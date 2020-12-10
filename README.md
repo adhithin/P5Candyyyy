@@ -8,6 +8,59 @@ You’re a knight from the human realm that’s been held captive by the goblins
 One day, after a guard walks by, you hear the fall of an item. Your eyes shift to the sound. It’s a golden key. You pick it up and curiously fit the key in the lock of your cell. It unlocks the door, and you take a step outside. You let out a deep breath, and look both ways, then revel in your position. 
 This is your chance to escape. Type “help” to start. 
 
+# Project Structure
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Room #1</th>
+<th>Room #2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>
+- Dungeon floor
+- Room 1
+- Door to room 2 
+- Map of game
+- Item
+- Shows rooms
+- Puzzle locations
+- Each floor
+- Each room in floor
+- Puzzle 1: Brick Math Puzzle
+- Gives a sheet of paper that has a clue for the next puzzle. Clue shows colors in a specific order.
+- Puzzle 2: Potion Mixing Puzzle
+- Final potion will open the door.
+</td>
+<td>
+- Ladder to next level
+- Puzzle 1: Key Puzzle
+- Elixir will be first part of second puzzle
+- Puzzle 2: Trading Puzzle
+- Key will open door
+</tr>
+<tr>
+<td>2</td>
+<td>
+- Room 1
+- Door to room 2 
+- Puzzle 1: Alchemy Puzzle
+- Get golden bar for next puzzle
+- Puzzle 2: Black Smith Puzzle
+- Golden key will open the door
+</td>
+<td>
+- Exit
+- Puzzle 1
+- Puzzle 2
+</td>
+</tr>
+</tbody>
+</table>
+
 # Delivery Plans/Important Dates
 - Tuesdays: test prep
 - Fridays: asynchronous learning/weekly submissions are due

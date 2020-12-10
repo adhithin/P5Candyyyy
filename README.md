@@ -12,3 +12,4 @@ This is your chance to escape. Type “help” to start.
 - Tuesdays: test prep
 - Fridays: asynchronous learning/weekly submissions are due
 - Midterm: January 19-22
+- N@TM: March 8-12

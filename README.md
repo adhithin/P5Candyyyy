@@ -1,7 +1,7 @@
 # P5Candyyyy - Escape Room
-Hello, and welcome to our Trimester 2 project. On this pag you find our code and progress throughout this trimester. 
+Hello, and welcome to our Trimester 2 project. On this page you find our code and progress throughout this trimester. 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1">Scrum Board</a> (tracking sheet + schedule) | <a href="https://docs.google.com/document/d/1R9BawAX6t35F5weV8FzLEZb7pOPIBGzeWPMray6rQdc/edit?usp=sharing">Project Plan</a></h3>
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1" target="_blank">Scrum Board</a> (tracking sheet + schedule) | <a href="https://docs.google.com/document/d/1R9BawAX6t35F5weV8FzLEZb7pOPIBGzeWPMray6rQdc/edit?usp=sharing">Project Plan</a></h3>
 
 # Story
 You’re a knight from the human realm that’s been held captive by the goblins. After being taken prisoner during the apocalypse, you’ve lost hope of ever seeing your friends again. 
@@ -21,41 +21,19 @@ This is your chance to escape. Type “help” to start.
 <tr>
 <td>1</td>
 <td>
-- Dungeon floor
-- Room 1
-- Door to room 2 
-- Map of game
-- Item
-- Shows rooms
-- Puzzle locations
-- Each floor
-- Each room in floor
-- Puzzle 1: Brick Math Puzzle
-- Gives a sheet of paper that has a clue for the next puzzle. Clue shows colors in a specific order.
-- Puzzle 2: Potion Mixing Puzzle
-- Final potion will open the door.
+Dungeon floor; Room 1; Door to room 2; Map of game; Item; Shows rooms; Puzzle locations; Each floor; Each room in floor; Puzzle 1: Brick Math Puzzle; Gives a sheet of paper that has a clue for the next puzzle (Clue shows colors in a specific order); Puzzle 2: Potion Mixing Puzzle; Final potion will open the door.
 </td>
 <td>
-- Ladder to next level
-- Puzzle 1: Key Puzzle
-- Elixir will be first part of second puzzle
-- Puzzle 2: Trading Puzzle
-- Key will open door
+Ladder to next level
+- Puzzle 1: Key Puzzle; Elixir will be first part of second puzzle; Puzzle 2: Trading Puzzle; Key will open door.
 </tr>
 <tr>
 <td>2</td>
 <td>
-- Room 1
-- Door to room 2 
-- Puzzle 1: Alchemy Puzzle
-- Get golden bar for next puzzle
-- Puzzle 2: Black Smith Puzzle
-- Golden key will open the door
+Room 1; Door to room 2; Puzzle 1: Alchemy Puzzle; Get golden bar for next puzzle; Puzzle 2: Black Smith Puzzle; Golden key will open the door.
 </td>
 <td>
-- Exit
-- Puzzle 1
-- Puzzle 2
+Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spirit Puzzle (Use key to finish game).
 </td>
 </tr>
 </tbody>

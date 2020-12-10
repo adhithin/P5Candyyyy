@@ -14,3 +14,42 @@ This is your chance to escape. Type “help” to start.
 - Midterm: January 19-22
 - N@TM: March 8-12
 - College Board AP Exam: May 13
+
+# College Board Requirements & Big Ideas
+
+<table>
+<thead>
+<tr>
+<th>Big Idea Number / Requirement</th>
+<th>Big Idea Summary</th>
+<th>Project Goal To Meet Each Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Big Idea #1</td>
+<td>Creative Development: Collaboration, Design, Development, Function, Purpose, Resolving Errors</td>
+<td>Working together as a team of 4 to come up with ideas and implement them. Collaboration between group and pair shares. Journals to keep track of progress.</td>
+</tr>
+<tr>
+<td>Big Idea #2 and #3:</td>
+<td>Data, Algorithms and Programming: Using data, algorithms, and programming to create code.</td>
+<td>Using SQLalchamey to create a database for our recipes and have the ability to add more recipes. Going beyond the Python fundamentals with logic and data. Using GET and POST, Python backend, and creating a data related UI. Having the ability to create, read, update, and delete recipes.</td>
+</tr>
+<tr>
+<td>Big Idea #3:</td>
+<td>Algorithms and Programming: Using algos and programming to design and present to the user.</td>
+<td>Creating a great UI desgin for our data filled website. Using HTML, CSS, and Javascript. Making a visual storyboard before putting it into our website. We will have options to go to different recipe pages and add in your own recipes.</td>
+</tr>
+<tr>
+<td>Big Idea #4:</td>
+<td>Computing Systems and Networks: How computing systems and networks function on the internet.</td>
+<td>Deploying our website on a Raspberry Pi server, using HTTP protocol for communication, using GET to request data, and POST to update the data. We will use an internet router.</td>
+</tr>
+<tr>
+<td>Big Idea #5:</td>
+<td>Impact of Computing: The effects that computing can have and with our project.</td>
+<td>Deploying our website onto the internet with a Raspberry Pi, sharing it to the community through Night At the Museum, and sharing it with College Board (AP Test).</td>
+</tr>
+</tbody>
+</table>

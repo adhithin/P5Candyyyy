@@ -11,3 +11,4 @@ This is your chance to escape. Type “help” to start.
 # Delivery Plans/Important Dates
 - Tuesdays: test prep
 - Fridays: asynchronous learning/weekly submissions are due
+- Midterm: January 19-22

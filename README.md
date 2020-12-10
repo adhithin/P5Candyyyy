@@ -26,20 +26,20 @@ This is your chance to escape. Type “help” to start.
 </thead>
 <tbody>
 <tr>
-<td>Eva</td>
-<td align="center"><a href="https://github.com/evagravin">Github</a></td>
+<td>Adhiti</td>
+<td align="center"><a href="https://github.com/adhithin">Github</a></td>
 </tr>
 <tr>
-<td>Ali</td>
-<td align="center"><a href="https://github.com/Ali-Saad">Github</a></td>
+<td>Akhilesh</td>
+<td align="center"><a href="https://github.com/AkhileshLG">Github</a></td>
 </tr>
 <tr>
-<td>Sophie</td>
-<td align="center"><a href="https://github.com/sophieleeajh">Github</a></td>
+<td>Arul</td>
+<td align="center"><a href="https://github.com/arulsalaniwal">Github</a></td>
 </tr>
 <tr>
-<td>Linda</td>
-<td align="center"><a href="https://github.com/lindalonglong">Github</a></td>
+<td>Pedro</td>
+<td align="center"><a href="https://github.com/PedroBMedeiros">Github</a></td>
 </tr>
 </tbody>
 </table>

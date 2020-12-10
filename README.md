@@ -1,5 +1,5 @@
-# P5Candyyyy - Esacpe Room
-vesion 1.0 project development. 
+# P5Candyyyy - Escape Room
+Hello, and welcome to our Trimester 2 project. On this pag you find our code and progress throughout this trimester. 
 
 # Story
 You’re a knight from the human realm that’s been held captive by the goblins. After being taken prisoner during the apocalypse, you’ve lost hope of ever seeing your friends again. 

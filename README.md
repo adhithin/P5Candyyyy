@@ -43,6 +43,7 @@ This is your chance to escape. Type “help” to start.
 </tr>
 </tbody>
 </table>
+
 # College Board Requirements & Big Ideas
 
 <table>

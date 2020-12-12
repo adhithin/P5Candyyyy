@@ -112,17 +112,17 @@ Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spiri
 <tr>
 <td>Big Idea #1</td>
 <td>Creative Development: Collaboration, Design, Development, Function, Purpose, Resolving Errors</td>
-<td>Working together as a team of 4 to come up with ideas and implement them. Collaboration between group and pair shares. Journals to keep track of progress.</td>
+<td>Working together as a team of 4 to come up with ideas and implement them. Collaboration between group and pair shares. Journals to keep track of progress. We're going to plan to use AGILE methods as well.</td>
 </tr>
 <tr>
 <td>Big Idea #2 and #3:</td>
 <td>Data, Algorithms and Programming: Using data, algorithms, and programming to create code.</td>
-<td>Using SQLalchamey to create a database for our recipes and have the ability to add more recipes. Going beyond the Python fundamentals with logic and data. Using GET and POST, Python backend, and creating a data related UI. Having the ability to create, read, update, and delete recipes.</td>
+<td>Using SQLalchamey to create a database for our recipes and have the ability to add more recipes. Going beyond the Python fundamentals with logic and data. Using GET and POST, Python backend, and creating a data related UI. Having the ability to create, read, update, and delete recipes. We're going to include the CRUD method and SQL from the lecture from this week, as well as look into other ways to deploy and demonstrate the data.</td>
 </tr>
 <tr>
 <td>Big Idea #3:</td>
 <td>Algorithms and Programming: Using algos and programming to design and present to the user.</td>
-<td>Creating a great UI desgin for our data filled website. Using HTML, CSS, and Javascript. Making a visual storyboard before putting it into our website. We will have options for seeing data on leaderboards, as well as easy to access buttons for the user to understand. </td>
+<td>Creating a great UI desgin for our data filled website. Using HTML, CSS, and Javascript. Making a visual storyboard before putting it into our website. We will have options for seeing data on leaderboards, as well as easy to access buttons for the user to understand. Furthermore, a nice immersive background and visuals to keep the user engaged.</td>
 </tr>
 <tr>
 <td>Big Idea #4:</td>
@@ -132,7 +132,7 @@ Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spiri
 <tr>
 <td>Big Idea #5:</td>
 <td>Impact of Computing: The effects that computing can have and with our project.</td>
-<td>Deploying our website onto the internet with a Raspberry Pi, sharing it to the community through Night At the Museum, and sharing it with College Board (AP Test).</td>
+<td>Deploying our website onto the internet with a Raspberry Pi, sharing it to the community through Night At the Museum, and sharing it with College Board (AP Test). We're going to use integration here.</td>
 </tr>
 </tbody>
 </table>

@@ -99,7 +99,7 @@ Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spiri
 <tr>
 <td>Big Idea #3:</td>
 <td>Algorithms and Programming: Using algos and programming to design and present to the user.</td>
-<td>Creating a great UI desgin for our data filled website. Using HTML, CSS, and Javascript. Making a visual storyboard before putting it into our website. We will have options to go to different recipe pages and add in your own recipes.</td>
+<td>Creating a great UI desgin for our data filled website. Using HTML, CSS, and Javascript. Making a visual storyboard before putting it into our website. We will have options for seeing data on leaderboards, as well as easy to access buttons for the user to understand. </td>
 </tr>
 <tr>
 <td>Big Idea #4:</td>

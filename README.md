@@ -64,10 +64,29 @@ Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spiri
 
 # Delivery Plans/Important Dates
 - Tuesdays: test prep
+On tuesdays, we’ll be reviewing what we need to do to prepare for the MC test. We’re going to be reviewing and reflecting on our practices, noting any mistakes and how we can improve on them. We’ll be using test prep tuesdays as a day to check our progress on improving each skill for the mc. 
+12/8 tpt: reviewed mc#1 2018, and created our reflections for the test. 
+12/15 tpt: review some skill sets that we need to improve on, as well as discuss journals, and how we can improve those as well. 
+
 - Fridays: asynchronous learning/weekly submissions are due
+On Fridays, we’ll be reviewing our progress on our coding and project, and reflecting on how the week progressed. We’re also going to be submitting our weekly assignments, as well as adding to the progress tracker and read me files. 
+	12/11: our submission for today is our general outline and plan for what we want to get done and when. In the following week, our goal is to 
+play around with the code
+organize a plan for the coding itself
+plan week by week if possible. We’re going to split the rooms on floor 1 most likely, and have maybe about 1-2 people working on a room. 
+Finish planning out the puzzles and fully develop the puzzles by next week. 
+Finish establishing the storyline next week. 
+Include character data on each character, maybe incorporate CRUD from what we learned for the leaderboard and character data. 
+	12/18: make sure we have a plan for the code, and continue coding. 
+
 - Midterm: January 19-22
+By midterm, our goal is to have at least one full floor coded. We’re going to have the floor include the puzzles, characters, and full developed storyline by this time. As we go week by week, we’re going to make any adjustments to this plan as needed, but for now, our goal will be to code at least one full floor - please see map. 
+
 - N@TM: March 8-12
+By n@tm our goal is to complete the full game, and make sure that it is playable, with no bugs or errors. If we have time before n@tm to add in more visuals, we’ll do so. 
+
 - College Board AP Exam: May 13
+By this time, the game will be fully coded and everything will be finalized. 
 
 # Contributors
 

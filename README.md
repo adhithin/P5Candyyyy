@@ -3,10 +3,33 @@ Hello, and welcome to our Trimester 2 project. On this page you find our code an
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1" target="_blank">Scrum Board</a> (tracking sheet + schedule) | <a href="https://docs.google.com/document/d/1R9BawAX6t35F5weV8FzLEZb7pOPIBGzeWPMray6rQdc/edit?usp=sharing">Project Plan</a></h3>
 
-# Story
+# Summary + Story
 You’re a knight from the human realm that’s been held captive by the goblins. After being taken prisoner during the apocalypse, you’ve lost hope of ever seeing your friends again. 
 One day, after a guard walks by, you hear the fall of an item. Your eyes shift to the sound. It’s a golden key. You pick it up and curiously fit the key in the lock of your cell. It unlocks the door, and you take a step outside. You let out a deep breath, and look both ways, then revel in your position. 
 This is your chance to escape. Type “help” to start. 
+
+In this virtual escape room, the user will be a hero tasked with the goal of escaping from the dungeon. Throughout the game, the user will encounter various puzzles, which they must solve to escape. In addition with these puzzles, the user will be prompted to interact with various characters, such as spirits, goblins, dragons, and other fantasy beings. Data stored here will include 1) leaderboard of those who have played the game 2) data on the characters and 3) data on the puzzles. The purpose of this project is to captivate the user's mind to prompt critical thinking skills and teach them how to apply these skills in fun, fantasy based adventures. Through play, strategies, critical thinking, and even collaboration will be present for the user. 
+
+On our end: 
+
+**Collaboration** 
+
+We'll be collaborating together to create this project, and work on coding each segment of the code, as well as creating the project plan. 
+So far, we've all gotten along really well, and have worked well together on formatting our work, designing the game, and developing the gaming concept. 
+
+**Communication** 
+
+We do our communication using Slack and Zoom nearly every day in order to progress on our work. We hope to do the same over winter break. 
+
+
+**Creativity** 
+
+We're implementing creative game ideas, such as a creative fantasy concept, as well as developing engaging events and aspects to further reach to the user. Creativity is included in character design, game design, as well as conceptual mapping. 
+
+
+**Critical Thinking** 
+
+We use critical thinking when mapping out our story board for the game, and linking the puzzles together for the user to solve the escape room. We need to use critical thinking to design the game, and make it challenging but also fun for the user. Mainly, the puzzles and being smart with how the puzzles are programmed and solved is the key section where critical thinking will apply. 
 
 # Project Structure
 <table>

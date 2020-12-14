@@ -64,6 +64,15 @@ Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spiri
 
 # Data
 
+**Characters**
+- Each NPC can have their own individual data set
+  - data confirms actions
+  - for trading puzzles
+- User's Character
+  - Can use characters from other games
+  - Have alternate options as data values
+  - Optional: Make database for users to input other characters or their own
+    - Not main priority
 
 # Delivery Plans/Important Dates
 - Tuesdays: test prep

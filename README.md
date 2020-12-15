@@ -75,8 +75,8 @@ Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spiri
     - Optional: Make database for users to input other characters or their own
       - Not main priority
       
-**Iventory**
-- Iventory has data values
+**Inventory**
+- Inventory has data values
   - Determines what items the player has
   - Keys, Puzzle items, Map
 

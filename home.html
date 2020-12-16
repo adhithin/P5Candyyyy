@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+<title>Castle Run</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xlarge" style="display:none;z-index:2" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+        <i class="fa fa-remove"></i>
+    </a>
+    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button">Link 4</a>
+    <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-red w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-black"><i class="fa fa-home w3-margin-right"></i>Home</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-blue">About</a>
+        <a href="#howtoplay" class="w3-bar-item w3-button w3-hide-small w3-hover-red">How To Play</a>
+        <a href="#zachary" class="w3-bar-item w3-button w3-hide-small w3-hover-green">Zachary</a>
+        <a href="#aiden" class="w3-bar-item w3-button w3-hide-small w3-hover-yellow">Aiden</a>
+
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+    </div>
+
+
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#howtoplay" class="w3-bar-item w3-button">How to Play</a>
+        <a href="#zachary" class="w3-bar-item w3-button">Zachary</a>
+        <a href="#aiden" class="w3-bar-item w3-button">Aiden</a>
+        <a href="#" class="w3-bar-item w3-button">Search</a>
+    </div>
+</div>
+
+<-- html by adhithi - embeds, padlets, website to organize our progress in comp sci so far -->
+
+
+<div class="w3-container w3-padding-64 w3-center" id="about">
+    <h2>About</h2>
+
+
+</div>
+
+<div class="w3-container w3-padding-64 w3-center" id="howtoplay">
+    <h2>How To Play</h2>
+    <p>Individual Mastery Week #9</p>
+
+
+</div>
+</div>
+
+</div>
+
+
+<div class="w3-container" style="position:relative">
+    <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+       style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+
+<div class="w3-container w3-padding-64 w3-center" id="zachary">
+    <h2>Zachary</h2>
+    <p>Individual Mastery Week #9</p>
+
+</div>
+</div>
+
+
+<div class="w3-container w3-padding-64 w3-center" id="aiden">
+    <h2>Aiden</h2>
+    <p>Individual Mastery Week #9</p>
+
+</div>
+</div>
+
+
+
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
+
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <h4>Follow Us</h4>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+    <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+        <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+        <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+</footer>
+
+<script>
+
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

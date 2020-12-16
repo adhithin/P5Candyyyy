@@ -15,3 +15,12 @@ donkey kong = {
 }
 
 print (donkey kong)
+
+mario = {
+    "name": "Mario"
+    "game": "MarioBros"
+    "backstory": "Mario is the protector of the Mushroom Kingdom"
+                 "He is a hero."
+}
+
+print (mario)

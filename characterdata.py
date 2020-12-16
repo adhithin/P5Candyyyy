@@ -7,20 +7,20 @@ pikachu = {
 
 print (pikachu)
 
-donkey kong = {
+donkey_kong = {
     "name": "Donkey Kong",
     "game": "Mario Kart",
     "backstory": "Donky Kong is a powerful ape who loves eating bananas more than anything. "
                  "He is seen as Mario's enemy"
 }
 
-print (donkey kong)
+print (donkey_kong)
 
 mario = {
-    "name": "Mario"
-    "game": "MarioBros"
-    "backstory": "Mario is the protector of the Mushroom Kingdom"
-                 "He is a hero."
+    "name": "Mario",
+    "game": "Mario Bros",
+    "backstory": "Mario is a plumber who is also the protector of the Mushroom Kingdom."
+                 "He is seen as a Hero."
 }
 
 print (mario)

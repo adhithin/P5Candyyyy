@@ -33,3 +33,12 @@ luigi = {
 }
 
 print(luigi)
+
+sonic = {
+    "name": "Sonic",
+    "game": "Sonic the Hedgehog",
+    "backstory": "Sonic is a blue hedgehog with supersonic speed and the ability to roll into a ball and face his enemies"
+                 "He is seen as a Hero"
+}
+
+print(sonic)

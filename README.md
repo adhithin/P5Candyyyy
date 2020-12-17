@@ -117,7 +117,7 @@ By this time, the game will be fully coded and everything will be finalized.
 </thead>
 <tbody>
 <tr>
-<td>Adhiti</td>
+<td>Adhiti (Scrum Master)</td>
 <td align="center"><a href="https://github.com/adhithin">Github</a></td>
 </tr>
 <tr>

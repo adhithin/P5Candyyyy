@@ -29,7 +29,7 @@ luigi = {
     "name": "Luigi",
     "game": "Mario Kart",
     "backstory": "Luigi is Mario's brother and a plumber"
-                 "He is seen as a Hero"
+                 "He is seen as "
 }
 
 print(luigi)

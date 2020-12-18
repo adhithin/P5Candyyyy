@@ -1,10 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Dungeon Run</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-link">
+                <a class="nav-link" href="/home"> Home </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title> Room 1 </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+<!--Top Right-->
+<div class="container-fluid">
+    <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
+
+        <div class="col-4" style="text-align: right;">
+
+            <a href="https://github.com/LordRoop/P5_Gorillas-Portfolio" target="_blank"><i class="fa fa-map"></i></a>
+
+        </div>
+    </div>
+</div>
+
+
+<!--Github Buttons
+<div class="row" style="padding-left: 10%;">
+    <div class="col-6">
+        <a href="https://github.com/PedroBMedeiros" target="_blank" class="btn">Github Profile</a>
+    </div>
+
+    <div class="col-6">
+        <a href="https://github.com/LordRoop/P5_Gorillas-Portfolio/commits?author=PedroBMedeiros" target="_blank" class="btn">Commits</a>
+    </div>
+</div>
+-->
+<!--/Github Buttons-->
+
+<!--Embed Padlet-->
+<div class="product" style="margin-top: 12%;">
+    <div class="row justify-content-center" style="margin-top: 2vw;">
+        <div class="col-11">
+            <iframe frameborder="0" width="100%" height="750px" src="https://padlet.com/jagroopvij/ak7qrz26swtqtjvr"></iframe>
+        </div>
+    </div>
+</div>
+<!--/Embed Padlet-->
+
+
+<div class="product" style="margin-top: 2%;">
+    <div class="row justify-content-center" style="margin-top: 2vw;">
+        <div class="col-11">
+            <iframe frameborder="0" width="100%" height="500px" src="https://www.youtube.com/embed/8TG99JmNUaM?autoplay=0"></iframe>
+        </div>
+    </div>
+</div>
+
+
 
 </body>
+
+
+<script src="{{ url_for('static', filename='p5.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vanta.topology.min.js') }}"></script>
+
+<script>
+    VANTA.TOPOLOGY({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 2000.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x7171ff,
+      backgroundColor: 0xa0a52
+    })
+    </script>
+
+<style>
+    html, body {
+        margin: 0;
+        height: 100%;
+        color: white;
+    }
+
+    h1{
+        font-size: 5em;
+    }
+
+
+    .fa{
+        font-size: 3em;
+        letter-spacing: 1em;
+        transition: all .2s;
+        color: white;
+    }
+
+    .fa:hover{
+        transform: translateY(10px);
+    }
+
+    .fa-youtube-play:hover{
+        color: #cc0000;
+    }
+
+    .fa-twitter:hover{
+        color: #1da1f2;
+    }
+
+    .fa-github:hover{
+        color: #000000;
+    }
+
+
+    .btn:link,
+    .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: absolute;
+        color: white;
+        font-size: 2.5em;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    }
+
+
+    </style>
 </html>
+
+
+
+
+
+

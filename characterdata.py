@@ -42,3 +42,12 @@ sonic = {
 }
 
 print(sonic)
+
+link = {
+    "name": "Link",
+    "game": "Legend of Zelda",
+    "backstory": "Link is a knight and Hero of Hyrule."
+                 "He is a noble hero"
+}
+
+print(link)

@@ -20,6 +20,14 @@ def room1():
 def room2():
     return render_template("room2.html")
 
+@app.route('/L2Room1')
+def L2Room1():
+    return render_template("L2Room1.html")
+
+@app.route('/L2Room2')
+def L2Room2():
+    return render_template("L2Room2.html")
+
 if __name__ == "__main__":
     #runs the application on the repl development server
     app.run(debug=True, port='3000', host='127.0.0.1')

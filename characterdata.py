@@ -51,3 +51,12 @@ link = {
 }
 
 print(link)
+
+tails = {
+    "name": "Tails",
+    "game": "Sonic the Hedgehog",
+    "backstory": "Tails is a fox that can use his tail to fly around like a helicopter."
+                 "He is Sonic's partner."
+}
+
+print(tails)

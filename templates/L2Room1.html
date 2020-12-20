@@ -1,117 +1,25 @@
+<!DOCTYPE html>
 <html>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Castle Run</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-link">
-                <a class="nav-link" href="/home"> Home </a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<head>
-    <title> Level 2 Room 1 </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+<title>Level 2 Room 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
 
+.bgimg {
+  background-image: url('https://cdn.conceptartempire.com/images/08/2592/17-dungeon-of-fire.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+</style>
 <body>
 
-<!--Top Right-->
-<div class="container-fluid">
-    <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
 
-        <div class="col-4" style="text-align: right;">
-
-            <a href="https://github.com/LordRoop/P5_Gorillas-Portfolio" target="_blank"><i class="fa fa-map"></i></a>
-
-        </div>
-    </div>
-</div>
-
-<div class="product" style="margin-top: 12%;">
-    <div class="row justify-content-center" style="margin-top: 2vw;">
-        <div class="col-11">
-            <iframe frameborder="0" width="100%" height="750px" src="https://docs.google.com/drawings/d/1sg_Art8hSr2jqqM9gm3Bx8tnNdWLYDbm5PhB2ENhKpU"></iframe>
-        </div>
-    </div>
-</div>
 
 </body>
-
-
-<script src="{{ url_for('static', filename='p5.min.js') }}"></script>
-<script src="{{ url_for('static', filename='vanta.topology.min.js') }}"></script>
-
-<script>
-    VANTA.TOPOLOGY({
-      el: "body",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 2000.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x7171ff,
-      backgroundColor: 0xa0a52
-    })
-</script>
-
-<style>
-    html, body {
-        margin: 0;
-        height: 100%;
-        color: white;
-    }
-
-    h1{
-        font-size: 5em;
-    }
-
-
-    .fa{
-        font-size: 4em;
-        letter-spacing: 1em;
-        transition: all .2s;
-        color: brown;
-    }
-
-    .fa:hover{
-        transform: translateY(10px);
-    }
-
-    .fa-map:hover{
-        color: #8b6040;
-    }
-
-
-    .btn:link,
-    .btn:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 15px 40px;
-        display: inline-block;
-        border-radius: 100px;
-        transition: all .2s;
-        position: absolute;
-        color: white;
-        font-size: 2.5em;
-    }
-
-    .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
-    }
-
-    .btn:active {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
-    }
-
-
-    </style>
 </html>

@@ -28,6 +28,10 @@ def L2Room1():
 def L2Room2():
     return render_template("L2Room2.html")
 
+@app.route('/loadingpage')
+def CharSelect():
+    return render_template("loadingpage.html")
+
 if __name__ == "__main__":
     #runs the application on the repl development server
     app.run(debug=True, port='3000', host='127.0.0.1')

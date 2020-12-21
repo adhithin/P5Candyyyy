@@ -65,6 +65,7 @@ Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spiri
 # Data
 
 **Characters**
+- using inspiration from common cartoon characters
 - Each NPC can have their own individual data set
   - Data confirms actions 
   - For trading puzzles

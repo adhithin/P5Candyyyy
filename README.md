@@ -19,7 +19,7 @@ So far, we've all gotten along really well, and have worked well together on for
 
 **Communication** 
 
-We do our communication using Slack and Zoom nearly every day in order to progress on our work. We hope to do the same over winter break. We have also made a group discord server for extra communication opportunities.
+We do our communication using Slack and Zoom nearly every day in order to progress on our work. We hope to do the same over winter break. We have also made a group Discord server for extra communication if needed.
 
 
 **Creativity** 

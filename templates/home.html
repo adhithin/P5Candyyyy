@@ -34,10 +34,10 @@ body, html {
             <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
         </div>
         <div class="w3-col s3">
-            <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+            <a href="#menu" class="w3-button w3-block w3-black">DETAILS</a>
         </div>
         <div class="w3-col s3">
-            <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+            <a href="#where" class="w3-button w3-block w3-black">BEGIN</a>
         </div>
     </div>
 </div>
@@ -130,6 +130,25 @@ body, html {
         </div>
     </div>
 
+    <!-- Where Container -->
+    <div class="w3-container" id="where">
+        <div class="w3-content" style="max-width:700px">
+            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">BEGIN</span></h5>
+            <p>ARE YOU READY?
+            </p>
+            <p> TIPS: </p>
+            <p>+ Grab a notepad to keep track of clues.</p>
+            <p>+ Give yourself enough time.</p>
+            <p>+ Have your critical thinking at the ready.</p>
+            <p>+ Get your coffee and get comfy.</p>
+            <p>+ Be ready. </p>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <p><i> It's time to escape. Press LET'S ESCAPE to begin. </i></p>
+            </div>
+            <div class="w3-col s3">
+                <a href="#" class="w3-center w3-button w3-block w3-black"> LET'S ESCAPE </a>
+        </div>
+    </div>
 
 
     <!-- End page content -->
@@ -152,11 +171,11 @@ function openMenu(evt, menuName) {
   for (i = 0; i < x.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
   }
-  document.getElementById(menuName).style.display = "block";
+ document.getElementById(menuName).style.display = "block";
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
 document.getElementById("myLink").click();
 </script>
 
-</body>
-</html>
+
+</div>

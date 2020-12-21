@@ -83,7 +83,7 @@ Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spiri
 
 # Delivery Plans/Important Dates
 - Tuesdays: test prep
-On tuesdays, we’ll be reviewing what we need to do to prepare for the MC test. We’re going to be reviewing and reflecting on our practices, noting any mistakes and how we can improve on them. We’ll be using test prep tuesdays as a day to check our progress on improving each skill for the mc. 
+On Tuesdays, we’ll be reviewing what we need to do to prepare for the MC test. We’re going to be reviewing and reflecting on our practices, noting any mistakes and how we can improve on them. We’ll be using test prep tuesdays as a day to check our progress on improving each skill for the mc. 
 12/8 tpt: reviewed mc#1 2018, and created our reflections for the test. 
 12/15 tpt: review some skill sets that we need to improve on, as well as discuss journals, and how we can improve those as well. 
 

@@ -21,17 +21,33 @@ body, html {
 .menu {
   display: none;
 }
-</style>
-<body>
 
-<!-- Links (sit on top) -->
-<div class="w3-top">
-    <div class="w3-row w3-padding w3-black">
-        <div class="w3-col s3">
-            <a href="/home" class="w3-button w3-block w3-black">HOME</a>
+.fa {
+    font-size: 4em;
+    letter-spacing: 1em;
+    transition: all .2s;
+    color: brown;
+}
+
+.fa:hover{
+    transform: translateY(10px);
+}
+
+.fa-map:hover{
+    color: #8b6040;
+}
+</style>
+
+<body>
+    <!-- Links (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-row w3-padding w3-black">
+            <div class="w3-col s3">
+                <a href="/home" class="w3-button w3-block w3-black">HOME</a>
+            </div>
         </div>
     </div>
-</div>
+</body>
 
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
@@ -44,20 +60,27 @@ body, html {
     <div class="w3-display-bottomright w3-center w3-padding-large">
         <span class="w3-text-white">A CSP ESCAPE ROOM</span>
     </div>
+    <div class="col-4" style="text-align: right;">
+        <a href="https://github.com/LordRoop/P5_Gorillas-Portfolio" target="_blank"><i class="fa fa-map"></i></a>
+    </div>
 </header>
+
+<div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
+
+</div>
 
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-sand w3-grayscale w3-large">
 
         <!-- End page content -->
-    </div>
+</div>
 
     <!-- Footer -->
-    <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-    </footer>
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
 
-    <script>
+<script>
 // Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;
@@ -75,9 +98,7 @@ function openMenu(evt, menuName) {
 document.getElementById("myLink").click();
 </script>
 
-
 </div>
-
 
 
 

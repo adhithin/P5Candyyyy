@@ -10,7 +10,7 @@ print (pikachu)
 donkey_kong = {
     "name": "Donkey Kong",
     "game": "Mario Kart",
-    "backstory": "Donky Kong is a powerful ape who loves eating bananas more than anything. "
+    "backstory": "Donkey Kong is a powerful ape who loves eating bananas more than anything. "
                  "He is Mario's enemy"
 }
 

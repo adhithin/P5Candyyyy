@@ -8,6 +8,7 @@ from werkzeug.utils import redirect
 
 app = Flask(__name__)
 
+from tkinter import *
 
 #Use of Routes here
 #connects default URL of server to render home.html

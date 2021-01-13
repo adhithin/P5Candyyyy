@@ -49,5 +49,5 @@ def login():
 
 if __name__ == "__main__":
     #runs the application on the repl development server
-    app.run(debug=True, port='80', host='75.6.165.166')
+    app.run(debug=True, port='80', host='192.168.86.51')
 

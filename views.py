@@ -1,5 +1,5 @@
 
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, Flask
 # from __init__ import app
 # from models.lessons import menus, TITLE, PROJECTS, select_2_proj, lessons_dict
 # import requests
@@ -7,7 +7,7 @@ from flask import render_template, request, redirect, url_for
 # from flask import Flask, render_template, request, url_for
 # from werkzeug.utils import redirect
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
 # from tkinter import *
 

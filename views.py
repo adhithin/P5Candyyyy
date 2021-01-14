@@ -1,12 +1,13 @@
 
-#Use of flask Here
-# https://flask.palletsprojects.com/en/1.1.x/api/
-from flask import Flask, render_template, request, url_for
+from flask import render_template, request, redirect, url_for
+# from __init__ import app
+# from models.lessons import menus, TITLE, PROJECTS, select_2_proj, lessons_dict
+# import requests
 
-#create a Flask instance
-from werkzeug.utils import redirect
+# from flask import Flask, render_template, request, url_for
+# from werkzeug.utils import redirect
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 # from tkinter import *
 
@@ -46,8 +47,3 @@ def login():
         else:
             return redirect(url_for('room1'))
     return render_template('login.html', error=error)
-
-if __name__ == "__main__":
-    #runs the application on the repl development server
-    app.run(debug=True, port='80', host='192.168.86.51')
-

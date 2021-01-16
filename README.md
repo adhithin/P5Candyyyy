@@ -4,10 +4,10 @@ Hello, and welcome to our Trimester 2 project. On this page you find our code an
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1" target="_blank">Scrum Board</a> (tracking sheet + schedule) | <a href="https://docs.google.com/document/d/1R9BawAX6t35F5weV8FzLEZb7pOPIBGzeWPMray6rQdc/edit?usp=sharing">Project Plan</a></h3>
 
 # Currently We're Working On...
-Deployment through Raspberry Pi
-Adding more in-game characters
-Trying to make website's "Let's Escape" button functional and direct the user to Room 1 of the escape
-Incorporating the various puzzles into our escape rooms
+- Deployment through Raspberry Pi
+- Adding more in-game characters
+- Trying to make website's "Let's Escape" button functional and direct the user to Room 1 of the escape
+- Incorporating the various puzzles into our escape rooms
 
 # Summary + Story
 You’re a knight from the human realm that’s been held captive by the goblins. After being taken prisoner during the apocalypse, you’ve lost hope of ever seeing your friends again. 

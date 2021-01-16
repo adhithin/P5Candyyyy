@@ -16,6 +16,14 @@ donkey_kong = {
 
 print (donkey_kong)
 
+diddy_kong = {
+    "name": "Diddy Kong",
+    "game": "Mario Kart",
+    "backstory": "Diddyy Kong is Donkey Kong's apprentice who also loves eating bananas more than anything. "
+}
+
+print (diddy_kong)
+
 mario = {
     "name": "Mario",
     "game": "Mario Bros",

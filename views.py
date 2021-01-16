@@ -45,5 +45,5 @@ def login():
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Please try again.'
         else:
-            return redirect(url_for('room1'))
+            return redirect(url_for('http://castleescape.tk/room1'))
     return render_template('login.html', error=error)

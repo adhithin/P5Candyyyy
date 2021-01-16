@@ -47,3 +47,7 @@ def login():
         else:
             return redirect(url_for('http://castleescape.tk/room1'))
     return render_template('login.html', error=error)
+
+@app.route('/register')
+def register():
+    return render_template("register.html")

@@ -5,5 +5,3 @@ if __name__ == "__main__":
     app.run(debug=True, port='80', host='192.168.86.51')
     #192.168.86.51
     #127.0.0.1
-
-    #hello

@@ -53,10 +53,48 @@
             <area class="answer_5" shape="rect" coords="494,480,608.5,587.5" alt="answer9" href="#">
             <area shape="rect" coords="659,503,783.5,580" alt="answer10" href="#">
         </map>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Deaths</th>
+                <th>Positive Tests</th>
+                <th>Negative Tests</th>
+                <th>Pending Tests</th>
+            </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+        </table>
 
     </div>
         <!-- End page content -->
 </div>
+
+<script>
+    fetch("https://api.covidtracking.com/v1/us/daily.json").then(
+        res=>{
+            res.json().then(
+                data=>{
+                    console.log(data);
+                    if(data.length > 0){
+                        var temp = ""
+
+                        data.forEach((u)=>{
+                            temp += "<tr>";
+                            temp += "<td>"+u.date+"</td>";
+                            temp += "<td>"+u.death+"</td>";
+                            temp += "<td>"+u.positive+"</td>";
+                            temp += "<td>"+u.negative+"</td>";
+                            temp += "<td>"+u.pending+"</td></tr>";
+                        })
+                        document.getElementById("data").innerHTML = temp;
+                    }
+                }
+            )
+        }
+    )
+</script>
 
     <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-48 w3-large">

@@ -9,29 +9,15 @@
     <h1>Please login</h1>
     <br>
     <form action="" method="post">
-        <input type="text" placeholder="Username" name="username" value="">
-        <input type="password" placeholder="Password" name="password" value="">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+        <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
         <input class="btn btn-default" type="submit" value="Login">
     </form>
+    {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+        {% endif %}
 </div>
-
-<div>
-    <div class="w3-col s3">
-        <a href="http://castleescape.tk/register" class="w3-center w3-button w3-block w3-black"> don't have a login code? register here! </a>
-    </div>
-
-</div>
-
-
-
 </body>
-<style>
-body, html {
-  height: 100%;
-  font-family: "Roboto", sans-serif;
-}
-
-
-</style>
-
 </html>

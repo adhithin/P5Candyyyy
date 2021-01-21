@@ -14,7 +14,7 @@ app = Flask(__name__)
 #Use of Routes here
 #connects default URL of server to render home.html
 @app.route('/')
-def home():
+def main():
     return render_template("home.html")
 
 @app.route('/room1')
@@ -33,20 +33,17 @@ def L2Room1():
 def L2Room2():
     return render_template("L2Room2.html")
 
+
 @app.route('/loadingpage')
 def CharSelect():
-    return render_template("loadingpage.html")
+    return render_template("loadingpage")
 
 # Route for handling the login page logic
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    error = None
-    if request.method == 'POST':
-        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Invalid Credentials. Please try again.'
-        else:
-            return render_template("room1.html")
-    return render_template('login.html', error=error)
+@app.route('/')
+def home():
+    return render_template ('register.html')
+    if request.form:
+        username = users(username =request.form.get("username"))
 
 @app.route('/register')
 def register():

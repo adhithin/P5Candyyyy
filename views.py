@@ -39,7 +39,7 @@ def CharSelect():
     return render_template("loadingpage")
 
 # Route for handling the login page logic
-@app.route('/')
+@app.route('/login')
 def home():
     return render_template ('register.html')
     if request.form:

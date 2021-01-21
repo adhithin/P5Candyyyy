@@ -41,7 +41,7 @@ def CharSelect():
 # Route for handling the login page logic
 @app.route('/login')
 def home():
-    return render_template ('register.html')
+    return render_template ('login.html')
     if request.form:
         username = users(username =request.form.get("username"))
 

@@ -5,20 +5,60 @@ Hello, and welcome to our Trimester 2 project. On this page you find our code an
 
 # Currently We're Working On... 1/29
 
+## Easter Egg: 
 
-Adi's Ticket: 
+link: 
 
+goal: 
 
+how to test: 
 
-Pedro's Ticket: 
-
-
-
-Akhil's Ticket: 
-
+resources:
 
 
-Arul's Ticket: 
+## Adi's Ticket: 
+
+link: 
+
+goal: 
+
+how to test: 
+
+resources: 
+
+## Pedro's Ticket: 
+
+link: 
+
+goal: 
+
+how to test: 
+
+resources: 
+
+
+## Akhil's Ticket: 
+
+link: 
+
+goal: 
+
+how to test: 
+
+resources: 
+
+
+## Arul's Ticket: 
+
+link: 
+
+goal: 
+
+how to test: 
+
+resources: 
+
+
 
 # Summary + Story
 You’re a knight from the human realm that’s been held captive by the goblins. After being taken prisoner during the apocalypse, you’ve lost hope of ever seeing your friends again. 

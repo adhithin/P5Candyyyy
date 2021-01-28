@@ -5,7 +5,7 @@ Hello, and welcome to our Trimester 2 project. On this page you find our code an
 
 # Currently We're Working On... 1/29
 
-## Easter Egg: 
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1" target="_blank">Easter Egg</a> (tracking sheet + schedule) |
 
 link: 
 
@@ -16,7 +16,7 @@ how to test:
 resources:
 
 
-## Adi's Ticket: 
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782116" target="_blank">Adi's Ticket</a> (tracking sheet + schedule) |
 
 link: 
 
@@ -26,18 +26,7 @@ how to test:
 
 resources: 
 
-## Pedro's Ticket: 
-
-link: 
-
-goal: 
-
-how to test: 
-
-resources: 
-
-
-## Akhil's Ticket: 
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243" target="_blank">Pedro's Ticket/a> (tracking sheet + schedule) |
 
 link: 
 
@@ -48,7 +37,18 @@ how to test:
 resources: 
 
 
-## Arul's Ticket: 
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782740" target="_blank">Akhil's Ticket</a> (tracking sheet + schedule) |
+
+link: 
+
+goal: 
+
+how to test: 
+
+resources: 
+
+
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782099" target="_blank">Arul's Ticket</a> (tracking sheet + schedule) |
 
 link: 
 

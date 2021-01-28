@@ -29,7 +29,9 @@ resources:
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243" target="_blank">Pedro's Ticket</a>
 
 link: 
-* [Test]()  
+* [Sessions](https://docs.google.com/document/d/1F6iYBj5xJ8ZWCtkDqlF_-skWM-Xuut-BqT5eRNPhnOE/edit)
+* [Flask Idea Homesite](https://github.com/nighthawkcoders/flask-idea-homesite)
+* [Flask Login](https://flask-login.readthedocs.io/en/latest/)
 
 goal: 
 

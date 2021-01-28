@@ -8,14 +8,19 @@
 
 
 <body>
+
     <!-- Links (sit on top) -->
     <div class="w3-top">
         <div class="w3-row w3-padding w3-black">
             <div class="w3-col s3">
                 <a href="/" class="w3-button w3-block w3-black">HOME</a>
             </div>
+            <div class="w3-col s3">
+                <a href="#Puzzle_1" class="w3-button w3-block w3-black">Puzzle 1</a>
+            </div>
         </div>
     </div>
+
 </body>
 
 
@@ -53,19 +58,23 @@
             <area class="answer_5" shape="rect" coords="494,480,608.5,587.5" alt="answer9" href="#">
             <area shape="rect" coords="659,503,783.5,580" alt="answer10" href="#">
         </map>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Date</th>
-                <th>Deaths</th>
-                <th>Positive Tests</th>
-                <th>Negative Tests</th>
-                <th>Pending Tests</th>
-            </tr>
-            </thead>
-            <tbody id="data">
-            </tbody>
-        </table>
+        <br>
+        <center>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Deaths so Far</th>
+                    <th>Positive Tests so Far</th>
+                    <th>Negative Tests so Far</th>
+                    <th>Pending Tests</th>
+                </tr>
+                </thead>
+                <tbody id="data">
+                </tbody>
+            </table>
+        </center>
+
 
     </div>
         <!-- End page content -->
@@ -152,7 +161,21 @@ body, html {
     color: #8b6040;
 }
 
+table{
+  border: 1px solid black;
+  width: 80%;
+  text-align: center;
+}
 
+th{
+  border: 1px solid black;
+  text-align: center;
+}
+
+td{
+  border: 1px solid black;
+  text-align: center;
+}
 
 </style>
 

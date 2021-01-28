@@ -16,7 +16,7 @@ how to test:
 resources:
 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782116" target="_blank">Adi's Ticket</a> (tracking sheet + schedule) |
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782116" target="_blank">Adi's Ticket</a>
 
 link: 
 
@@ -26,18 +26,7 @@ how to test:
 
 resources: 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243" target="_blank">Pedro's Ticket</a> (tracking sheet + schedule) |
-
-link: 
-
-goal: 
-
-how to test: 
-
-resources: 
-
-
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782740" target="_blank">Akhil's Ticket</a> (tracking sheet + schedule) |
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243" target="_blank">Pedro's Ticket</a>
 
 link: 
 
@@ -48,7 +37,18 @@ how to test:
 resources: 
 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782099" target="_blank">Arul's Ticket</a> (tracking sheet + schedule) |
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782740" target="_blank">Akhil's Ticket</a>
+
+link: 
+
+goal: 
+
+how to test: 
+
+resources: 
+
+
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782099" target="_blank">Arul's Ticket</a> 
 
 link: 
 

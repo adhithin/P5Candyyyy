@@ -28,7 +28,8 @@ resources:
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243" target="_blank">Pedro's Ticket</a>
 
-link: https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243  
+link: 
+* [Test]()  
 
 goal: 
 

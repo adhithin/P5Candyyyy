@@ -36,9 +36,10 @@ Links:
 Goal: 
 - Creating a login and authentication algorithm
 
-how to test: 
+How to test:
+- Not Ready for deployment yet
 
-resources: 
+Resources: 
 
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782740" target="_blank">Akhil's Ticket</a>

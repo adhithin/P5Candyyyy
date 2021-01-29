@@ -44,13 +44,17 @@ Resources:
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782740" target="_blank">Akhil's Ticket</a>
 
-link: 
+Link: 
+- https://github.com/adhithin/P5Candyyyy/blob/main/templates/room1.html
 
-goal: 
+Goal: 
+- Update user interface for puzzle 1
+- Add API for puzzle 1
 
-how to test: 
+How to test: 
+- Use local ip address
 
-resources: 
+Resources: 
 
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782099" target="_blank">Arul's Ticket</a> 

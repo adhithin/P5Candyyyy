@@ -19,12 +19,21 @@ resources:
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782116" target="_blank">Adi's Ticket</a>
 
 link: 
+please use the ip address for our game. 
 
 goal: 
+- creating a login and registration 
+- build upon the 1/27 tech talk 
+- break apart the code given and build up to a login and authentication page 
 
 how to test: 
+- run the server, and open the login in. you should be able to register, then login, and then create a gaming session. after you log out, the session will expire. 
 
 resources: 
+
+- [Sessions](https://docs.google.com/document/d/1F6iYBj5xJ8ZWCtkDqlF_-skWM-Xuut-BqT5eRNPhnOE/edit)
+- [Flask Idea Homesite](https://github.com/nighthawkcoders/flask-idea-homesite)
+- [Flask Login](https://flask-login.readthedocs.io/en/latest/)
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243" target="_blank">Pedro's Ticket</a>
 
@@ -60,10 +69,14 @@ Resources:
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782099" target="_blank">Arul's Ticket</a> 
 
 link: 
+- https://github.com/adhithin/P5Candyyyy/blob/main/templates/room1.html
 
 goal: 
+- update user interfaces for puzzle 1 and rooms 
+- help add APIs 
 
 how to test: 
+- use the IP address 
 
 resources: 
 

@@ -26,7 +26,7 @@ how to test:
 
 resources: 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243" target="_blank">Pedro's Ticket</a>
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243" target="_blank">*Pedro's Ticket*</a>
 
 Links: 
 - [Sessions](https://docs.google.com/document/d/1F6iYBj5xJ8ZWCtkDqlF_-skWM-Xuut-BqT5eRNPhnOE/edit)

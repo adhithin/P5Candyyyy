@@ -38,6 +38,10 @@ def L2Room2():
 def CharSelect():
     return render_template("loadingpage")
 
+@app.route('/apcsp')
+def apcsp():
+    return render_template("apcsp.html")
+
 # Route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
 def login():

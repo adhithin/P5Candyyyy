@@ -7,19 +7,22 @@ Hello, and welcome to our Trimester 2 project. On this page you find our code an
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1" target="_blank">Easter Egg</a> (tracking sheet + schedule) |
 
-link: 
+goal: create a secret login and password. when entered, it will bring you to the AP CSP page and information! this will be your session; when you log out, you will be brought back to the login page. we will use information learned from the 1/27 and 1/6 tech talk. 
 
-goal: 
-
-how to test: 
+how to test: when you enter your username and password, the website will redirect you to a page with AP CSP information and resouces. when you click log out, the session will expire and will return you to the game's log in page. 
 
 resources:
+
+- [Sessions](https://docs.google.com/document/d/1F6iYBj5xJ8ZWCtkDqlF_-skWM-Xuut-BqT5eRNPhnOE/edit)
+- [Flask Idea Homesite](https://github.com/nighthawkcoders/flask-idea-homesite)
+- [Flask Login](https://flask-login.readthedocs.io/en/latest/)
 
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782116" target="_blank">Adi's Ticket</a>
 
 link: 
 please use the ip address for our game. 
+
 
 goal: 
 - creating a login and registration 

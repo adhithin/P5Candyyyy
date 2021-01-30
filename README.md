@@ -5,7 +5,7 @@ Hello, and welcome to our Trimester 2 project. On this page you find our code an
 
 # Currently We're Working On... 1/29
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1" target="_blank">Easter Egg</a> (tracking sheet + schedule) |
+<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Easter Egg</a> 
 
 goal: create a secret login and password. when entered, it will bring you to the AP CSP page and information! this will be your session; when you log out, you will be brought back to the login page. we will use information learned from the 1/27 and 1/6 tech talk. 
 

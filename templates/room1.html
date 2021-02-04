@@ -43,22 +43,52 @@
     </div>
     <div>
         <center>
-            <img src="https://lh3.googleusercontent.com/1NRKlauToVbSWtlIi6ZJaLzn4wYEkHRCJ8A6--iVCYsHUpTTKzqAem4ROsNPtcFeykiajmkcg89N7qZndvDTduthpBUIWv6putkUMpcCLw2nPlO3U_hazDvkCYK3cHsiQIXLiPNfKw=w600-h315-p-k" width="1068" height="604" usemap="#brickpuzzle">
+            <img id="wall1" src="https://i.ibb.co/7Wt9cLp/image1.png" width="1068" height="604">
         </center>
-
+<!--
         <map name="brickpuzzle">
-            <area class="answer_1" shape="rect" coords="42,179,107,282.5" alt="answer1" href="#">
-            <area shape="rect" coords="204.5,188.5,328.5,281" alt="answer2" href="#">
-            <area class="answer_2" shape="rect" coords="392,191,502,301.5" alt="answer3" href="#">
+            <area class="answer_1" shape="rect" coords="42,179,107,282.5" alt="answer1" href="#Puzzle_1" onclick="https://i.ibb.co/S5545cN/image2.png">
+            <area shape="rect" coords="204.5,188.5,328.5,281" alt="answer2" href="#Puzzle_1">
+            <area class="answer_2" shape="rect" coords="392,191,502,301.5" alt="answer3" onclick="">
             <area shape="rect" coords="550.5,216.5,677,298.5" alt="answer4" href="#">
             <area class="answer_3" shape="rect" coords="755.5,203.5,867.5,315.5" alt="answer5" href="#">
             <area shape="rect" coords="916.5,227.5,1040,308" alt="answer6" href="#">
             <area shape="rect" coords="50.5,471.5,167,581" alt="answer7" href="#">
-            <area class="answer_4" shape="rect" coords="214,486.5,342,564.5" alt="answer8" href="#">
+            <area class="answer_4" shape="rect" coords="214,486.5,342,564.5" alt="answer8" onclick="">
             <area class="answer_5" shape="rect" coords="494,480,608.5,587.5" alt="answer9" href="#">
-            <area shape="rect" coords="659,503,783.5,580" alt="answer10" href="#">
+            <area shape="rect" coords="659,503,783.5,580" alt="answer10" onclick="">
         </map>
+
+        -->
+
         <br>
+
+        <center>
+            <p>Question 1</p>
+            <button onclick="document.getElementById('wall1').src='https://i.ibb.co/S5545cN/image2.png'">862</button>
+            <button>598</button>
+
+            <p>Question 2</p>
+            <button onclick="document.getElementById('wall1').src='https://i.ibb.co/1260Cwq/image3.png'">457741</button>
+            <button>560917</button>
+
+            <p>Question 3</p>
+            <button onclick="document.getElementById('wall1').src='https://i.ibb.co/vJsjjVf/image4.png'">2592</button>
+            <button>2938</button>
+
+            <p>Question 4</p>
+            <button>Jan 1</button>
+            <button onclick="document.getElementById('wall1').src='https://i.ibb.co/1Gn90Vt/image5.png'">Jan 7</button>
+
+            <p>Question 5</p>
+            <button onclick="document.getElementById('wall1').src='https://i.ibb.co/1Gn90Vt/image5.png'">410</button>
+            <button>809</button>
+            <br>
+            <br>
+
+        </center>
+
+
         <center>
             <table class="table">
                 <thead>
@@ -180,6 +210,54 @@ td{
 </style>
 
 </div>
+
+<script type="text/JavaScript">
+
+var default_map=1;
+
+function my(n) {
+	switch(n)
+		{
+			case 1:
+  				document['imgName'].src='images/image1.jpg';
+				document['imgName'].usemap='#map1';
+  			break;
+
+			case 2:
+			  document['imgName'].src='images/image2.jpg';
+			  document['imgName'].usemap='#map2';
+			  break;
+			case 3:
+			  document['imgName'].src='images/image3.jpg';
+			  document['imgName'].usemap='#map3';
+			  break;
+			default:
+			  document['imgName'].src="images/image1.jpg";
+				document['imgName'].usemap='#map1';
+			}
+}
+</script>
+
+<IMG SRC="Images/image1.jpg" ALT="First image" name="imgName" width="680" height="464" BORDER="0" usemap="#map3">
+
+<map name="Map" id="Map1">
+    <area shape="rect" coords="259,174,299,202" href="../Default.asp" />
+</map>
+<map name="Map2" id="Map2">
+    <area shape="rect" coords="357,174,410,202" href="../Link2.asp" />
+</map>
+<map name="Map3" id="Map3">
+    <area shape="rect" coords="329,190,400,200" href="../Link3.asp" />
+</map>
+
+<INPUT type="radio" name="C1" onClick="my(1)">
+<span class="blueText">Click here for first image</span><BR>
+<INPUT TYPE="radio" NAME="C1" onClick="my(2)">
+<span class="blueText">Click here for second image</span><BR>
+<INPUT TYPE="radio" NAME="C1" onClick="my(3)">
+<span class="blueText">Click here for third image</span><BR><br>
+</div>
+
 </html>
 
 

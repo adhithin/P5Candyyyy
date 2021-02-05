@@ -11,6 +11,8 @@ goal: create a secret login and password. when entered, it will bring you to the
 
 how to test: when you enter your username and password, the website will redirect you to a page with AP CSP information and resouces. when you click log out, the session will expire and will return you to the game's log in page. 
 
+to test for now: click the home button at the top of the main page. the button shoould take you to the ap csp resources document. 
+
 resources:
 
 - [Sessions](https://docs.google.com/document/d/1F6iYBj5xJ8ZWCtkDqlF_-skWM-Xuut-BqT5eRNPhnOE/edit)
@@ -28,9 +30,12 @@ goal:
 - creating a login and registration 
 - build upon the 1/27 tech talk 
 - break apart the code given and build up to a login and authentication page 
+- use further resources https://pythonspot.com/login-authentication-with-flask/ 
 
 how to test: 
-- run the server, and open the login in. you should be able to register, then login, and then create a gaming session. after you log out, the session will expire. 
+- run the server, and open the login in. you should be able to register, then login, and then create a gaming session. after you log out, the session will expire.
+
+currently in playground; we're starting to integrate this into our main web server. 
 
 resources: 
 

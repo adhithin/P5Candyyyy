@@ -1,1 +1,115 @@
 <embed name="GoodEnough" src="/music/good_enough.mp3" loop="false" hidden="true" autostart="true">
+
+#!/usr/bin/env python
+
+import pygame
+from pygame.locals import *  # noqa
+import sys
+import random
+
+
+
+class Escape Room:
+def __init__(self):
+    self.screen = pygame.display.set_mode((400, 708))
+    self.bird = pygame.Rect(65, 50, 50, 50)
+    self.background = pygame.image.load("assets/background1.png").convert()
+    self.birdSprites = 
+[pygame.image.load("assets/superman.png").convert_alpha(),
+
+pygame.image.load("assets/superman.png").convert_alpha(),
+                        pygame.image.load("assets/supermangrayed.png")]
+    self.wallUp = pygame.image.load("assets/s_purple.png").convert_alpha() # 
+Top of the screen
+    self.wallDown = pygame.image.load("assets/cloud.png").convert_alpha() # 
+Bottom of the screen
+    self.gap = 25   # Gap between the clouds and the building
+    self.wallx = 400
+    self.birdY = 25
+    self.jump = 1
+    self.jumpSpeed = 10
+    self.gravity = 10
+    self.dead = False
+    self.sprite = 0
+    self.counter = 0
+    self.offset = random.randint(-110, 110)
+    # I haven't used this variable yet
+    self.sound = path.join(path.dirname(__file__), 'assets')
+
+
+def updateWalls(self):
+    self.wallx -= 2
+    if self.wallx < -80:
+        self.wallx = 400
+        self.counter += 1
+        self.offset = random.randint(-50, 50)
+
+
+def birdUpdate(self):
+    if self.jump:
+        self.jumpSpeed -= 0.5
+        self.birdY -= self.jumpSpeed
+        self.jump -= 1
+    else:
+        self.birdY += self.gravity
+        self.gravity += 0.1
+    self.bird[1] = self.birdY
+    upRect = pygame.Rect(self.wallx,
+                         360 + self.gap - self.offset + 10,
+                         self.wallUp.get_width() - 10,
+                         self.wallUp.get_height())
+    downRect = pygame.Rect(self.wallx,
+                           0 - self.gap - self.offset - 5,
+                           self.wallDown.get_width() - 10,
+                           self.wallDown.get_height())
+    if upRect.colliderect(self.bird):
+        self.dead = True
+    if downRect.colliderect(self.bird):
+        self.dead = True
+    if not 0 < self.bird[1] < 720:
+        self.bird[1] = 50
+        self.birdY = 50
+        self.dead = False
+        self.counter = 0
+        self.wallx = 400
+        self.offset = random.randint(-110, 110)
+        self.gravity = 3
+
+def run(self):
+    clock = pygame.time.Clock()
+    pygame.font.init()
+    font = pygame.font.SysFont("calibri", 50)
+    while True:
+        clock.tick(60)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+            if (event.type == pygame.KEYDOWN or event.type == 
+pygame.MOUSEBUTTONDOWN) and not self.dead:
+                self.jump = 10
+                self.gravity = 4.5
+                self.jumpSpeed = 10.5
+
+        self.screen.fill((255, 255, 255))
+        self.screen.blit(self.background, (0, 0))
+        self.screen.blit(self.wallUp,
+                         (self.wallx, 300 + self.gap - self.offset))
+        self.screen.blit(self.wallDown,
+                         (self.wallx, 1 - self.gap - self.offset))
+        self.screen.blit(font.render(str(self.counter),
+                                     -1,
+                                     (255, 255, 255)),
+                         (200, 50))
+        if self.dead:
+            self.sprite = 2
+        elif self.jump:
+            self.sprite = 1
+        self.screen.blit(self.birdSprites[self.sprite], (50, self.birdY))
+        if not self.dead:
+            self.sprite = 0
+        self.updateWalls()
+        self.birdUpdate()
+        pygame.display.update()
+
+if __name__ == "__main__":
+Escape Room().run()

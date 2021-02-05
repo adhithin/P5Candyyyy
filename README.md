@@ -46,12 +46,10 @@ Links:
 - [Flask Login](https://flask-login.readthedocs.io/en/latest/)
 
 Goal: 
-- Creating a login and authentication algorithm
+- Practice with Easter Egg on project and then start loading it to the overall project look into login and authentication
 
 How to test:
-- Not Ready for deployment yet
-
-Resources: 
+- Not Ready for deployment yet (currently in playground) 
 
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782740" target="_blank">Akhil's Ticket</a>

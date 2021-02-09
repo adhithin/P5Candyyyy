@@ -7,6 +7,7 @@
       method="POST">
 
     <p>username: <input type="text" name="username"/></p>
+    <p>password: <input type="text" name="password"/></p>
 
     <p><input type="submit" name="submit" value="register"/></p>
 

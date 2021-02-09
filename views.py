@@ -17,21 +17,21 @@ app = Flask(__name__)
 def main():
     return render_template("home.html")
 
-@app.route('/room1')
+@app.route('/game1')
 def room1():
-    return render_template("room1.html")
+    return render_template("game1.html")
 
-@app.route('/room2')
+@app.route('/game2')
 def room2():
-    return render_template("room2.html")
+    return render_template("game2.html")
 
-@app.route('/L2Room1')
+@app.route('/game3')
 def L2Room1():
-    return render_template("L2Room1.html")
+    return render_template("game3.html")
 
-@app.route('/L2Room2')
+@app.route('/game4')
 def L2Room2():
-    return render_template("L2Room2.html")
+    return render_template("game4.html")
 
 
 @app.route('/loadingpage')

@@ -1,5 +1,22 @@
-<h1>PACMAN GAME</h1>
-<p>Welcome to our retro PacMan game. You love the 80's, right? Check out our high scores below:</p>
+<!DOCTYPE html>
+<html>
+
+<style>
+body, html {
+height: 100%;
+font-family: "Roboto", sans-serif;
+
+}
+
+.menu {
+display: none;
+}
+</style>
+
+<h1>ARCADE LEADERBOARD</h1>
+<p>CHECK OUT THE HIGHEST SCORES</p>
+
+
 
 <table class="score">
     <tr>
@@ -18,8 +35,8 @@
     <!-- end loop here -->
     {% endfor %}
 </table>
-<p>Use arrow keys to move PacMan on the board and gobble up pellets. Avoid the ghosts, except when they are ghostly blue.</p>
-<a href="/game"><div class="button">Start Game</div></a>
+<p>don't see your name? that means you haven't played yet. hit 'start game' to start playing some rad games.</p>
+<a href="/home"><div class="button">Start Game</div></a>
 
 
 </html>

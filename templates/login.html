@@ -1,32 +1,25 @@
-<html>
-<head>
-    <title>Flask Intro - login page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+<h1>PACMAN GAME</h1>
+<p>Welcome to our retro PacMan game. You love the 80's, right? Check out our high scores below:</p>
 
-</head>
-
-<body>
-<div class="container">
-    <h1>Please login</h1>
-    <br>
-    <form action="" method="post">
-        <input type="text" placeholder="Username" name="username" value="{{
-          request.form.username }}">
-        <input type="password" placeholder="Password" name="password" value="{{
-          request.form.password }}">
-        <input class="btn btn-default" type="submit" value="Login">
-    </form>
-    {% if error %}
-    <p class="error"><strong>Error:</strong> {{ error }}
-        {% endif %}
-
-        <div class="w3-col s3">
-        <a href="http://arcadesmash.tk/register"> REGISTER </a>
-    </div>
+<table class="score">
+    <tr>
+        <td colspan="2"><h2>High Scores</h2></td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <th>Score</th>
+    </tr>
+    {% for score in scores %}
+    <!-- this is where a python loop would go. -->
+    <tr>
+        <td>{{score.name}}</td>
+        <td>{{score.score}}</td>
+    </tr>
+    <!-- end loop here -->
+    {% endfor %}
+</table>
+<p>Use arrow keys to move PacMan on the board and gobble up pellets. Avoid the ghosts, except when they are ghostly blue.</p>
+<a href="/game"><div class="button">Start Game</div></a>
 
 
-
-</div>
-</body>
 </html>

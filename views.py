@@ -30,8 +30,8 @@ def __init__(self, p_name, p_score):
     self.p_score = p_score
 
 def __repr__(self):
-    return f"{self.p_name},{self.p_score}"
-
+    #return f"{self.p_name},{self.p_score}"
+    return "f" + self.p_name + "," + self.p_score
 
 
 # from tkinter import *
@@ -98,7 +98,8 @@ class Score(db.Model):
         self.p_score = p_score
 
     def __repr__(self):
-        return f"{self.p_name},{self.p_score}"
+        # return f"{self.p_name},{self.p_score}"
+        return "f" + self.p_name + "," + self.p_score
 
 
 # db.create_all(); #to initialize the tables in the db. Do not need after first initilization

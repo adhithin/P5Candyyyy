@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, flash, redirect, url_for, session, logging
 from flask import request
-import requests
+
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 
@@ -40,7 +40,7 @@ class Score(db.Model):
 db.create_all();
 
 @app.route('/')
-def index():
+def home():
 	return render_template('home.html')
 
 @app.route('/game1', methods=['GET', 'POST'])
@@ -70,7 +70,18 @@ def game1():
 
 	return render_template('game1-1.html', gameScores=gameScores)
 
+@app.route('/index')
+def index():
+	# go to the score table and query it, order it by the score value descending, limit 5 and serve up all of those items I asked for as a list.
+	results = {1, 2, 3, 4}
+	scores = []
+
+	for result in results:
+		score_dict = {"name": "name", 'score': 'score', "game":"game"}
+		scores.append(score_dict)
+
+		return render_template('leaderboard.html', scores=scores)
 
 #debug = True so we can send and see messages to the terminal window so we can see what our code is doing!
-if __name__ == '__main__':
-	 app.run(debug=True)#host and port can be added into parameters
+
+

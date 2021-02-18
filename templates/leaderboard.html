@@ -23,8 +23,10 @@ display: none;
         <td colspan="2"><h2>High Scores</h2></td>
     </tr>
     <tr>
-        <th>Name</th>
-        <th>Score</th>
+        <th>PLAYER</th>
+        <th>SCORE</th>
+        <th>GAME</th>
+
     </tr>
     {% for score in scores %}
     <!-- this is where a python loop would go. -->
@@ -36,7 +38,12 @@ display: none;
     {% endfor %}
 </table>
 <p>don't see your name? that means you haven't played yet. hit 'start game' to start playing some rad games.</p>
-<a href="/home"><div class="button">Start Game</div></a>
+<a href="/game1"><div class="button">Start Game</div></a>
+
+<p>do you want to add your score? click here to add your score to the leaderboard!</p>
+<a href="/game"><div class="button">Add Score</div></a>
+
+
 
 
 </html>

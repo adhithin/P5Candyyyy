@@ -14,9 +14,10 @@
             /*height: 100%;*/
             font-family: "Roboto", sans-serif;
             }
-            h1{
+            h1, h2{
                 text-align: center;
             }
+
 
             .bgimg {
             background-position: center;
@@ -100,9 +101,10 @@
             </h1>
             <div style="text-align: center; margin: 16px auto" class="banner-image">
                 <a href='https://www.freepik.com/vectors/background' style="cursor:none; ">
-                <img src="../images/covid.jpg" alt="Background vector created by s.salvador - www.freepik.com">
+                <img src="{{url_for('static', filename='/images/covid.jpg')}}" alt="Background vector created by s.salvador - www.freepik.com">
                 </a>                
             </div>
+        {% if gameScores == 'nothing' %} 
             <div style="text-align: center; margin: 16px auto">
                 <section id="first-click">
                     <p>Question 1:<br>
@@ -153,9 +155,7 @@
                 </section>
 
             </div>
-
-
-
+            
             <div id="covid-data-display" style="text-align: center; margin: 16px auto">
                 <h3>Covid Data</h3>
                 <table class="table">
@@ -173,18 +173,40 @@
                     </tbody>
                 </table>
             </div>
+            {% endif %}
+            {% if gameScores != 'nothing' %}    
+            <div>
+                <h2>Best Time Results</h2>
+                <table class="score">
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                    {% for score in gameScores  %}
+                    <tr>
+                        <td>{{score.name}}</td>
+                        <td>{{score.score}}</td>
+                    </tr>
+                    {%  endfor %}
+                </table>
+            </div>
+            {% endif %}
+
         </div>
 <!-- End page content -->
 </div>
-
 
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
 <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
+
+{% if gameScores == 'nothing' %}
 <script type="text/javascript">
+
 //variables: start holds the start time, end holds the end time when the player completed the puzzle.
+
 let start,
     end; 
 
@@ -254,6 +276,15 @@ function showQuestion(e){
         })
     })
 </script>
+{% endif %}
+<script type="text/javascript">
+        //fixes the double post upon refresh. 
+    if ( window.history.replaceState ) {
+        console.log('history replaceState...')
+      window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+
 
 </body>
 </html>

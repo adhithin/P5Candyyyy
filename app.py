@@ -70,7 +70,7 @@ def game1():
 
 	return render_template('game1-1.html', gameScores=gameScores)
 
-@app.route('/index')
+@app.route('/leaderboard')
 def index():
 	# go to the score table and query it, order it by the score value descending, limit 5 and serve up all of those items I asked for as a list.
 	results = {1, 2, 3, 4}
@@ -82,6 +82,33 @@ def index():
 
 		return render_template('leaderboard.html', scores=scores)
 
-#debug = True so we can send and see messages to the terminal window so we can see what our code is doing!
+@app.route('/game3', methods=['GET', 'POST'])
+def game3():
+	gameScores='nothing'
 
+	if request.method == 'POST':
+		name = request.form['name']
+		score = int(request.form['score'])
+		game = request.form['game']
+		#the code below confirmed I had the proper data. Now to add it to the db.
+		#print(Score(name, score, game))
 
+		new_score = Score(name, score, game)
+		db.session.add(new_score)
+		db.session.commit()
+
+		#query the db for the relevant scores on this table:
+		gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
+		gameScores = []
+
+		for gameResult in gameResults:
+			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
+			gameScores.append(game_dict)
+
+	#return redirect(url_for('game1', gameScores=gameScores))
+
+	return render_template('game3.html', gameScores=gameScores)
+
+@app.route('/game3loss')
+def game3loss():
+	return render_template('game3loss.html')

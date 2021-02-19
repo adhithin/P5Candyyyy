@@ -10,7 +10,7 @@ Our games use API as well, and we're looking to create a fun interactive space f
 
 **Adhithi** 
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">adhithi's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Adhithi's ticket</a> 
 
 Mini Code Review: 
 - i finally got CRUD working! big thanks to Ms. Trish 
@@ -25,19 +25,19 @@ Suggestions:
 
 **Pedro** 
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55309736" target="_blank">pedro's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55309736" target="_blank">Pedro's ticket</a> 
 
 Mini Code Review: 
 
 **Akhil** 
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">akhil's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Akhil's ticket</a> 
 	
 Mini Code Review: 
 
 **Arul**
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">arul's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Arul's ticket</a> 
 
 Mini Code Review: 
 

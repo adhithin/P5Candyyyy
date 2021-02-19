@@ -10,14 +10,14 @@ Our games use API as well, and we're looking to create a fun interactive space f
 
 **Adhithi** 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">adhithi's tickets</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">adhithi's ticket</a> 
 
 Mini Code Review: 
 
 
 **Pedro** 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">pedro's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">pedro's ticket</a> 
 
 Mini Code Review: 
 

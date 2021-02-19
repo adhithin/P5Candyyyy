@@ -9,21 +9,29 @@ We're now building an arcade. This arcade will include a variety of games, and e
 Our games use API as well, and we're looking to create a fun interactive space for users to have fun. 
 
 **Adhithi** 
+
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">adhithi's tickets</a> 
-	
+
+Mini Code Review: 
 
 
 **Pedro** 
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">pedro's ticket</a> 
 
+Mini Code Review: 
+
 **Akhil** 
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">akhil's ticket</a> 
+	
+Mini Code Review: 
 
 **Arul**
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">arul's ticket</a> 
+
+Mini Code Review: 
 
 
 # Contributors

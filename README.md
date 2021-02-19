@@ -23,13 +23,13 @@ Mini Code Review:
 
 **Akhil** 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">akhil's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">akhil's ticket</a> 
 	
 Mini Code Review: 
 
 **Arul**
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">arul's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">arul's ticket</a> 
 
 Mini Code Review: 
 

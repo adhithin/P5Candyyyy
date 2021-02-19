@@ -13,7 +13,15 @@ Our games use API as well, and we're looking to create a fun interactive space f
 <p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">adhithi's ticket</a> 
 
 Mini Code Review: 
+- i finally got CRUD working! big thanks to Ms. Trish 
+- i added in game 3 - a pokemon game 
+- played around with querying and data tables 
+- finalized our new game plan and visualization 
 
+Suggestions: 
+- apply CRUD to other games 
+- figure out how to incorparate read + delete (CRUD) 
+- create stunning UI and visuals 
 
 **Pedro** 
 

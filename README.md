@@ -25,7 +25,7 @@ Suggestions:
 
 **Pedro** 
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">pedro's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55309736" target="_blank">pedro's ticket</a> 
 
 Mini Code Review: 
 

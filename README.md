@@ -2,195 +2,37 @@
 Hello, and welcome to our Trimester 2 project. On this page you find our code and progress throughout this trimester. 
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1" target="_blank">Scrum Board</a> (tracking sheet + schedule) | <a href="https://docs.google.com/document/d/1R9BawAX6t35F5weV8FzLEZb7pOPIBGzeWPMray6rQdc/edit?usp=sharing">Project Plan</a></h3>
+# GAME OVERVIEW, as of friday, 2/19: 
 
-# Currently We're Working On... 1/29
+**IDEA** 
+We're now building an arcade. This arcade will include a variety of games, and each will also have a leaderboard that will log user's data through CRUD. 
+Our games use API as well, and we're looking to create a fun interactive space for users to have fun. 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Easter Egg</a> 
+**Adhithi** 
 
-goal: create a secret login and password. when entered, it will bring you to the AP CSP page and information! this will be your session; when you log out, you will be brought back to the login page. we will use information learned from the 1/27 and 1/6 tech talk. 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">adhithi's ticket</a> 
 
-how to test: when you enter your username and password, the website will redirect you to a page with AP CSP information and resouces. when you click log out, the session will expire and will return you to the game's log in page. 
-
-to test for now: click the home button at the top of the main page. the button shoould take you to the ap csp resources document. 
-
-resources:
-
-- [Sessions](https://docs.google.com/document/d/1F6iYBj5xJ8ZWCtkDqlF_-skWM-Xuut-BqT5eRNPhnOE/edit)
-- [Flask Idea Homesite](https://github.com/nighthawkcoders/flask-idea-homesite)
-- [Flask Login](https://flask-login.readthedocs.io/en/latest/)
+Mini Code Review: 
 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782116" target="_blank">Adi's Ticket</a>
+**Pedro** 
 
-link: 
-please use the ip address for our game. 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">pedro's ticket</a> 
 
+Mini Code Review: 
 
-goal: 
-- creating a login and registration 
-- build upon the 1/27 tech talk 
-- break apart the code given and build up to a login and authentication page 
-- use further resources https://pythonspot.com/login-authentication-with-flask/ 
+**Akhil** 
 
-how to test: 
-- run the server, and open the login in. you should be able to register, then login, and then create a gaming session. after you log out, the session will expire.
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">akhil's ticket</a> 
+	
+Mini Code Review: 
 
-currently in playground; we're starting to integrate this into our main web server. 
+**Arul**
 
-resources: 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">arul's ticket</a> 
 
-- [Sessions](https://docs.google.com/document/d/1F6iYBj5xJ8ZWCtkDqlF_-skWM-Xuut-BqT5eRNPhnOE/edit)
-- [Flask Idea Homesite](https://github.com/nighthawkcoders/flask-idea-homesite)
-- [Flask Login](https://flask-login.readthedocs.io/en/latest/)
+Mini Code Review: 
 
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782243" target="_blank">Pedro's Ticket</a>
-
-Links: 
-- [Sessions](https://docs.google.com/document/d/1F6iYBj5xJ8ZWCtkDqlF_-skWM-Xuut-BqT5eRNPhnOE/edit)
-- [Flask Idea Homesite](https://github.com/nighthawkcoders/flask-idea-homesite)
-- [Flask Login](https://flask-login.readthedocs.io/en/latest/)
-
-Goal: 
-- Practice with Easter Egg on project and then start loading it to the overall project look into login and authentication
-
-How to test:
-- Not Ready for deployment yet (currently in playground) 
-
-
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782740" target="_blank">Akhil's Ticket</a>
-
-Link: 
-- https://github.com/adhithin/P5Candyyyy/blob/main/templates/room1.html
-
-Goal: 
-- Update user interface for puzzle 1
-- Add API for puzzle 1
-
-How to test: 
-- Use local ip address
-
-Resources: 
-
-
-<h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53782099" target="_blank">Arul's Ticket</a> 
-
-link: 
-- https://github.com/adhithin/P5Candyyyy/blob/main/templates/room1.html
-
-goal: 
-- update user interfaces for puzzle 1 and rooms 
-- help add APIs 
-
-how to test: 
-- use the IP address 
-
-resources: 
-
-
-
-# Summary + Story
-You’re a knight from the human realm that’s been held captive by the goblins. After being taken prisoner during the apocalypse, you’ve lost hope of ever seeing your friends again. 
-One day, after a guard walks by, you hear the fall of an item. Your eyes shift to the sound. It’s a golden key. You pick it up and curiously fit the key in the lock of your cell. It unlocks the door, and you take a step outside. You let out a deep breath, and look both ways, then revel in your position. 
-This is your chance to escape. Type “help” to start. 
-
-In this virtual escape room, the user will be a hero tasked with the goal of escaping from the dungeon. Throughout the game, the user will encounter various puzzles, which they must solve to escape. In addition with these puzzles, the user will be prompted to interact with various characters, such as spirits, goblins, dragons, and other fantasy beings. Data stored here will include 1) leaderboard of those who have played the game 2) data on the characters and 3) data on the puzzles. The purpose of this project is to captivate the user's mind to prompt critical thinking skills and teach them how to apply these skills in fun, fantasy based adventures. Through play, strategies, critical thinking, and even collaboration will be present for the user. 
-
-On our end: 
-
-**Collaboration** 
-
-We'll be collaborating together to create this project, and work on coding each segment of the code, as well as creating the project plan. 
-So far, we've all gotten along really well, and have worked well together on formatting our work, designing the game, and developing the gaming concept. 
-
-**Communication** 
-
-We do our communication using Slack and Zoom nearly every day in order to progress on our work. We hope to do the same over winter break. We have also made a group Discord server for extra communication if needed.
-
-
-**Creativity** 
-
-We're implementing creative game ideas, such as a creative fantasy concept, as well as developing engaging events and aspects to further reach to the user. Creativity is included in character design, game design, as well as conceptual mapping. 
-
-
-**Critical Thinking** 
-
-We use critical thinking when mapping out our story board for the game, and linking the puzzles together for the user to solve the escape room. We need to use critical thinking to design the game, and make it challenging but also fun for the user. Mainly, the puzzles and being smart with how the puzzles are programmed and solved is the key section where critical thinking will apply. 
-
-# Project Structure
-<table>
-<thead>
-<tr>
-<th>Level</th>
-<th>Room #1</th>
-<th>Room #2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>
-Dungeon floor; Room 1; Door to room 2; Map of game; Item; Shows rooms; Puzzle locations; Each floor; Each room in floor; Puzzle 1: Brick Math Puzzle; Gives a sheet of paper that has a clue for the next puzzle (Clue shows colors in a specific order); Puzzle 2: Potion Mixing Puzzle; Final potion will open the door.
-</td>
-<td>
-Ladder to next level
-- Puzzle 1: Key Puzzle; Elixir will be first part of second puzzle; Puzzle 2: Trading Puzzle; Key will open door.
-</tr>
-<tr>
-<td>2</td>
-<td>
-Room 1; Door to room 2; Puzzle 1: Alchemy Puzzle; Get golden bar for next puzzle; Puzzle 2: Black Smith Puzzle; Golden key will open the door.
-</td>
-<td>
-Exit; Puzzle 1: Flower Math Puzzle (Use seed for second puzzle); Puzzle 2: Spirit Puzzle (Use key to finish game).
-</td>
-</tr>
-</tbody>
-</table>
-
-# Data
-
-**Characters**
-- using inspiration from common cartoon characters
-- Each NPC can have their own individual data set
-  - Data confirms actions 
-  - For trading puzzles
-- User's Character
-  - Character has data to confirm actions
-  - Can use characters from other games
-    - Have alternate options as data values
-    - Optional: Make database for users to input other characters or their own
-      - Not main priority
-      
-**Inventory**
-- Inventory has data values
-  - Determines what items the player has
-  - Keys, Puzzle items, Map
-
-# Delivery Plans/Important Dates
-- Tuesdays: test prep
-On Tuesdays, we’ll be reviewing what we need to do to prepare for the MC test. We’re going to be reviewing and reflecting on our practices, noting any mistakes and how we can improve on them. We’ll be using test prep tuesdays as a day to check our progress on improving each skill for the mc. 
-12/8 tpt: reviewed mc#1 2018, and created our reflections for the test. 
-12/15 tpt: review some skill sets that we need to improve on, as well as discuss journals, and how we can improve those as well. 
-
-- Fridays: asynchronous learning/weekly submissions are due
-On Fridays, we’ll be reviewing our progress on our coding and project, and reflecting on how the week progressed. We’re also going to be submitting our weekly assignments, as well as adding to the progress tracker and read me files. 
-	12/11: our submission for today is our general outline and plan for what we want to get done and when. In the following week, our goal is to 
-play around with the code
-organize a plan for the coding itself
-plan week by week if possible. We’re going to split the rooms on floor 1 most likely, and have maybe about 1-2 people working on a room. 
-Finish planning out the puzzles and fully develop the puzzles by next week. 
-Finish establishing the storyline next week. 
-Include character data on each character, maybe incorporate CRUD from what we learned for the leaderboard and character data. 
-	12/18: make sure we have a plan for the code, and continue coding. 
-
-- Midterm: January 19-22
-By midterm, our goal is to have at least one full floor coded. We’re going to have the floor include the puzzles, characters, and full developed storyline by this time. As we go week by week, we’re going to make any adjustments to this plan as needed, but for now, our goal will be to code at least one full floor - please see map. 
-
-- N@TM: March 8-12
-By n@tm our goal is to complete the full game, and make sure that it is playable, with no bugs or errors. If we have time before n@tm to add in more visuals, we’ll do so. 
-
-- College Board AP Exam: May 13
-By this time, the game will be fully coded and everything will be finalized. 
 
 # Contributors
 
@@ -203,7 +45,7 @@ By this time, the game will be fully coded and everything will be finalized.
 </thead>
 <tbody>
 <tr>
-<td>Adhiti (Scrum Master)</td>
+<td>Adhithi (Scrum Master)</td>
 <td align="center"><a href="https://github.com/adhithin">Github</a></td>
 </tr>
 <tr>

@@ -2,7 +2,7 @@
 <html>
 <title> Arcade Smash | Game 4 </title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
@@ -10,7 +10,7 @@
             border:5px solid #4b6a9c;
             background-color: #5bcce3;
             position: relative;
-            top: 50px;
+            top: 70px;
             left: 250px;
     }
 
@@ -18,11 +18,12 @@
         font-family: "Raleway";
     }
 
-    body, h2 {
+    h2 {
         position: relative;
         font-family: "Consolas";
-        left: 15px;
-        top: 30px;
+        top: 70px;
+        color: white;
+        text-align: center;
     }
 
     body, html {
@@ -44,11 +45,11 @@
 </style>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=2.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="https://img.icons8.com/material-sharp/24/000000/apple-arcade.png"/>
 </head>
 
-<body onload="startGame()">
+<body class="bgimg w3-display-container w3-grayscale-min" id="home" onload="startGame()">
     <div class="w3-top">
         <div class="w3-row w3-padding w3-black">
             <div class="w3-col s3">
@@ -60,13 +61,13 @@
         </div>
     </div>
 
-<script>
+    <script>
     var GamePiece;
     var Obstacles = [];
     var Score;
 
     function startGame() {
-        GamePiece = new component(20, 20, "red", 160, 120);
+        GamePiece = new component(20, 20, "red", 200, 120);
         GamePiece.gravity = 1;
         Score = new component("30px", "Consolas", "yellow", 800, 40, "text");
         GameArea.start();
@@ -80,7 +81,7 @@
             this.context = this.canvas.getContext("2d");
             document.body.insertBefore(this.canvas, document.body.childNodes[0]);
             this.frameNo = 0;
-            this.interval = setInterval(updateGameArea, 15);
+            this.interval = setInterval(updateGameArea, 12);
             },
         clear : function() {
             this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -112,15 +113,25 @@
 
         this.newPos = function() {
             this.gravitySpeed += this.gravity;
+            let newx = this.x + this.speedx;
             this.x += this.speedX;
             this.y += this.speedY + this.gravitySpeed;
             this.hitBottom();
+            this.hitTop();
         }
 
         this.hitBottom = function() {
             var rockbottom = GameArea.canvas.height - this.height;
             if (this.y > rockbottom) {
                 this.y = rockbottom;
+                this.gravitySpeed = 0;
+            }
+        }
+
+        this.hitTop = function() {
+            var rockTop = 0;
+            if (this.y <= rockTop) {
+                this.y = rockTop;
                 this.gravitySpeed = 0;
             }
         }
@@ -160,8 +171,8 @@
             minGap = 50;
             maxGap = 175;
             gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-            Obstacles.push(new component(10, height, "green", x, 0));
-            Obstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+            Obstacles.push(new component(30, height, "green", x, 0));
+            Obstacles.push(new component(30, x - height - gap, "green", x, height + gap));
         }
 
         for (i = 0; i < Obstacles.length; i += 1) {
@@ -185,10 +196,10 @@
     }
 </script>
 
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-<h2>Use the ACCELERATE button to stay in the air</h2>
-<h2>How long can you stay alive?</h2>
-
+    <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+    <h2>Use the ACCELERATE button to stay in the air</h2>
+    <h2>How long can you stay alive?</h2>
 </body>
+</html>
 
 

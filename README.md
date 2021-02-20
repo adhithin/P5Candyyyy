@@ -15,7 +15,7 @@ Our games use API as well, and we're looking to create a fun interactive space f
 
 **Adhithi** 
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Adhithi's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55319962" target="_blank">Adhithi's tickets</a> 
 
 Mini Code Review: 
 - i finally got CRUD working! big thanks to Ms. Trish 
@@ -30,7 +30,7 @@ Suggestions:
 
 **Pedro** 
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55309736" target="_blank">Pedro's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55309736" target="_blank">Pedro's tickets</a> 
 
 Mini Code Review: 
 - I understood most of what Ms. Trish taught us about CRUD
@@ -39,7 +39,7 @@ Mini Code Review:
 
 **Akhil** 
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55316524" target="_blank">Akhil's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55316524" target="_blank">Akhil's tickets</a> 
 	
 Mini Code Review: 
 - Added game 2 - Einteins puzzle treasure map
@@ -53,7 +53,7 @@ Suggestions
 
 **Arul**
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Arul's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Arul's tickets</a> 
 
 Mini Code Review: 
 - Added game 2 - Einteins puzzle treasure map

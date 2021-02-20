@@ -34,7 +34,7 @@ Suggestions:
 
 Mini Code Review: 
 - I understood most of what Ms. Trish taught us about CRUD
-- I added a game 4 - our adapted version of Flappy Bird called Cube Dodge
+- I added a [game 4](http://www.arcadesmash.tk/game4) - our adapted version of Flappy Bird called Cube Dodge
 - Learned how to use a [canvas](https://github.com/adhithin/P5Candyyyy/blob/bad9f4629d277cf409de0c0661abc77e0f56fbbb/templates/game4.html#L75-L81)
 - Creating a simple [leaderboard](https://github.com/adhithin/P5Candyyyy/blob/main/templates/leaderboard.html) for a game on our website with guidance from Ms. Trish
 

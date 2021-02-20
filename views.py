@@ -89,7 +89,6 @@ def L2Room1():
 def L2Room2():
     return render_template("game4.html")
 
-
 @app.route('/loadingpage')
 def CharSelect():
     return render_template("loadingpage")

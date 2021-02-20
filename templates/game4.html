@@ -6,19 +6,189 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
+    canvas {
+            border:5px solid #4b6a9c;
+            background-color: #5bcce3;
+            position: relative;
+            top: 50px;
+            left: 250px;
+    }
 
-.bgimg {
-  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/921419479886167027/AF5C97A259C17A10BC08C27495FE05493EC45C9F/');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
+    body,h1 {
+        font-family: "Raleway";
+    }
 
+    body, h2 {
+        position: relative;
+        font-family: "Consolas";
+        left: 15px;
+        top: 30px;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    .bgimg {
+      background-image: url("https://ak.picdn.net/shutterstock/videos/1019919385/thumb/1.jpg");
+      min-height: 50%;
+      background-position: center;
+      background-size: cover;
+    }
+
+    button {
+        position: relative;
+        left: -900px;
+        top: -390px;
+    }
 </style>
-<body>
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0"/>
+    <link rel="icon" href="https://img.icons8.com/material-sharp/24/000000/apple-arcade.png"/>
+</head>
+
+<body onload="startGame()">
+    <div class="w3-top">
+        <div class="w3-row w3-padding w3-black">
+            <div class="w3-col s3">
+                <a href="/" class="w3-button w3-block w3-black">HOME</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="/game4" class="w3-button w3-block w3-black">RESTART</a>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var GamePiece;
+    var Obstacles = [];
+    var Score;
+
+    function startGame() {
+        GamePiece = new component(20, 20, "red", 160, 120);
+        GamePiece.gravity = 1;
+        Score = new component("30px", "Consolas", "yellow", 800, 40, "text");
+        GameArea.start();
+    }
+
+    var GameArea = {
+        canvas : document.createElement("canvas"),
+        start : function() {
+            this.canvas.width = 1000;
+            this.canvas.height = 500;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.frameNo = 0;
+            this.interval = setInterval(updateGameArea, 15);
+            },
+        clear : function() {
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+    }
+
+    function component(width, height, color, x, y, type) {
+        this.type = type;
+        this.score = 0;
+        this.width = width;
+        this.height = height;
+        this.speedX = 0;
+        this.speedY = 0;
+        this.x = x;
+        this.y = y;
+        this.gravity = 0;
+        this.gravitySpeed = 0;
+        this.update = function() {
+            ctx = GameArea.context;
+            if (this.type == "text") {
+                ctx.font = this.width + " " + this.height;
+                ctx.fillStyle = color;
+                ctx.fillText(this.text, this.x, this.y);
+            } else {
+                ctx.fillStyle = color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+        }
+
+        this.newPos = function() {
+            this.gravitySpeed += this.gravity;
+            this.x += this.speedX;
+            this.y += this.speedY + this.gravitySpeed;
+            this.hitBottom();
+        }
+
+        this.hitBottom = function() {
+            var rockbottom = GameArea.canvas.height - this.height;
+            if (this.y > rockbottom) {
+                this.y = rockbottom;
+                this.gravitySpeed = 0;
+            }
+        }
+
+        this.crashWith = function(otherobj) {
+            var left = this.x;
+            var right = this.x + (this.width);
+            var top = this.y;
+            var bottom = this.y + (this.height);
+            var otherleft = otherobj.x;
+            var otherright = otherobj.x + (otherobj.width);
+            var othertop = otherobj.y;
+            var otherbottom = otherobj.y + (otherobj.height);
+            var crash = true;
+            if ((bottom < othertop) || (top > otherbottom) || (right < otherleft) || (left > otherright)) {
+                crash = false;
+            }
+            return crash;
+        }
+    }
+
+    function updateGameArea() {
+        var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+        for (i = 0; i < Obstacles.length; i += 1) {
+            if (GamePiece.crashWith(Obstacles[i])) {
+                return;
+            }
+        }
+
+        GameArea.clear();
+        GameArea.frameNo += 1;
+        if (GameArea.frameNo == 1 || everyinterval(150)) {
+            x = GameArea.canvas.width;
+            minHeight = 20;
+            maxHeight = 200;
+            height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+            minGap = 50;
+            maxGap = 175;
+            gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+            Obstacles.push(new component(10, height, "green", x, 0));
+            Obstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+        }
+
+        for (i = 0; i < Obstacles.length; i += 1) {
+            Obstacles[i].x += -1;
+            Obstacles[i].update();
+        }
+
+        Score.text="SCORE: " + GameArea.frameNo;
+        Score.update();
+        GamePiece.newPos();
+        GamePiece.update();
+    }
+
+    function everyinterval(n) {
+        if ((GameArea.frameNo / n) % 1 == 0) {return true;}
+        return false;
+    }
+
+    function accelerate(n) {
+        GamePiece.gravity = n;
+    }
+</script>
+
+<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+<h2>Use the ACCELERATE button to stay in the air</h2>
+<h2>How long can you stay alive?</h2>
 
 </body>
-</html>
+
+

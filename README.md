@@ -28,6 +28,9 @@ Suggestions:
 <p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55309736" target="_blank">Pedro's ticket</a> 
 
 Mini Code Review: 
+- I understood most of what Ms. Trish taught us about CRUD
+- I added a game 4 & 5 - Tic Tac Toe (inspired from last trimester) & our adated version of Flappy Bird
+- 
 
 **Akhil** 
 

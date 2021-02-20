@@ -36,13 +36,13 @@ Mini Code Review:
 - I understood most of what Ms. Trish taught us about CRUD
 - I added a game 4 - our adapted version of Flappy Bird called Cube Dodge
 - Learned how to use a [canvas](https://github.com/adhithin/P5Candyyyy/blob/bad9f4629d277cf409de0c0661abc77e0f56fbbb/templates/game4.html#L75-L81)
-- Creating a simple [leaderboard]( for a game on our website with guidance from Ms. Trish
+- Creating a simple [leaderboard](https://github.com/adhithin/P5Candyyyy/blob/main/templates/leaderboard.html) for a game on our website with guidance from Ms. Trish
 
 Suggestions:
-- *Adhithi*: Attempt to create a better UI for the Pokemon Game
-- *Akhil*: Simplify the table on Covid API Game so that it is easier to understand
-- *Arul*: Attempt to create a completely new game with music being a facotr in order to implement a new skill into our collection
-- *Myself*: Bug fix the new game and improve the user interface, and add the leaderboard feature
+- *Adhithi*: Attempt to create a better UI for the [Pokemon Game](http://www.arcadesmash.tk/game3)
+- *Akhil*: Simplify the table on [Covid API Game](http://www.arcadesmash.tk/game1) so that it is easier to understand
+- *Arul*: Attempt to create a completely new game with music being a factor in order to implement a new skill into our collection
+- *Myself*: Bug fix the [new game](http://www.arcadesmash.tk/game4) and improve the user interface, and add the leaderboard feature
 
 **Akhil** 
 

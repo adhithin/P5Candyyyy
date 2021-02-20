@@ -37,6 +37,14 @@ Mini Code Review:
 <p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Akhil's ticket</a> 
 	
 Mini Code Review: 
+- Added game 2 - Einteins puzzle treasure map
+- Understtod CRUD from Ms. Trish
+- Played with style in .css
+
+Suggestions
+- Add more answer choices for game 1
+- Remove pictures from game 1 because they give away the answer
+- Add leaderboard
 
 **Arul**
 

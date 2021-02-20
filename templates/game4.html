@@ -157,6 +157,7 @@
         var x, height, gap, minHeight, maxHeight, minGap, maxGap;
         for (i = 0; i < Obstacles.length; i += 1) {
             if (GamePiece.crashWith(Obstacles[i])) {
+                document.getElementById("FinalScore").innerHTML = GameArea.frameNo;
                 return;
             }
         }
@@ -199,6 +200,7 @@
     <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
     <h2>Use the ACCELERATE button to stay in the air</h2>
     <h2>How long can you stay alive?</h2>
+    <h2 id="FinalScore"></h2>
 </body>
 </html>
 

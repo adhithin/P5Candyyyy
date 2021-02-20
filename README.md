@@ -2,6 +2,8 @@
 Hello, and welcome to our Trimester 2 project. On this page you find our code and progress throughout this trimester. 
 
 <h3><a href="https://github.com/adhithin/P5Candyyyy/projects/1" target="_blank">Scrum Board</a> (tracking sheet + schedule) | <a href="https://docs.google.com/document/d/1R9BawAX6t35F5weV8FzLEZb7pOPIBGzeWPMray6rQdc/edit?usp=sharing">Project Plan</a></h3>
+
+# LINK TO COLLEGE BOARD REQUIREMENTS REFLECTION
 <a href="https://docs.google.com/document/d/1M6TA9va1JPlph9bKWUdITfQCo4J2toZWWaiO3n3Nft4/edit?usp=sharing">Link to CollegeBoard Requirements</a></h3>
 
 
@@ -54,6 +56,14 @@ Suggestions
 <p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Arul's ticket</a> 
 
 Mini Code Review: 
+- Added game 2 - Einteins puzzle treasure map
+- Understood CRUD from Ms. Trish
+- Played with style in .css
+
+Suggestions
+- Add more answer choices for game 1
+- Remove pictures from game 1 because they give away the answer
+- Add leaderboard
 
 
 # Contributors

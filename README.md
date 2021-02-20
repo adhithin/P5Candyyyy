@@ -34,7 +34,7 @@ Mini Code Review:
 
 **Akhil** 
 
-<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-53866927" target="_blank">Akhil's ticket</a> 
+<p><a href="https://github.com/adhithin/P5Candyyyy/projects/1#card-55316524" target="_blank">Akhil's ticket</a> 
 	
 Mini Code Review: 
 - Added game 2 - Einteins puzzle treasure map

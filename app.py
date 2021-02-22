@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, flash, redirect, url_for, session, logging
 from flask import request
-
+import requests #keep this because this is how you get post data.
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 
@@ -46,6 +46,7 @@ def home():
 @app.route('/game1', methods=['GET', 'POST'])
 def game1():
 	gameScores='nothing'
+	print('game1 app.py')
 
 	if request.method == 'POST':
 		name = request.form['name']
@@ -65,11 +66,35 @@ def game1():
 		for gameResult in gameResults:
 			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
 			gameScores.append(game_dict)
-		
-		#return redirect(url_for('game1', gameScores=gameScores))
 
 	return render_template('game1-1.html', gameScores=gameScores)
 
+@app.route('/game3', methods=['GET', 'POST'])
+def game3():
+	gameScores='nothing'
+
+	if request.method == 'POST':
+		name = request.form['name']
+		score = int(request.form['score'])
+		game = request.form['game']
+		#the code below confirmed I had the proper data. Now to add it to the db.
+		print(Score(name, score, game))
+
+		new_score = Score(name, score, game)
+		db.session.add(new_score)
+		db.session.commit()
+
+		#query the db for the relevant scores on this table:
+		gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
+		gameScores = []
+
+		for gameResult in gameResults:
+			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
+			gameScores.append(game_dict)
+
+	return render_template('game3.html', gameScores=gameScores)
+
+#moved this down to see if it was interfering with game3
 @app.route('/leaderboard')
 def index():
 	# go to the score table and query it, order it by the score value descending, limit 5 and serve up all of those items I asked for as a list.
@@ -82,32 +107,7 @@ def index():
 
 		return render_template('leaderboard.html', scores=scores)
 
-@app.route('/game3', methods=['GET', 'POST'])
-def game3():
-	gameScores='nothing'
 
-	if request.method == 'POST':
-		name = request.form['name']
-		score = int(request.form['score'])
-		game = request.form['game']
-		#the code below confirmed I had the proper data. Now to add it to the db.
-		#print(Score(name, score, game))
-
-		new_score = Score(name, score, game)
-		db.session.add(new_score)
-		db.session.commit()
-
-		#query the db for the relevant scores on this table:
-		gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
-		gameScores = []
-
-		for gameResult in gameResults:
-			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
-			gameScores.append(game_dict)
-
-	#return redirect(url_for('game1', gameScores=gameScores))
-
-	return render_template('game3.html', gameScores=gameScores)
 
 @app.route('/apcsp')
 def apcsp():

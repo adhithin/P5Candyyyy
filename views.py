@@ -1,6 +1,4 @@
-
 import os
-
 from flask import Flask, render_template, redirect, url_for
 from flask import request
 
@@ -15,6 +13,9 @@ from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -45,6 +46,7 @@ def home():
 @app.route('/game1', methods=['GET', 'POST'])
 def game1():
     gameScores='nothing'
+    print('game1 views.py')
 
     if request.method == 'POST':
         name = request.form['name']
@@ -70,6 +72,31 @@ def game1():
     return render_template('game1-1.html', gameScores=gameScores)
 
 
+@app.route('/game3', methods=['GET', 'POST'])
+def game3():
+    gameScores='nothing'
+
+    if request.method == 'POST':
+        name = request.form['name']
+        score = int(request.form['score'])
+        game = request.form['game']
+        #the code below confirmed I had the proper data. Now to add it to the db.
+        print(Score(name, score, game))
+
+        new_score = Score(name, score, game)
+        db.session.add(new_score)
+        db.session.commit()
+
+        #query the db for the relevant scores on this table:
+        gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
+        gameScores = []
+
+        for gameResult in gameResults:
+            game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
+            gameScores.append(game_dict)
+
+    return render_template('game3.html', gameScores=gameScores)
+
 # from tkinter import *
 
 #Use of Routes here
@@ -81,9 +108,9 @@ def game1():
 def room2():
     return render_template("game2.html")
 
-@app.route('/game3')
-def L2Room1():
-    return render_template("game3.html")
+# @app.route('/game3')
+# def L2Room1():
+#     return render_template("game3.html")
 
 @app.route('/game4')
 def L2Room2():
@@ -111,28 +138,6 @@ def login():
 @app.route('/register')
 def register():
     return render_template("register.php")
-
-db = SQLAlchemy(app)
-
-
-# we're adding to table scores
-class Score(db.Model):
-    __tablename__ = 'scores'
-    id = db.Column(db.Integer, primary_key=True)
-    # not planning to delete scores, but still a good practice
-    p_name = db.Column(db.String(10), unique=False, nullable=False)
-    p_score = db.Column(db.Integer, unique=False, nullable=False)  # want score as int so we can sort by it easily.
-
-    def __init__(self, p_name, p_score, p_game):
-        self.p_name = p_name
-        self.p_score = p_score
-        self.p_game = p_game
-
-    def __repr__(self):
-        return f"{self.p_name},{self.p_score}, {self.p_game}"
-
-
-# db.create_all(); #to initialize the tables in the db. Do not need after first initilization
 
 @app.route('/index')
 def index():

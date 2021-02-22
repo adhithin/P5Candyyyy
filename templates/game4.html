@@ -197,6 +197,17 @@
     }
 </script>
 
+    <section id="done">
+        <h2>Congrats! You've solved the puzzle!</h2>
+        <form action="" method="POST">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
+            <input type="hidden" name="score">
+            <input type="hidden" name="game" value="game1">
+            <button type="submit" class="button">Add Your Name to the Leaderboard!</button>
+        </form>
+    </section>
+
     <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
     <h2>Use the ACCELERATE button to stay in the air</h2>
     <h2>How long can you stay alive?</h2>

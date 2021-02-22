@@ -88,7 +88,7 @@ def game3():
 
 	if request.method == 'POST':
 		name = request.form['name']
-		score = request.form['score']
+		score = int(request.form['score'])
 		game = request.form['game']
 		#the code below confirmed I had the proper data. Now to add it to the db.
 		#print(Score(name, score, game))
@@ -109,6 +109,10 @@ def game3():
 
 	return render_template('game3.html', gameScores=gameScores)
 
-@app.route('/game3loss')
-def game3loss():
-	return render_template('game3loss.html')
+@app.route('/apcsp')
+def apcsp():
+	return render_template('apcsp.html')
+
+@app.route('/apcsp/adhithi')
+def adhithi():
+	return render_tempalte('adhithi.html')

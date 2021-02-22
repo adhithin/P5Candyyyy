@@ -115,4 +115,4 @@ def apcsp():
 
 @app.route('/apcsp/adhithi')
 def adhithi():
-	return render_tempalte('adhithi.html')
+	return render_template('adhithi.html')

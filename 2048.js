@@ -1,5 +1,9 @@
 (function ($) {
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/main
     $.fn.play2048 = function(size2048 = 4, divSizePx = 600) {
 
         var DivGame = this; //Référence "en dur" pour élargir la portée à tous les scopes
@@ -7,8 +11,13 @@
 
         /*Insertion des div dynamiquement dans le plateau de jeu en position absolu /r au plateau
         selon les dimensions du plateau et selon le taille du 2048*/
+<<<<<<< HEAD
 
         //Style du plateau de jeu
+=======
+            
+            //Style du plateau de jeu
+>>>>>>> origin/main
         var padding = (size2048+1)*10;
 
         DivGame.css({
@@ -21,9 +30,15 @@
             "border-radius": "5px"
         }).addClass("game");
 
+<<<<<<< HEAD
         //Pour compatibilité avec bootstrap enveloppement du DivGame
         DivGame.wrap("<div id = 'gameWrapper' />");
 
+=======
+            //Pour compatibilité avec bootstrap enveloppement du DivGame
+        DivGame.wrap("<div id = 'gameWrapper' />");
+        
+>>>>>>> origin/main
         $("#gameWrapper").css({
             "position" : "relative",
             "border" : "1px solid black",
@@ -37,7 +52,11 @@
 
         });
 
+<<<<<<< HEAD
         //Insertion + Style des box + box arrière plan
+=======
+            //Insertion + Style des box + box arrière plan
+>>>>>>> origin/main
         for(let i=0; i < nbBox; i++)
         {
             //box de jeu
@@ -53,7 +72,11 @@
                         "display" : "flex"
                     }
                 ).addClass("box")
+<<<<<<< HEAD
                     .append($("<p />").css("margin", "auto"))
+=======
+                .append($("<p />").css("margin", "auto"))
+>>>>>>> origin/main
             );
             //box d'arrière plan
             this.append(
@@ -71,8 +94,13 @@
         }
         placeBoxes(this, size2048, 0, "attr");//Affichage des box en arrière plan
 
+<<<<<<< HEAD
         /*------------------------ Initialisation du jeu ------------------------------*/
 
+=======
+        /*------------------------ Initialisation du jeu ------------------------------*/ 
+        
+>>>>>>> origin/main
         var score = {amount : 0};
         var moveMatrix = getNewMatrix(size2048);
         var gameMatrix = getNewMatrix(size2048);
@@ -84,7 +112,11 @@
         $("#score").text("Score : " + score.amount);
 
         /*------------------------ Fin d'initialisation ------------------------------*/
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         /*------------------------ Gestion Appui sur touche déplacement ---------------*/
 
         function endMoveCheck()
@@ -108,13 +140,21 @@
                     resetGame();
                 }
             }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         }
 
         function initKeyEvents()
         {
             $(window).on("keyup", function(e){
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
                 if(e.key === "ArrowLeft")
                 {
                     let nbMerge = mergeLeft(gameMatrix, moveMatrix, size2048, score);
@@ -155,7 +195,11 @@
                 score.amount = 0;
                 moveMatrix = getNewMatrix(size2048);
                 gameMatrix = getNewMatrix(size2048);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
                 assignRandomly(2, gameMatrix, size2048);
                 assignValueOnId(DivGame, size2048, gameMatrix);
                 DivGame.children(".box[id]").hide();
@@ -164,6 +208,7 @@
                 initKeyEvents();
                 $("#score").text("Score : " + score.amount);
             },10000);
+<<<<<<< HEAD
 
         };
 
@@ -173,11 +218,26 @@
             moveMatrix = getNewMatrix(size2048);
             gameMatrix = getNewMatrix(size2048);
 
+=======
+                
+        };
+
+        $("button#resetGame").on("click", function(){
+            
+            score.amount = 0;
+            moveMatrix = getNewMatrix(size2048);
+            gameMatrix = getNewMatrix(size2048);
+    
+>>>>>>> origin/main
             assignRandomly(2, gameMatrix, size2048);
             assignValueOnId(DivGame, size2048, gameMatrix);
             DivGame.children(".box[id]").hide();
             placeBoxes(DivGame, size2048, 1, "id");
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             initKeyEvents();
             $("#score").text("Score : " + score.amount);
         });
@@ -211,13 +271,21 @@
         var sumMoves = 0;
 
         if(direction === "left")
+<<<<<<< HEAD
         {
+=======
+        {   
+>>>>>>> origin/main
 
             for(let i = 0; i < nbBox; i++)
             {
                 //Déplacements sur ligne dans gameMatrix : changement de colonne
                 let nbMove = moveMatrix[Math.floor(i/size2048)][i%size2048];
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 gameMatrix[Math.floor(i/size2048)][(i-nbMove)%size2048] = gameMatrix[Math.floor(i/size2048)][i%size2048];
 
                 //Si déplacement alors case en cours à 0
@@ -235,7 +303,11 @@
                     "linear",
                     function(){
                         $(this).hide();
+<<<<<<< HEAD
 
+=======
+                       
+>>>>>>> origin/main
                         assignValueOnId(DivGame, size2048, gameMatrix);
                         placeBoxes(DivGame, size2048, 1, "id");
 
@@ -245,23 +317,39 @@
                 moveMatrix[Math.floor(i/size2048)][i%size2048] = 0;
             }
             //S'il y a eu des mouvements et/ou des fusions
+<<<<<<< HEAD
             if(sumMoves !== 0 || nbMerge !== 0)
+=======
+            if(sumMoves !== 0 || nbMerge !== 0) 
+>>>>>>> origin/main
             {
                 assignRandomly(1, gameMatrix, size2048);
                 sumMoves = 0;
             }
+<<<<<<< HEAD
 
         }
         else if(direction === "right")
         {
 
+=======
+            
+        }
+        else if(direction === "right")
+        {
+            
+>>>>>>> origin/main
             for(let i = nbBox-1; i >= 0; i--)
             {
                 //Déplacements sur ligne dans gameMatrix : changement de colonne
                 let nbMove = moveMatrix[Math.floor(i/size2048)][i%size2048];
 
                 gameMatrix[Math.floor(i/size2048)][(i+nbMove)%size2048] = gameMatrix[Math.floor(i/size2048)][i%size2048];
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 //Si déplacement alors case en cours à 0
                 if(nbMove !== 0 )
                 {
@@ -277,7 +365,11 @@
                     "linear",
                     function(){
                         $(this).hide();
+<<<<<<< HEAD
 
+=======
+                       
+>>>>>>> origin/main
                         assignValueOnId(DivGame, size2048, gameMatrix);
                         placeBoxes(DivGame, size2048, 1, "id");
 
@@ -287,24 +379,40 @@
                 moveMatrix[Math.floor(i/size2048)][i%size2048] = 0;
             }
             //S'il y a eu des mouvement et/ou des fusions
+<<<<<<< HEAD
             if(sumMoves !== 0 || nbMerge !== 0)
+=======
+            if(sumMoves !== 0 || nbMerge !== 0) 
+>>>>>>> origin/main
             {
                 assignRandomly(1, gameMatrix, size2048);
                 sumMoves = 0;
             }
 
+<<<<<<< HEAD
 
         }
         else if(direction === "top")
         {
 
+=======
+            
+        }
+        else if(direction === "top")
+        {
+            
+>>>>>>> origin/main
             for(let i = 0; i < nbBox; i++)
             {
                 //Déplacements sur colonne dans gameMatrix : changement de ligne
                 let nbMove = moveMatrix[i%size2048][Math.floor(i/size2048)];
 
                 gameMatrix[(i-nbMove)%size2048][Math.floor(i/size2048)] = gameMatrix[i%size2048][Math.floor(i/size2048)];
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 //Si déplacement alors case en cours à 0
                 if(nbMove !== 0)
                 {
@@ -314,7 +422,11 @@
 
                 //Déplacements sur colonne dans le plateau de jeu
                 let idBox = idsMatrix[i%size2048][Math.floor(i/size2048)]; //Correspondance entre itération en cours et id de la box
+<<<<<<< HEAD
 
+=======
+               
+>>>>>>> origin/main
                 $(boxes[idBox]).animate(
                     {
                         top : "-=" + boxHeight*nbMove + "px"
@@ -323,7 +435,11 @@
                     "linear",
                     function(){
                         $(this).hide();
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> origin/main
                         assignValueOnId(DivGame, size2048, gameMatrix);
                         placeBoxes(DivGame, size2048, 1, "id");
 
@@ -333,23 +449,39 @@
                 moveMatrix[i%size2048][Math.floor(i/size2048)] = 0;
             }
             //S'il y a eu des mouvement et/ou des fusions
+<<<<<<< HEAD
             if(sumMoves !== 0 || nbMerge !== 0)
+=======
+            if(sumMoves !== 0 || nbMerge !== 0) 
+>>>>>>> origin/main
             {
                 assignRandomly(1, gameMatrix, size2048);
                 sumMoves = 0;
             }
+<<<<<<< HEAD
 
         }
         else if(direction === "down")
         {
 
+=======
+    
+        }
+        else if(direction === "down")
+        {
+            
+>>>>>>> origin/main
             for(let i = nbBox-1; i >= 0; i--)
             {
                 //Déplacements sur colonne dans gameMatrix : changement de ligne
                 let nbMove = moveMatrix[i%size2048][Math.floor(i/size2048)];
 
                 gameMatrix[(i+nbMove)%size2048][Math.floor(i/size2048)] = gameMatrix[i%size2048][Math.floor(i/size2048)];
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 //Si déplacement alors case en cours à 0
                 if(nbMove !== 0)
                 {
@@ -359,7 +491,11 @@
 
                 //Déplacements sur colonne dans le plateau de jeu
                 let idBox = idsMatrix[i%size2048][Math.floor(i/size2048)]; //Correspondance entre itération en cours et id de la box
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 $(boxes[idBox]).animate(
                     {
                         top : "+=" + boxHeight*nbMove + "px"
@@ -368,7 +504,11 @@
                     "linear",
                     function(){
                         $(this).hide();
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> origin/main
                         assignValueOnId(DivGame, size2048, gameMatrix);
                         placeBoxes(DivGame, size2048, 1, "id");
 
@@ -378,7 +518,11 @@
                 moveMatrix[i%size2048][Math.floor(i/size2048)] = 0;
             }
             //S'il y a eu des mouvement et/ou des fusions
+<<<<<<< HEAD
             if(sumMoves !== 0 || nbMerge !== 0)
+=======
+            if(sumMoves !== 0 || nbMerge !== 0) 
+>>>>>>> origin/main
             {
                 assignRandomly(1, gameMatrix, size2048);
                 sumMoves = 0;
@@ -407,7 +551,11 @@
             }
 
             var currentVal = gameMatrix[Math.floor(i/size2048)][i%size2048];
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             if(currentVal === 0) //case "vide"
             {
                 nbSpace++;
@@ -439,7 +587,11 @@
 
                 }
             }
+<<<<<<< HEAD
         }
+=======
+        } 
+>>>>>>> origin/main
         return nbMerge;
     }
 
@@ -463,7 +615,11 @@
             }
 
             var currentVal = gameMatrix[Math.floor(i/size2048)][i%size2048];
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             if(currentVal === 0) //case "vide"
             {
                 nbSpace++;
@@ -495,7 +651,11 @@
 
                 }
             }
+<<<<<<< HEAD
         }
+=======
+        } 
+>>>>>>> origin/main
 
         return nbMerge;
     }
@@ -520,7 +680,11 @@
             }
 
             var currentVal = gameMatrix[i%size2048][Math.floor(i/size2048)];
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             if(currentVal === 0) //case "vide"
             {
                 nbSpace++;
@@ -552,7 +716,11 @@
 
                 }
             }
+<<<<<<< HEAD
         }
+=======
+        } 
+>>>>>>> origin/main
 
         return nbMerge;
     }
@@ -577,7 +745,11 @@
             }
 
             var currentVal = gameMatrix[i%size2048][Math.floor(i/size2048)];
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             if(currentVal === 0) //case "vide"
             {
                 nbSpace++;
@@ -609,7 +781,11 @@
 
                 }
             }
+<<<<<<< HEAD
         }
+=======
+        } 
+>>>>>>> origin/main
 
         return nbMerge;
     }
@@ -634,6 +810,7 @@
             }
 
             var currentVal = gameMatrix[Math.floor(i/size2048)][i%size2048];
+<<<<<<< HEAD
 
             //Fusion
             if((currentVal !== 0) && (currentVal === prevVal))
@@ -643,6 +820,17 @@
 
                 prevVal = null;
                 prevValId = null;
+=======
+            
+            //Fusion
+            if((currentVal !== 0) && (currentVal === prevVal)) 
+            {
+                    //Gestion des buffers
+                    nbMerge++;
+
+                    prevVal = null;
+                    prevValId = null;
+>>>>>>> origin/main
             }
             else if((currentVal !== 0) && (currentVal !== prevVal))
             {
@@ -666,6 +854,7 @@
             }
 
             var currentVal = gameMatrix[i%size2048][Math.floor(i/size2048)];
+<<<<<<< HEAD
 
             //Fusion
             if((currentVal !== 0) && (currentVal === prevVal))
@@ -675,6 +864,17 @@
 
                 prevVal = null;
                 prevValId = null;
+=======
+            
+            //Fusion
+            if((currentVal !== 0) && (currentVal === prevVal)) 
+            {
+                    //Gestion des buffers
+                    nbMerge++;
+
+                    prevVal = null;
+                    prevValId = null;
+>>>>>>> origin/main
             }
             else if((currentVal !== 0) && (currentVal !== prevVal))
             {
@@ -690,7 +890,11 @@
         {
             return false;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
     }
 
     /*Assign to a random empty position on the gameMatrix a defined number of 2 or 4*/
@@ -732,7 +936,11 @@
             }
         }
 
+<<<<<<< HEAD
         return emptyPositions;
+=======
+            return emptyPositions;
+>>>>>>> origin/main
     }
 
     /*get a 2 or a 4*/
@@ -780,14 +988,22 @@
             {
                 $(boxes[i]).children("p").empty();
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
         }
     }
     /*Place les box selon leur id dans le plateau de jeu + gère l'effet d'apparition à chaque nvl etat de la matrice */
     function placeBoxes(JQElmt, size2048, zIndex=1, attribut)
     {
         var boxes = JQElmt.children(".box["+ attribut +"]");
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         var nbBox = size2048*size2048;
 
         var boxWidth = parseInt(JQElmt.css("width"))/size2048;
@@ -796,6 +1012,7 @@
         //Couleurs du jeu
 
         var colors = [];
+<<<<<<< HEAD
         colors[2]   = "#fff4e6";
         colors[4]   = "#ffe8cc";
         colors[8]   = "#ffd8a8";
@@ -807,6 +1024,19 @@
         colors[512] = "#e8590c";
         colors[1024] = "#d9480f";
         colors[2048] = "#c92a2a";
+=======
+            colors[2]   = "#fff4e6";
+            colors[4]   = "#ffe8cc";
+            colors[8]   = "#ffd8a8";
+            colors[16]  = "#ffc078";
+            colors[32]  = "#ffa94d";
+            colors[64]  = "#ff922b";
+            colors[128] = "#fd7e14";
+            colors[256] = "#f76707";
+            colors[512] = "#e8590c";
+            colors[1024] = "#d9480f";
+            colors[2048] = "#c92a2a";
+>>>>>>> origin/main
 
         for(let i = 0; i < nbBox; i++)
         {
@@ -823,15 +1053,25 @@
             )
 
             let boxText = $(boxes[i]).children("p").text();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             if(attribut === "id" && boxText !== "")
             {
                 $(boxes[i]).css("background-color", colors[parseInt(boxText)]);
                 $(boxes[i]).show();
             }
+<<<<<<< HEAD
 
         }
 
+=======
+             
+        }
+        
+>>>>>>> origin/main
 
     }
 

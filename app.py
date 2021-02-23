@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, flash, redirect, url_for, session, logging
 from flask import request
-import requests #keep this because this is how you get post data.
+#import requests
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 

@@ -3,27 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Ratings</title>
+    <img src="https://img.pngio.com/clipart-stars-aesthetic-gold-star-transparent-background-png-star-aesthetics-png-920_409.png"
 </head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
     body, h1 {font-family: "Roboto", sans-serif, size=20pt }
-    h2 {font-family: "Roboto", sans-serif, size=20pt }
+    h2, label, button {font-family: Roboto, sans-serif, size=20pt }
     body, html {height: 100%}
-    th, td {font-family:"Roboto", sans-serif, size=15pt}
+    th, td, input {font-family:"Roboto", sans-serif, size=15pt}
 
     .bgimg {
-        background-image: url('https://cdn.conceptartempire.com/images/08/2592/17-dungeon-of-fire.jpg');
+        background-image: src="https://cdn.conceptartempire.com/images/08/2592/17-dungeon-of-fire.jpg";
         min-height: 100%;
         background-position: center;
         background-size: cover;
     }
 </style>
 
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-blue">
+        <div class="w3-col s3">
+            <a href="apcsp" class="w3-button w3-block w3-black">HOME</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="#menu" class="w3-button w3-block w3-black">GAMES</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="#where" class="w3-button w3-block w3-black">BEGIN</a>
+        </div>
+    </div>
+</div>
+
 <body>
-<h2>Ratings and Reviews</h2>
+<h2 font="Roboto" class="w3-cyan">Ratings and Reviews</h2>
 <form action="" method="POST">
-    <label for="name">Name:</label>
+    <label for="name" style="font-family: Roboto, sans-serif, size=20pt" >Name:</label>
     <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
     <label for="score">Comment:</label>
     <input id="score" type="text" name="score" placeholder="Your Comment">
@@ -37,9 +55,9 @@
     <h1 align="center" color="red" type="block"> Reviews </h1>
     <table class="score">
         <tr>
-            <th align="left" style="font-size: 15px"> NAME </th>
-            <th align="center" style="font-size: 15px"> COMMENT </th>
-            <th align="right" style="font-size: 15px"> RATING </th>
+            <th align="left" style="font-size: 30px"> NAME </th>
+            <th align="center" style="font-size: 30px"> COMMENT </th>
+            <th align="right" style="font-size: 30px"> RATING </th>
         </tr>
         {% for score in gameScores  %}
         <tr>
@@ -50,6 +68,7 @@
         {%  endfor %}
     </table>
 </div>
+
 
 </body>
 </html>

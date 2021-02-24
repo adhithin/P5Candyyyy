@@ -97,15 +97,28 @@ def game3():
 #moved this down to see if it was interfering with game3
 @app.route('/leaderboard')
 def index():
-	# go to the score table and query it, order it by the score value descending, limit 5 and serve up all of those items I asked for as a list.
-	results = {1, 2, 3, 4}
-	scores = []
+	gameScores='nothing'
 
-	for result in results:
-		score_dict = {"name": "name", 'score': 'score', "game":"game"}
-		scores.append(score_dict)
+	if request.method == 'POST':
+		name = request.form['name']
+		score = int(request.form['score'])
+		game = request.form['game']
+		#the code below confirmed I had the proper data. Now to add it to the db.
+		print(Score(name, score, game))
 
-		return render_template('leaderboard.html', scores=scores)
+		new_score = Score(name, score, game)
+		db.session.add(new_score)
+		db.session.commit()
+
+		#query the db for the relevant scores on this table:
+		gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
+		gameScores = []
+
+		for gameResult in gameResults:
+			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
+			gameScores.append(game_dict)
+
+	return render_template('leaderboard.html', gameScores=gameScores)
 
 
 
@@ -146,6 +159,27 @@ def game5():
 def adhithi():
 	return render_template('adhithi.html')
 
-@app.route('/game4')
+@app.route('/game4', methods=['GET', 'POST'])
 def game4():
-	return render_template('game4.html')
+	gameScores='nothing'
+
+	if request.method == 'POST':
+		name = request.form['name']
+		score = request.form['score']
+		game = request.form['game']
+		#the code below confirmed I had the proper data. Now to add it to the db.
+		print(Score(name, score, game))
+
+		new_score = Score(name, score, game)
+		db.session.add(new_score)
+		db.session.commit()
+
+		#query the db for the relevant scores on this table:
+		gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
+		gameScores = []
+
+		for gameResult in gameResults:
+			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score, 'game':gameResult.p_game}
+			gameScores.append(game_dict)
+
+	return render_template('game4.html', gameScores=gameScores)

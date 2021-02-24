@@ -6,8 +6,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body,h1 {font-family: "Roboto", sans-serif, size=28pt }
+body, h1, {font-family: "Roboto", sans-serif, size=20pt }
 body, html {height: 100%}
+th, td {font-family:"Roboto", sans-serif, size=15pt}
 
 .bgimg {
   background-image: url('https://cdn.conceptartempire.com/images/08/2592/17-dungeon-of-fire.jpg');
@@ -19,46 +20,36 @@ body, html {height: 100%}
 
 <body>
 
-<div class="w3-top">
-    <div class="w3-row w3-padding w3-blue">
-        <div class="w3-col s3">
-            <a href="/" class="w3-button w3-block w3-black">HOME</a>
-        </div>
-        <div class="w3-col s3">
-            <a href="game1" class="w3-button w3-block w3-black">ROCK CLIMBING API</a>
-        </div>
-        <div class="w3-col s3">
-            <a href="game1" class="w3-button w3-block w3-black"> CUBE DODGE</a>
-        </div>
 
-    </div>
+
+
+
+<div align="center">
+
+    <h1 style="font-size: 45px"> WELCOME TO GAME 3 </h1>
+
 </div>
 
+<div align="center" style="font-family:Helvetica; font-size: 45px">
 
-<div>
-    <h2>Best Time Results</h2>
+    <h1 align="center" color="red" type="block"> LEADERBOARD </h1>
     <table class="score">
         <tr>
-            <th>Name</th>
-            <th>Score</th>
+            <th align="center" style="font-size: 15px"> NAME </th>
+            <th align="center" style="font-size: 15px"> CASH </th>
         </tr>
         {% for score in gameScores  %}
         <tr>
-            <td>{{score.name}}</td>
-            <td>{{score.score}}</td>
+            <td align="center" style="font-family:Roboto; font-size: 15px">{{score.name}}</td>
+            <td align="center" style="font-family:Roboto; font-size: 15px">{{score.score}}</td>
         </tr>
         {%  endfor %}
     </table>
 </div>
 
-<div align="center">
-
-    <h1> WELCOME TO GAME 3</h1>
-
-</div>
 
     <iframe height="800px" width="100%" src="https://repl.it/@zachajoseph/Pokemon-core-game-engine-final?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-    gameScores:{{gameScores}}
+
 
 <div align="center">
     <section id="done">

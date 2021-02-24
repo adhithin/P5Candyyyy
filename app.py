@@ -133,7 +133,7 @@ def ratings():
 		gameScores = []
 
 		for gameResult in gameResults:
-			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
+			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score, 'game':gameResult.p_game}
 			gameScores.append(game_dict)
 
 	return render_template('ratings.html', gameScores=gameScores)
@@ -145,3 +145,7 @@ def game5():
 @app.route('/apcsp/adhithi')
 def adhithi():
 	return render_template('adhithi.html')
+
+@app.route('/game4')
+def game4():
+	return render_template('game4.html')

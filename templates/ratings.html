@@ -5,54 +5,64 @@
     <title>Ratings</title>
     <img src="https://img.pngio.com/clipart-stars-aesthetic-gold-star-transparent-background-png-star-aesthetics-png-920_409.png"
 </head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=MedievalSharp'>
 <style>
-    body, h1 {font-family: "Roboto", sans-serif, size=20pt }
-    h2, label, button {font-family: Roboto, sans-serif, size=20pt }
-    body, html {height: 100%}
-    th, td, input {font-family:"Roboto", sans-serif, size=15pt}
+    body, html {
+        height: 100%;
+        font-family: "Roboto", roboto;
+
+    }
 
     .bgimg {
-        background-image: src="https://cdn.conceptartempire.com/images/08/2592/17-dungeon-of-fire.jpg";
-        min-height: 100%;
         background-position: center;
         background-size: cover;
+        min-height: 100%;
+    }
+
+    .menu {
+        display: none;
     }
 </style>
+
 
 <div class="w3-top">
     <div class="w3-row w3-padding w3-blue">
         <div class="w3-col s3">
-            <a href="apcsp" class="w3-button w3-block w3-black">HOME</a>
+            <a href="/" class="w3-button w3-block w3-blue">HOME</a>
         </div>
         <div class="w3-col s3">
-            <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+            <a href="#about" class="w3-button w3-block w3-blue">ABOUT</a>
         </div>
         <div class="w3-col s3">
-            <a href="#menu" class="w3-button w3-block w3-black">GAMES</a>
+            <a href="#menu" class="w3-button w3-block w3-blue">GAMES</a>
         </div>
         <div class="w3-col s3">
-            <a href="#where" class="w3-button w3-block w3-black">BEGIN</a>
+            <a href="#where" class="w3-button w3-block w3-blue">BEGIN</a>
         </div>
     </div>
 </div>
 
 <body>
-<h2 font="Roboto" class="w3-cyan">Ratings and Reviews</h2>
+<div>
+<h2 font="Roboto" class=" w3-button" style="font-family:Roboto; font-size: 45px">Ratings and Reviews</h2>
 <form action="" method="POST">
     <label for="name" style="font-family: Roboto, sans-serif, size=20pt" >Name:</label>
     <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
     <label for="score">Comment:</label>
     <input id="score" type="text" name="score" placeholder="Your Comment">
     <label for="rating">Rating (1-5)</label>
-    <input id="rating" type="number" name="rating" placeholder="Stars">
-    <button type="submit" class="w3-center w3-button w3-blue" > ADD YOUR REVIEW </button>
+    <input id="rating" type="number" name="rating" min="0" max="5" placeholder="Rating">
+    <button type="submit" class="w3-center w3-button w3-blue"> Submit your review  </button>
 </form>
 
+</div>
 <div align="center" style="font-family:Roboto; font-size: 45px">
 
-    <h1 align="center" color="red" type="block"> Reviews </h1>
+    <h1 align="center" type="block"> Reviews </h1>
     <table class="score">
         <tr>
             <th align="left" style="font-size: 30px"> NAME </th>

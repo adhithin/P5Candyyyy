@@ -126,6 +126,10 @@ def index():
 def apcsp():
 	return render_template('apcsp.html')
 
+@app.route('/adhithi')
+def adhithi():
+	return render_template('adhithi.html')
+
 @app.route("/ratings", methods=['GET', 'POST'])
 def ratings():
 	gameScores='nothing'
@@ -154,10 +158,6 @@ def ratings():
 @app.route('/index')
 def game5():
 	return render_template('index.html')
-
-@app.route('/apcsp/adhithi')
-def adhithi():
-	return render_template('adhithi.html')
 
 @app.route('/game4', methods=['GET', 'POST'])
 def game4():

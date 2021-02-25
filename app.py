@@ -188,10 +188,4 @@ def game4():
 			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
 			gameScores.append(game_dict)
 
-		def average():
-			sum = sum(ratingResults)
-
-		print (average)
-
-
 	return render_template('game4.html', gameScores=gameScores, ratingResults=ratingResults)

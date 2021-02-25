@@ -165,7 +165,7 @@ def game4():
 
 	if request.method == 'POST':
 		name = request.form['name']
-		score = request.form['score']
+		score = int(request.form['score'])
 		game = request.form['game']
 		#the code below confirmed I had the proper data. Now to add it to the db.
 		print(Score(name, score, game))
@@ -175,17 +175,11 @@ def game4():
 		db.session.commit()
 
 		#query the db for the relevant scores on this table:
-
-		gameResults = Score.query.filter_by(p_game=game).order_by(desc('p_score')).all()
-		print(gameResults)
-		gameScores = []
-
-		ratingResults = Score.query.filter_by(p_game=game).order_by(desc('p_game')).all()
-		print(ratingResults)
+		gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
 		gameScores = []
 
 		for gameResult in gameResults:
 			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
 			gameScores.append(game_dict)
 
-	return render_template('game4.html', gameScores=gameScores, ratingResults=ratingResults)
+	return render_template('game4.html', gameScores=gameScores)

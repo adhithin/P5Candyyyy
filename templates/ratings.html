@@ -55,10 +55,11 @@
     <label for="score">Comment:</label>
     <input id="score" type="text" name="score" placeholder="Your Comment">
     <label for="rating">Rating (1-5)</label>
-    <input id="rating" type="number" name="rating" min="0" max="5" placeholder="Rating">
+    <input id="rating" name="rating" min="0" max="5" placeholder="Rating">
     <button type="submit" class="w3-center w3-button w3-blue"> Submit your review  </button>
 </form>
-
+    {% for ratingResult in ratingResults %}
+    {%  endfor %}
 </div>
 <div align="center" style="font-family:Roboto; font-size: 45px">
 

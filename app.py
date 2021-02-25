@@ -180,8 +180,18 @@ def game4():
 		print(gameResults)
 		gameScores = []
 
+		ratingResults = Score.query.filter_by(p_game=game).order_by(desc('p_game')).all()
+		print(ratingResults)
+		gameScores = []
+
 		for gameResult in gameResults:
 			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
 			gameScores.append(game_dict)
 
-	return render_template('game4.html', gameScores=gameScores)
+		def average():
+			sum = sum(ratingResults)
+
+		print (average)
+
+
+	return render_template('game4.html', gameScores=gameScores, ratingResults=ratingResults)

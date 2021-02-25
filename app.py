@@ -175,11 +175,13 @@ def game4():
 		db.session.commit()
 
 		#query the db for the relevant scores on this table:
-		gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
+
+		gameResults = Score.query.filter_by(p_game=game).order_by(desc('p_score')).all()
+		print(gameResults)
 		gameScores = []
 
 		for gameResult in gameResults:
-			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score, 'game':gameResult.p_game}
+			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
 			gameScores.append(game_dict)
 
 	return render_template('game4.html', gameScores=gameScores)

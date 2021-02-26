@@ -33,16 +33,11 @@
     }
 
     button {
-        position: static;
+        position: relative;
         left: 0px;
-        top: 0px;
+        top: 300px;
     }
 
-    button2 {
-        position: relative;
-        left: -900px;
-        top: -500px;
-    }
 </style>
 
 <head>
@@ -206,14 +201,22 @@
             GamePiece.gravity = n;
         }
 
+        document.addEventListener('keydown', function(e){
+            //e stands for event
+            console.log(e.which); //up = 38 , down = 40, spacebar = 32
+            if(e.which == 38){
+                    accelerate(-0.2)
+                    console.log('accelerate up')
+            }
+        })
 
+        document.addEventListener('keyup', function(e){
+            if(e.which == 38){
+                accelerate(0.05)
+                console.log('accelerate down')
+            }
+        })
     </script>
-
-    <div class="w3-bottom">
-        <button font="Roboto" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)" class="button">ACCELERATE</button>
-    </div>
-
-
 
     <div align="center">
         <section id="done">
@@ -229,8 +232,6 @@
     </div>
 
     <div align="center" style="font-family:Roboto; font-size: 45px">
-
-
 
         <h1 align="center" color="red" type="block"> LEADERBOARD </h1>
 

@@ -165,7 +165,7 @@ def game4():
 
 	if request.method == 'POST':
 		name = request.form['name']
-		score = int(request.form['score'])
+		score = request.form['score']
 		game = request.form['game']
 		#the code below confirmed I had the proper data. Now to add it to the db.
 		print(Score(name, score, game))

@@ -126,7 +126,7 @@ def index():
 def apcsp():
 	return render_template('apcsp.html')
 
-@app.route('/adhithi')
+@app.route('/apcsp/adhithi')
 def adhithi():
 	return render_template('adhithi.html')
 

@@ -148,6 +148,10 @@ def CharSelect():
 def apcsp():
     return render_template("apcsp.html")
 
+@app.route('/apcsp/adhithi')
+def adhithi():
+    return render_template("adhithi.html")
+
 # Route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
 def login():

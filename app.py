@@ -126,6 +126,10 @@ def index():
 def apcsp():
 	return render_template('apcsp.html')
 
+@app.route('/apcsp/adhithi')
+def adhithi():
+	return render_template('adhithi.html')
+
 @app.route("/ratings", methods=['GET', 'POST'])
 def ratings():
 	gameScores='nothing'
@@ -155,17 +159,13 @@ def ratings():
 def game5():
 	return render_template('index.html')
 
-@app.route('/apcsp/adhithi')
-def adhithi():
-	return render_template('adhithi.html')
-
 @app.route('/game4', methods=['GET', 'POST'])
 def game4():
 	gameScores='nothing'
 
 	if request.method == 'POST':
 		name = request.form['name']
-		score = int(request.form['score'])
+		score = request.form['score']
 		game = request.form['game']
 		#the code below confirmed I had the proper data. Now to add it to the db.
 		print(Score(name, score, game))

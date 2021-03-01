@@ -105,27 +105,62 @@
             <img src="{{url_for('static', filename='/images/covid.jpg')}}" alt="Background vector created by s.salvador - www.freepik.com">
         </a>
     </div>
-    {% if gameScores == 'nothing' %}
 
-        <section id="fifth-click">
-            <p>Question 5:<br>
-                How many more negative PCR tests were there for people on November 1, 2020 compared to October 31, 2020?</p>
-            <button value="410">410</button>
-            <button value="809">809</button>
+    {{gameScores}}
+    {% if gameScores == 'nothing' %}
+    <div>
+        <section id="start-button">
+            <div style="text-align: center;">
+                <p>Start Game</p>
+                <button value="start">START</button>
+            </div>
         </section>
+
+        <section id="startgame" style="display: none">
+            <div style="position: relative; left: 30px; width: 1450px;">
+                <p1>
+                    A pirate crew finds a map that leads to great treasure. The map leads the crew to five islands, which are miraculously in a perfect row. The map says that one of the islands has the treasure, but all the others are cursed. If the crew goes to the cursed islands, they will be stranded for the rest of their lives and will never get off that island. If the crew choses the right islands, they keep the treasure and go free. Luckily, the map offers some clues onto which island the treasure might be on. Each island has its own placement, terrain, name, item, fauna, and flora.
+                    <br><br>
+                    1. Bark Island has a rocky terrain.<br>
+                    2. Square Island has skulls.<br>
+                    3. Hunter island has boars.<br>
+                    4. The desert terrain is just to the left of the snowy one.<br>
+                    5. The island with the desert terrain has birds.<br>
+                    6. The island with banana trees has a boat.<br>
+                    7. The island with rocky terrain has palm trees.<br>
+                    8. The island in the center has a shark.<br>
+                    9. Boney island is the first island.<br>
+                    10. The island with boars has a neighbor island that has an anchor.<br>
+                    11. The island with mango trees has crocodiles.<br>
+                    12. The island with a sail is next to the island with palm trees.<br>
+                    13. Crescent island has berry bushes.<br>
+                    14. Boney island is next to the island with grassland terrain.<br>
+                    15. The island with boars has a neighbor island with monkeys.<br>
+                </p1>
+            </div>
+
+            <div id="answers" style="text-align: center;">
+                <p>Answer<br>Which Island is the treasure located on?
+                </p>
+                <button value="Island 1">Island 1</button>
+                <button value="Island 2">Island 2</button>
+                <button value="Island 3">Island 3</button>
+                <button value="Island 4">Island 4</button>
+                <button value="Island 5">Island 5</button>
+            </div>
+        </section>
+
         <section id="done">
             <h2>Congrats! You've solved the puzzle!</h2>
             <form action="" method="POST">
                 <label for="name">Name:</label>
                 <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
                 <input type="hidden" name="score">
-                <input type="hidden" name="game" value="game1">
+                <input type="hidden" name="game" value="game2">
                 <button type="submit" class="button">Add Your Name to the Leaderboard!</button>
             </form>
         </section>
-
     </div>
-
 
     {% endif %}
     {% if gameScores != 'nothing' %}
@@ -158,47 +193,35 @@
 
 {% if gameScores == 'nothing' %}
 <script type="text/javascript">
-
 //variables: start holds the start time, end holds the end time when the player completed the puzzle.
 
 let start,
     end;
 
 //event listeners
-document.querySelector('#first-click').addEventListener('click', showQuestion);
-document.querySelector('#second-click').addEventListener('click', showQuestion);
-document.querySelector('#third-click').addEventListener('click', showQuestion);
-document.querySelector('#fourth-click').addEventListener('click', showQuestion);
-document.querySelector('#fifth-click').addEventListener('click', showQuestion);
+document.querySelector('#start-button').addEventListener('click', showPuzzle);
+//document.querySelector('#startgame').addEventListener('click', showPuzzle);
+document.querySelector('#answers').addEventListener('click', function(e){
+alert(e.target)
+}); //end answers
 
 //game function
-function showQuestion(e){
+function showPuzzle(e){
     //the e parameter allows me to capture the event object and access its properties.
     console.log(e.target.value) //shows me the value of the item that was clicked
     console.log('this is:', this)
 
-    if(this.id == 'first-click'){
+    if(this.id == 'start-button'){
+        document.querySelector('#startgame').style.display='block';
         start = new Date().getTime();
     }
 
-    if(e.target.value == 862 && this.id == 'first-click'){
+    if(e.target.value == start && this.id == 'start-button'){
         //answered correctly
         this.style.display = 'none'
         this.nextElementSibling.style.display = 'block'
 
-    }else if(e.target.value == 457741 && this.id == 'second-click'){
-        this.style.display = 'none'
-        this.nextElementSibling.style.display = 'block'
-
-    }else if(e.target.value == 2592 && this.id == 'third-click'){
-        this.style.display = 'none'
-        this.nextElementSibling.style.display = 'block'
-
-    }else if(e.target.value == "Jan 7" && this.id == 'fourth-click'){
-        this.style.display = 'none'
-        this.nextElementSibling.style.display = 'block'
-
-    }else if(e.target.value == 410 && this.id == 'fifth-click'){
+    else if(e.target.value == Island 4 && this.id == 'startgame'){
         this.style.display = 'none'
         this.nextElementSibling.style.display = 'block'
         end = new Date().getTime();

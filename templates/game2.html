@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Arcade Smash | Game 1 </title>
+    <title> Arcade Smash | Game 2 </title>
     <meta charset="UTF-8">
     <!-- the viewport is only necessary if your website is responsive and if you are using responsive CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,7 +62,7 @@
             text-align: center;
             }
 
-            #second-click, #third-click, #fourth-click, #fifth-click, #done{
+           #done{
                 display: none;
             }
 
@@ -106,7 +106,6 @@
         </a>
     </div>
 
-    {{gameScores}}
     {% if gameScores == 'nothing' %}
     <div>
         <section id="start-button">
@@ -116,7 +115,7 @@
             </div>
         </section>
 
-        <section id="startgame" style="display: none">
+        <section id="startgame" style="display:none">
             <div style="position: relative; left: 30px; width: 1450px;">
                 <p1>
                     A pirate crew finds a map that leads to great treasure. The map leads the crew to five islands, which are miraculously in a perfect row. The map says that one of the islands has the treasure, but all the others are cursed. If the crew goes to the cursed islands, they will be stranded for the rest of their lives and will never get off that island. If the crew choses the right islands, they keep the treasure and go free. Luckily, the map offers some clues onto which island the treasure might be on. Each island has its own placement, terrain, name, item, fauna, and flora.
@@ -196,13 +195,31 @@
 //variables: start holds the start time, end holds the end time when the player completed the puzzle.
 
 let start,
-    end;
+    end
+    startBtn = document.querySelector('#start-button');
 
 //event listeners
-document.querySelector('#start-button').addEventListener('click', showPuzzle);
-//document.querySelector('#startgame').addEventListener('click', showPuzzle);
+
+startBtn.addEventListener('click', showPuzzle);
+
+//anon function
 document.querySelector('#answers').addEventListener('click', function(e){
-alert(e.target)
+    
+    answer = e.target.value;
+
+    if(answer == 'Island 4'){
+        end = new Date().getTime();
+        score = end-start; 
+
+        document.querySelector('form input[name="score"]').value = score;
+        document.querySelector('#startgame').style.display='none';
+        //TODO Display Form
+        document.querySelector('#done').style.display='block';
+        alert(score)
+
+    }
+
+
 }); //end answers
 
 //game function
@@ -210,28 +227,10 @@ function showPuzzle(e){
     //the e parameter allows me to capture the event object and access its properties.
     console.log(e.target.value) //shows me the value of the item that was clicked
     console.log('this is:', this)
-
-    if(this.id == 'start-button'){
         document.querySelector('#startgame').style.display='block';
         start = new Date().getTime();
+        startBtn.style.display = 'none'; //hides start button
     }
-
-    if(e.target.value == start && this.id == 'start-button'){
-        //answered correctly
-        this.style.display = 'none'
-        this.nextElementSibling.style.display = 'block'
-
-    else if(e.target.value == Island 4 && this.id == 'startgame'){
-        this.style.display = 'none'
-        this.nextElementSibling.style.display = 'block'
-        end = new Date().getTime();
-        score = end-start;
-        console.log(score)
-        document.querySelector('form input[name="score"]').value = score;
-        document.querySelector('#covid-data-display').style.display='none';
-    }
-
-}
 </script>
 {% endif %}
 <script type="text/javascript">
@@ -242,119 +241,5 @@ function showPuzzle(e){
     }
 </script>
 
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<html>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Arcade Smash</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-link">
-                <a class="nav-link" href="/"> Home </a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<head>
-    <title> Level 1 Room 1 </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body style="background-image: url('https://cdn.wallpapersafari.com/82/97/UHpNxb.jpg');">
-
-
-<div class="container-fluid">
-    <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
-
-        <div class="col-4" style="text-align: right;">
-
-            <a href="https://github.com/LordRoop/P5_Gorillas-Portfolio" target="_blank"><i class="fa fa-map"></i></a>
-
-        </div>
-    </div>
-
-</div>
-
-</body>
-
-
-
-<style>
-    html, body {
-        margin: 0;
-        height: 100%;
-        color: white;
-    }
-
-    h1{
-        font-size: 5em;
-    }
-
-
-    .fa{
-        font-size: 4em;
-        letter-spacing: 1em;
-        transition: all .2s;
-        color: brown;
-    }
-
-    .fa:hover{
-        transform: translateY(10px);
-    }
-
-    .fa-map:hover{
-        color: #8b6040;
-    }
-
-
-    .btn:link,
-    .btn:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 15px 40px;
-        display: inline-block;
-        border-radius: 100px;
-        transition: all .2s;
-        position: absolute;
-        color: white;
-        font-size: 2.5em;
-    }
-
-    .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
-    }
-
-    .btn:active {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
-    }
-
-
-    </style>
-</html>
--->

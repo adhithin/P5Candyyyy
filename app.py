@@ -163,6 +163,10 @@ def ratings():
 def game5():
 	return render_template('index.html')
 
+@app.route('/game6')
+def game6():
+	return render_template('game6')
+
 @app.route('/game4', methods=['GET', 'POST'])
 def game4():
 	gameScores='nothing'

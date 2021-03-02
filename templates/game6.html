@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ARCADESMASH | SIMON SAYS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://img.icons8.com/material-sharp/24/000000/apple-arcade.png"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+    <body>
+
+        <div class="w3-top">
+            <div class="w3-row w3-padding w3-black">
+                <div class="w3-col s3">
+                    <a href="/" class="w3-button w3-block w3-black">HOME</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="/game6" class="w3-button w3-block w3-black">RESTART</a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>SIMON SAYS</h2>
+        </div>
+
+        <div>
+            <div
+                    onclick="panelClicked(event.currentTarget)"
+                    class="panel top-left-panel"
+            ></div>
+            <div
+                    onclick="panelClicked(event.currentTarget)"
+                    class="panel top-right-panel"
+            ></div>
+        </div>
+
+        <div>
+            <div
+                    onclick="panelClicked(event.currentTarget)"
+                    class="panel bottom-left-panel"
+            ></div>
+            <div
+                    onclick="panelClicked(event.currentTarget)"
+                    class="panel bottom-right-panel"
+            ></div>
+        </div>
+
+        <div class="center"></div>
+
+        <script>
+                const topLeft = document.querySelector('.top-left-panel');
+                const topRight = document.querySelector('.top-right-panel');
+                const bottomLeft = document.querySelector('.bottom-left-panel');
+                const bottomRight = document.querySelector('.bottom-right-panel');
+
+                const getRandomPanel = () => {
+                  const panels = [
+                    topLeft,
+                    topRight,
+                    bottomLeft,
+                    bottomRight
+                  ];
+                  return panels[parseInt(Math.random() * panels.length)];
+                };
+
+                const sequence = [getRandomPanel()];
+                let sequenceToGuess = [...sequence];
+
+                const flash = panel => {
+                  return new Promise(resolve => {
+                    panel.className += ' active';
+                    setTimeout(() => {
+                      panel.className = panel.className.replace(
+                        ' active',
+                        ''
+                      );
+                      setTimeout(() => {
+                        resolve();
+                      }, 250);
+                    }, 1000);
+                  });
+                };
+
+                let canClick = false;
+
+                const panelClicked = panelClicked => {
+                  if (!canClick) return;
+                  const expectedPanel = sequenceToGuess.shift();
+                  if (expectedPanel === panelClicked) {
+                    if (sequenceToGuess.length === 0) {  // start new round
+                      sequence.push(getRandomPanel());
+                      sequenceToGuess = [...sequence];
+                      startFlashing();
+                    }
+                  } else {
+                    // end game
+                    alert('GAME OVER!!');
+                  }
+                };
+
+                const startFlashing = async () => {
+                  canClick = false;
+                  for (const panel of sequence) {
+                    await flash(panel);
+                  }
+                  canClick = true;
+                };
+
+                startFlashing();
+            </script>
+    </body>
+
+</html>
+
+<style>
+    body {
+        background-color: black;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    h2 {
+        position: relative;
+        font-family: "Brush Script MT";
+        font-size: 50px;
+        top: 10px;
+        color: crimson;
+        text-align: center;
+    }
+
+    .panel {
+        position: relative;
+        width: 260px;
+        height: 260px;
+        display: inline-block;
+        cursor: pointer;
+        top: 30px;
+    }
+
+    .panel:hover {
+        box-shadow: inset 0px 0px 0px 3px gray;
+        box-sizing: border-box;
+    }
+
+    .bottom-right-panel {
+        border-bottom-right-radius: 100%;
+        background-color: blue;
+    }
+
+    .bottom-left-panel {
+        border-bottom-left-radius: 100%;
+        background-color: gold;
+    }
+    .top-right-panel {
+        border-top-right-radius: 100%;
+        background-color: red;
+    }
+    .top-left-panel {
+        border-top-left-radius: 100%;
+        background-color: green;
+    }
+
+    .active {
+        background-color: silver;
+    }
+
+    .center {
+        position: relative;
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        background-color: black;
+        top: -360px;
+    }
+</style>

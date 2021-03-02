@@ -155,6 +155,10 @@ def game4():
     return render_template('game4.html', gameScores=gameScores)
 #    return render_template("game4.html")
 
+@app.route('/game6')
+def game6():
+    return render_template("game6.html")
+
 
 @app.route('/loadingpage')
 def CharSelect():

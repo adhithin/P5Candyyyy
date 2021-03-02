@@ -130,6 +130,10 @@ def apcsp():
 def adhithi():
 	return render_template('adhithi.html')
 
+@app.route('/pedro')
+def pedro():
+	return render_tmeplate('pedro.html')
+
 @app.route("/ratings", methods=['GET', 'POST'])
 def ratings():
 	gameScores='nothing'

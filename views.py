@@ -168,6 +168,10 @@ def apcsp():
 def adhithi():
     return render_template("adhithi.html")
 
+@app.route('/pedro')
+def pedro():
+    return render_template("pedro.html")
+
 # Route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
 def login():

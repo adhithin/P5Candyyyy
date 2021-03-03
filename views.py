@@ -176,6 +176,10 @@ def adhithi():
 def pedro():
     return render_template("pedro.html")
 
+@app.route('/arul')
+def arul():
+    return render_template("arul.html")
+
 # Route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
 def login():

@@ -132,7 +132,11 @@ def adhithi():
 
 @app.route('/pedro')
 def pedro():
-	return render_tmeplate('pedro.html')
+	return render_template('pedro.html')
+
+@app.route('/arul')
+def arul():
+	return render_template('arul.html')
 
 @app.route("/ratings", methods=['GET', 'POST'])
 def ratings():

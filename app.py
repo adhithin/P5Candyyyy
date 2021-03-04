@@ -169,7 +169,28 @@ def game5():
 
 @app.route('/game6')
 def game6():
-	return render_template('game6')
+	gameScores='nothing'
+
+	if request.method == 'POST':
+		name = request.form['name']
+		score = request.form['score']
+		game = request.form['game']
+		#the code below confirmed I had the proper data. Now to add it to the db.
+		print(Score(name, score, game))
+
+		new_score = Score(name, score, game)
+		db.session.add(new_score)
+		db.session.commit()
+
+		#query the db for the relevant scores on this table:
+		gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
+		gameScores = []
+
+		for gameResult in gameResults:
+			game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score}
+			gameScores.append(game_dict)
+
+	return render_template('game6.html', gameScores=gameScores)
 
 @app.route('/game4', methods=['GET', 'POST'])
 def game4():

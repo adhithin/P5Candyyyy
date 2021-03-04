@@ -2,18 +2,18 @@
 <html lang="en">
 
     <head>
-    <meta charset="UTF-8" />
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>ARCADESMASH | SIMON SAYS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="https://img.icons8.com/material-sharp/24/000000/apple-arcade.png"/>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-</head>
+        <meta charset="UTF-8" />
+        <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>ARCADESMASH | SIMON SAYS</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="https://img.icons8.com/material-sharp/24/000000/apple-arcade.png"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    </head>
 
     <body>
 
@@ -56,11 +56,17 @@
 
         <div class="center"></div>
 
+        <div>
+            <h3 id="CurrentLevel"></h3>
+        </div>
+
         <script>
                 const topLeft = document.querySelector('.top-left-panel');
                 const topRight = document.querySelector('.top-right-panel');
                 const bottomLeft = document.querySelector('.bottom-left-panel');
                 const bottomRight = document.querySelector('.bottom-right-panel');
+                document.getElementById("CurrentLevel").innerHTML = 1;
+
 
                 const getRandomPanel = () => {
                   const panels = [
@@ -75,26 +81,123 @@
                 const sequence = [getRandomPanel()];
                 let sequenceToGuess = [...sequence];
 
+
                 const flash = panel => {
                   return new Promise(resolve => {
-                    panel.className += ' active';
-                    setTimeout(() => {
-                      panel.className = panel.className.replace(
-                        ' active',
-                        ''
-                      );
-                      setTimeout(() => {
-                        resolve();
-                      }, 250);
-                    }, 1000);
+                    if (panel === topLeft) {
+                        panel.className += ' activetl';
+                        setTimeout(() => {
+                          panel.className = panel.className.replace(
+                            ' activetl',
+                            ''
+                          );
+                          setTimeout(() => {
+                            resolve();
+                          }, 250);
+                        }, 1000);
+                    }
+                    if (panel === topRight) {
+                        panel.className += ' activetr';
+                        setTimeout(() => {
+                          panel.className = panel.className.replace(
+                            ' activetr',
+                            ''
+                          );
+                          setTimeout(() => {
+                            resolve();
+                          }, 250);
+                        }, 1000);
+                    }
+                    if (panel === bottomLeft) {
+                        panel.className += ' activebl';
+                        setTimeout(() => {
+                          panel.className = panel.className.replace(
+                            ' activebl',
+                            ''
+                          );
+                          setTimeout(() => {
+                            resolve();
+                          }, 250);
+                        }, 1000);
+                    }
+                    if (panel === bottomRight) {
+                        panel.className += ' activebr';
+                        setTimeout(() => {
+                          panel.className = panel.className.replace(
+                            ' activebr',
+                            ''
+                          );
+                          setTimeout(() => {
+                            resolve();
+                          }, 250);
+                        }, 1000);
+                    }
                   });
                 };
+
+
+                const quickflash = panel => {
+                  return new Promise(resolve => {
+                    if (panel === topLeft) {
+                        panel.className += ' activetl';
+                        setTimeout(() => {
+                          panel.className = panel.className.replace(
+                            ' activetl',
+                            ''
+                          );
+                          setTimeout(() => {
+                            resolve();
+                          }, 250);
+                        }, 50);
+                    }
+                    if (panel === topRight) {
+                        panel.className += ' activetr';
+                        setTimeout(() => {
+                          panel.className = panel.className.replace(
+                            ' activetr',
+                            ''
+                          );
+                          setTimeout(() => {
+                            resolve();
+                          }, 250);
+                        }, 50);
+                    }
+                    if (panel === bottomLeft) {
+                        panel.className += ' activebl';
+                        setTimeout(() => {
+                          panel.className = panel.className.replace(
+                            ' activebl',
+                            ''
+                          );
+                          setTimeout(() => {
+                            resolve();
+                          }, 250);
+                        }, 50);
+                    }
+                    if (panel === bottomRight) {
+                        panel.className += ' activebr';
+                        setTimeout(() => {
+                          panel.className = panel.className.replace(
+                            ' activebr',
+                            ''
+                          );
+                          setTimeout(() => {
+                            resolve();
+                          }, 250);
+                        }, 50);
+                    }
+                  });
+                };
+
+
+
 
                 let canClick = false;
 
                 const panelClicked = panelClicked => {
                   if (!canClick) return;
                   const expectedPanel = sequenceToGuess.shift();
+                  quickflash(panelClicked)
                   if (expectedPanel === panelClicked) {
                     if (sequenceToGuess.length === 0) {  // start new round
                       sequence.push(getRandomPanel());
@@ -103,11 +206,13 @@
                     }
                   } else {
                     // end game
-                    alert('GAME OVER!!');
+                    document.querySelector('form input[name="score"]').value = sequenceToGuess.length;
+                    alert('GAME OVER!!  Your score is --> ' + sequenceToGuess.length);
                   }
                 };
 
                 const startFlashing = async () => {
+                  setTimeout(() => { document.getElementById("CurrentLevel").innerHTML = sequence.length; }, 400);
                   canClick = false;
                   for (const panel of sequence) {
                     await flash(panel);
@@ -117,6 +222,38 @@
 
                 startFlashing();
             </script>
+
+        <div align="center">
+            <section id="done">
+                <h2> ADD YOUR SCORE TO LEADERBOARD? </h2>
+                <form action="" method="POST">
+                    <label for="name">Name </label>
+                    <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
+                    <input type="hidden" name="score">
+                    <input type="hidden" name="game" value="game6">
+                    <button type="submit" class="w3-center w3-button w3-blue">Add Your Score to the Leaderboard!</button>
+                </form>
+            </section>
+        </div>
+
+        <div align="center" style="font-family:Roboto; font-size: 45px">
+
+            <h1 align="center" color="red" type="block"> LEADERBOARD </h1>
+
+            <table class="score">
+                <tr>
+                    <th align="center" style="font-size: 15px; color: crimson"> NAME </th>
+                    <th align="center" style="font-size: 15px; color: crimson"> SCORE </th>
+                </tr>
+                {% for score in gameScores  %}
+                <tr>
+                    <td align="center" style="font-family:Roboto; font-size: 15px; color: crimson">{{score.name}}</td>
+                    <td align="center" style="font-family:Roboto; font-size: 15px; color: crimson">{{score.score}}</td>
+                    <td align="center" style="font-family:Roboto; font-size: 15px; color: crimson">{{score.game}}</td>
+                </tr>
+                {%  endfor %}
+            </table>
+        </div>
     </body>
 
 </html>
@@ -128,12 +265,26 @@
         margin-top: 30px;
     }
 
+    h1 {
+        font-family: "Roboto";
+        color: crimson;
+    }
+
     h2 {
         position: relative;
         font-family: "Brush Script MT";
         font-size: 50px;
         top: 10px;
         color: crimson;
+        text-align: center;
+    }
+
+    h3 {
+        position: relative;
+        font-size: 30px;
+        top: -820px;
+        left: 400px;
+        color: yellow;
         text-align: center;
     }
 
@@ -153,24 +304,40 @@
 
     .bottom-right-panel {
         border-bottom-right-radius: 100%;
-        background-color: blue;
+        background-color: lightskyblue;
     }
 
     .bottom-left-panel {
         border-bottom-left-radius: 100%;
-        background-color: gold;
+        background-color: khaki;
     }
     .top-right-panel {
         border-top-right-radius: 100%;
-        background-color: red;
+        background-color: salmon;
     }
     .top-left-panel {
         border-top-left-radius: 100%;
-        background-color: green;
+        background-color: lightgreen;
     }
 
     .active {
         background-color: silver;
+    }
+
+    .activebr {
+        background-color: darkblue;
+    }
+
+    .activebl {
+        background-color: yellow;
+    }
+
+    .activetl {
+        background-color: green;
+    }
+
+    .activetr {
+        background-color: red;
     }
 
     .center {

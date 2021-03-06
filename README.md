@@ -10,3 +10,16 @@ The ultimate arcade for all your gaming purposes!
 - Leave a rating and a review! 
 
 ## Key Technicals 
+
+### CRUD 
+
+we use the employment of CRUD 
+
+### SQL 
+
+
+### API 
+
+
+### MUSIC 
+

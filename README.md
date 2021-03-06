@@ -1,20 +1,12 @@
-# Game-2048
-The well known 2048 game programmed in javascript with JQuery
+# Arcade Smash 
+The ultimate arcade for all your gaming purposes! 
 
 ## Quick start guide
 
-Set a div in your HTML with an id : 
+<a href="arcadesmash.tk"> Get onto arcade smash </a>
 
-```html
-<div id="game"></div>
-```
+- Explore our multitide of games available for your leisure 
 
-Include the javascript file and use the play2048 JQuery plugin on your div :
+- Leave a rating and a review! 
 
-```javascript
-<script type="text/javascript" src="2048.js"></script>
-
-<script type="text/javascript" >
-  $("#game").play2048(sizeOf2048Grid, sizeOfDiv);
-</script>
-```
+## Key Technicals 

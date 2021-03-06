@@ -203,9 +203,9 @@ def pedro():
 def arul():
     return render_template("arul.html")
 
-@app.route('/akhilesh')
+@app.route('/akhil')
 def akhilesh():
-    return render_template("akhilesh.html")
+    return render_template("akhil.html")
 
 
 # Route for handling the login page logic

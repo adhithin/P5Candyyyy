@@ -209,6 +209,10 @@ def game6():
     return render_template('game6.html', gameScores=gameScores)
 #    return render_template("game6.html")
 
+@app.route('/game7')
+def game7():
+    return render_template("game7.html")
+
 
 
 @app.route('/apcsp')

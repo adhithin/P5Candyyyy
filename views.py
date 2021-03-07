@@ -43,6 +43,33 @@ db.create_all();
 def home():
     return render_template('home.html')
 
+@app.route("/ratings", methods=['GET', 'POST'])
+def ratings():
+    gameScores='nothing'
+
+    if request.method == 'POST':
+        name = request.form['name']
+        score = request.form['score']
+        game = request.form['rating']
+        #the code below confirmed I had the proper data. Now to add it to the db.
+        print(Score(name, score, game))
+
+        new_score = Score(name, score, game)
+        db.session.add(new_score)
+        db.session.commit()
+
+        #query the db for the relevant scores on this table:
+        gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
+        gameScores = []
+
+        for gameResult in gameResults:
+            game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score, 'game':gameResult.p_game}
+            gameScores.append(game_dict)
+
+    return render_template('ratings.html', gameScores=gameScores)
+
+
+
 @app.route('/game1', methods=['GET', 'POST'])
 def game1():
     gameScores='nothing'
@@ -183,9 +210,6 @@ def game6():
 #    return render_template("game6.html")
 
 
-@app.route('/loadingpage')
-def CharSelect():
-    return render_template("loadingpage")
 
 @app.route('/apcsp')
 def apcsp():
@@ -207,33 +231,6 @@ def arul():
 def akhilesh():
     return render_template("akhil.html")
 
-
-# Route for handling the login page logic
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    error = None
-    if request.method == 'POST':
-        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Invalid Credentials. Please try again.'
-        else:
-            return render_template("apcsp.html")
-    return render_template('apcsp.html', error=error)
-
-@app.route('/register')
-def register():
-    return render_template("register.php")
-
-@app.route('/index')
-def index():
-    # go to the score table and query it, order it by the score value descending, limit 5 and serve up all of those items I asked for as a list.
-    results = {1, 2, 3, 4}
-    scores = []
-
-    for result in results:
-        score_dict = {"name": "name", 'score': 'score', "game":"game"}
-        scores.append(score_dict)
-
-    return render_template('leaderboard.html', scores=scores)
 
 
 @app.route('/game', methods=['GET', 'POST'])

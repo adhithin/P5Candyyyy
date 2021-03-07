@@ -213,6 +213,10 @@ def game6():
 def game7():
     return render_template('game7.html')
 
+@app.route('/game8', methods=['GET', 'POST'])
+def game8():
+    return render_template('game8.html')
+
 @app.route('/apcsp')
 def apcsp():
     return render_template("apcsp.html")

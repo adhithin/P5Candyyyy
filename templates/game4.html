@@ -45,6 +45,7 @@
     <link rel="icon" href="https://img.icons8.com/material-sharp/24/000000/apple-arcade.png"/>
 </head>
 
+
 <body class="bgimg w3-display-container" id="home" onload="startGame()">
 
     <div class="w3-top">
@@ -52,11 +53,15 @@
             <div class="w3-col s3">
                 <a href="/" class="w3-button w3-block w3-black">HOME</a>
             </div>
+
             <div class="w3-col s3">
                 <a href="/game4" class="w3-button w3-block w3-black">RESTART</a>
             </div>
+
         </div>
+
     </div>
+
 
     <script>
         var GamePiece;
@@ -218,6 +223,8 @@
         })
     </script>
 
+
+
     <div align="center">
         <section id="done">
             <h2> ADD YOUR SCORE TO LEADERBOARD </h2>
@@ -231,10 +238,17 @@
         </section>
     </div>
 
+
+
+    </div>
+
+
+</body>
+<footer>
     <div align="center" style="font-family:Roboto; font-size: 45px">
 
-        <h1 align="center" color="red" type="block"> LEADERBOARD </h1>
-
+        <h1 align="center" color="red" type="block"> Welcome to Cube Dodge. Use the up arrow to accelerate! </h1>
+<h1> leaderboard </h1>
         <table class="score">
             <tr>
                 <th align="center" style="font-size: 15px"> NAME </th>
@@ -249,9 +263,7 @@
             {%  endfor %}
         </table>
     </div>
-
-    </div>
-</body>
+</footer>
 </html>
 
 

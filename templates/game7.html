@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gem Gatherer Game</title>
+    <!-- found and modified art from here: http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html -->
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://lh3.googleusercontent.com/0LhKzvRDCuodOxM7cNP6tyLtvocQ6yPniStPmTN7Op3pq0LKgZL_tZJsE18ogM5YeESnEApVS0PkksJd8kvXxDm-zpagDuJwZ-OtoX74RY0lDxKP8Ak94b5I1YZPZ9xWlOKc4-7GqY6qzlNJnIYkvoyK3xDpJ7uzqK_S2ZKvqb5GnMzmqwVNrslTOCgalIb251VCvo6VYf2Tcf99164WJx9gWZ8umyeCzHl970oxS15tB9tyurAiiid3M6xxRdVpCI2B09lf5NzBnNvrTSvcTH0GeyUGPV92OPpaeAfS_1YN8mXmUm8ksxS7uZUug0Zld1NShKbt6q6VBZiSmZq4F9hn8uq89xghvdhzW67OD4fTuYr3TPaO6RKll_xlkcaMvfCTZcg4CCKheWc5ryW7BV89cTU0KmeaQnkosKb-mKseY59OLOYtuS_Je2DkjRYmjk63F-68Eqo2kVT_d1UBYkoMv9tYPYef6aeCWDus1SOsJdL3NAtBj2Ejzq5BcptGuiB-d6lxJY9eJm6TEi5_JWNnqRNX3FbCIHiOJnPpCqDUfEpUBwfchhJ2Fj9SQWDoF21M4aaPsvTXMqMyuUI3za0F_loM9lFE4pKgjyGFYVaoeHnQjxd2hCgH4upUVGH9He901575vq9Y2-BTweU85A8kgOroABfkTqN7rGIJh8T9XijWiw7RCWYuLqGf=s40-no?authuser=0' rel='stylesheet' type='image'>
+    <style>
+        html {
+            font-size: 24px;
+            font-family: 'Shadows Into Light Two', cursive;
+        }
+
+        #gridbox {
+            border: 1px solid black;
+            background-color: #CC99FF;
+            background-image: url(images/floor.png);
+            margin: 50px auto;
+            display: none;
+        }
+
+        .gridsquare {
+            width: 40px;
+            height: 40px;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .wall {
+            background-image: url(images/wall.png);
+        }
+
+        .collect.blue {
+            background-image: url(images/collectblue.png);
+        }
+
+        .collect.green {
+            background-image: url(images/collectgreen.png);
+        }
+
+        .collect.purple {
+            background-image: url(images/collectpurple.png);
+        }
+
+        .collect.orange {
+            background-image: url(images/collectorange.png);
+        }
+
+        .gridsquare.finish {
+            background-image: url(images/end.png);
+        }
+
+        .gridsquare.enemy {
+            background-image: url(images/bug.png);
+        }
+
+        .gridsquare.player {
+            background-image: url(images/girl.png);
+        }
+
+        #score {
+            border-radius: 20px;
+            padding-top: 2px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rebeccapurple;
+            color: white;
+            width: 80px;
+            float: left;
+        }
+
+        #ui {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            height: 50px;
+            display: none;
+        }
+
+        #lifebar {
+            border: 1px solid black;
+            width: 120px;
+            height: 40px;
+            float: left;
+        }
+
+        #lifebar .bar {
+            height: 40px;
+            width: 100%;
+            background-image: url(images/heart.png);
+        }
+
+        #start {
+            border-radius: 20px;
+            padding: .5em;
+            background-color: rebeccapurple;
+            color: white;
+            width: 150px;
+            margin: 5px auto;
+            cursor: pointer;
+        }
+
+        .info {
+            text-align: center;
+            width: 400px;
+            margin: 20px auto;
+        }
+
+        #gridbox h2 {
+            margin: 200px auto 0;
+            height: 150px;
+            line-height: 150px;
+        }
+
+        .winmessage {
+            background-color: white;
+            color: rebeccapurple;
+            text-align: center;
+            position: relative;
+        }
+
+        .losemessage {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        #princess {
+            background-image: url('images/princess.png');
+            position: absolute;
+            top: 100;
+            left: 0;
+            height: 196px;
+            width: 200px;
+            text-align: right;
+            text-transform: uppercase;
+            color: rebeccapurple;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .startover{
+            border-radius: 20px;
+            padding: .5em;
+            width:200px;
+            background-color: rebeccapurple;
+            color: white;
+            text-align: center;
+            margin: 30px auto;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+<!-- add gameover -->
+<div class="info">
+    <h2>Instructions</h2>
+    <p>Your Princess has sent you on a mission. She tells you to collect ALL the gems before being able to reach the star to teleport back to her castle. Avoid being hit by the icky bugs. They will hurt you.</p>
+    <div id="start">start game</div>
+</div>
+<div id="ui">
+    <div id="score">0</div>
+    <div id="lifebar">
+        <div class="bar"></div>
+    </div>
+</div>
+<div id="gridbox"></div>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+    var rows = 20;
+    var columns = 20;
+    var score = 0;
+    var playerx = 0;
+    var playery = 0;
+    var gems = ['blue', 'purple', 'orange', 'green'];
+    var enemycount = 0;
+    var moveTenemy;
+    var lives = 3;
+    //put setup in its own function:
+
+    function setup() {
+        //set up gameboard:
+        for (var j = 0; j < rows; j++) { //start of outer for loop
+
+            for (var i = 0; i < columns; i++) { //start inner for loop
+                var xcoord = i; //every column has the same x
+                var ycoord = j; //every column has the same y
+
+                var square = $('<div>').addClass('gridsquare')
+                    .attr('id', xcoord + '-' + ycoord);
+                var squareclass = Math.random();
+                //console.log(squareclass);
+                if (squareclass > .9) {
+                    square.addClass('wall');
+                }
+
+                if (squareclass > .04 && squareclass < .1) {
+                    square.addClass('collect');
+                    square.addClass(gems[getRandomInt(0, (gems.length - 1))])
+                }
+
+                //do we want to limit the number of enemies? If so, wrap the following code in an if statement:
+                //if(enemycount < 16){
+                //that would limit the max enemies to 15
+
+                //add the enemy class squares
+                if (squareclass < .03) {
+                    square.addClass('enemy');
+                    enemycount++;
+                    //square.html(enemycount); //lets us see how many enemies there are on the page
+
+                }
+                //} uncomment top and bottom to use // end if(enemycount)
+
+                $('#gridbox').append(square);
+
+
+            } //end inner for loop
+        } //end outer loop
+
+        //clears any walls that may block the start and end
+        $('#0-0, #0-1, #1-1, #1-0, #19-19').removeClass('wall');
+
+        //this makes our start (player) and finish (end)
+        $('#0-0').addClass('player');
+        $('#19-19').addClass('finish');
+        updatedlifebar(); //runs the updatedlifebar so that the lifebar appears as full
+
+
+        var boxwidth = $('.gridsquare').outerWidth();
+        var boxheight = $('.gridsquare').outerHeight();
+        $('#gridbox').css({
+            width: boxwidth * columns,
+            height: boxheight * rows
+        });
+
+
+        var boxwidth = $('.gridsquare').outerWidth();
+        var boxheight = $('.gridsquare').outerHeight();
+        $('#gridbox').css({
+            width: boxwidth * columns,
+            height: boxheight * rows
+        });
+
+        //declared moveTenemy at top. Initialized/reset its value here
+        moveTenemy = setTimeout(moveenemy, 1000)
+    } //end setup
+
+
+
+    //put code into a function that starts the game when user clicks the start button
+
+    function startgame() {
+        $('.info').hide();
+        $('#ui, #gridbox').show();
+        setup();
+
+
+        //all of what we need in order for our game to work
+
+    }
+
+    function moveplayer() {
+
+        $('.gridsquare').removeClass('player');
+        //addClass of player to the id with the same value as playerx-playery
+        $('#' + playerx + '-' + playery).addClass('player');
+    }
+
+    //keys to control player
+
+    $(document).keydown(function(e) {
+
+        var tempx = playerx; //save a copy of player position
+        var tempy = playery; //save a copy of player position
+
+        if (e.which == 87 || e.which == 38) {
+            //move up
+
+            tempy = tempy - 1;
+
+        }
+        if (e.which == 83 || e.which == 40) {
+            //move down
+            tempy = tempy + 1;
+        }
+        if (e.which == 65 || e.which == 37) {
+            //move left
+
+            tempx = tempx - 1;
+
+
+        }
+        if (e.which == 68 || e.which == 39) {
+            //move right
+            tempx = tempx + 1;
+        }
+
+        //check if new square is illegal
+        if (tempy < 0 || tempx < 0 || tempx > columns - 1 || tempy > rows - 1 || $('#' + tempx + '-' + tempy).hasClass('wall') || $('#' + tempx + '-' + tempy).hasClass('enemy')) {
+            //console.log(playerx, playery, tempx, tempy);
+        } else {
+            playerx = tempx;
+            playery = tempy;
+
+            moveplayer();
+        }
+
+        //chek to see if there is a gem here
+        if ($('#' + tempx + '-' + tempy).hasClass('collect')) {
+            if ($('#' + tempx + '-' + tempy).hasClass('orange')) {
+                points = 10;
+            }
+            if ($('#' + tempx + '-' + tempy).hasClass('blue')) {
+                points = 25;
+            }
+            if ($('#' + tempx + '-' + tempy).hasClass('green')) {
+                points = 50;
+            }
+            if ($('#' + tempx + '-' + tempy).hasClass('purple')) {
+                points = 75
+
+            }
+
+            score += points;
+
+            $('#score').text(score);
+            console.log(score);
+            $('#' + tempx + '-' + tempy).removeClass('collect')
+        }
+
+
+        if ($('#' + tempx + '-' + tempy).hasClass('finish')) {
+            if ($('.collect').length < 1) {
+                //   alert('YOU WIN');
+                gameover('win');
+            }
+
+        }
+
+
+    }) // end key down
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function moveenemy() {
+        var enemyy;
+        var enemyx;
+        $('.enemy').each(function() {
+            var enemy = $(this);
+            var enemyid = enemy.attr('id');
+            enemyid = enemyid.split("-");
+            enemyx = Number(enemyid[0]);
+            enemyy = Number(enemyid[1]);
+            var dir = getRandomInt(1, 4);
+            //console.log(dir);
+            var etempx = enemyx; //save a copy of enemy position
+            var etempy = enemyy; //save a copy of enemy position
+
+
+
+            if (dir == 1) { //up
+                etempy -= 1;
+            }
+            if (dir == 3) { //down**
+                etempy = etempy + 1;
+            }
+            if (dir == 4) { //left
+                etempx -= 1;
+            }
+            if (dir == 2) { //right**
+                etempx += 1;
+            }
+
+
+
+            //check if new square is illegal for enemy
+            if (etempy < 0 || etempx < 0 || etempx > columns - 1 || etempy > rows - 1 || $('#' + etempx + '-' + etempy).hasClass('wall') || $('#' + etempx + '-' + etempy).hasClass('enemy')) {
+                //console.log(enemyx, enemyy, etempx, etempy)
+            } else if ($('#' + etempx + '-' + etempy).hasClass('player')) {
+                //player loses a life
+
+                lives--;
+                updatedlifebar();
+
+                if (lives <= 0) {
+                    //alert('OH NOOO YOU LOSE!!!');
+                    gameover('lose');
+                }
+
+
+
+            } else {
+                $('#' + enemyx + '-' + enemyy).removeClass('enemy');
+                enemyx = etempx;
+                enemyy = etempy;
+                //console.log(enemyx, enemyy);
+                $('#' + enemyx + '-' + enemyy).addClass('enemy');
+            }
+        }) // end each
+        //moveenemy needs to call itself:
+        moveTenemy = setTimeout(moveenemy, 500);
+
+    } //end moveenemy
+
+
+    function updatedlifebar() {
+
+        var lifepercent = lives / 3;
+        lifepercent = lifepercent * 100;
+        $('#lifebar .bar').css({
+            width: lifepercent + '%'
+        });
+    } //end updatedlifebar
+
+    function gameover(result) {
+        //alert(result);
+        clearTimeout(moveTenemy);
+        var msg;
+
+        if (result == 'win') {
+            msg = '<div class="' + result + 'message"><div id="princess">Yay!</div><h2>You Win!!! The Princess is pleased!</h2><p>She gives you ' + score + ' gold.</p></div>';
+
+        } else {
+            msg = '<h2 class="' + result + 'message">Too bad, you lost.</h2>';
+        }
+
+        $('#gridbox').html(msg);
+        if (result == 'win') {
+            princessAni();
+        }
+
+        $('#gridbox').append('<div class="startover">Click here to play a new game!</div>');
+        $('.startover').click(function() {
+            location.reload();
+        });
+
+    }
+
+    function princessAni() {
+
+        $('#princess').animate({
+            top: '+=100'
+        }, 400).animate({
+            top: '-=100'
+        }, 400, function() {
+            princessAni();
+        });
+    }
+
+
+    //event listener:
+    $('#start').click(startgame);
+
+</script>
+
+</body>
+
+</html>

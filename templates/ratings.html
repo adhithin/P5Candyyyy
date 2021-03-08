@@ -52,14 +52,12 @@
 <form action="" method="POST">
     <label for="name" style="font-family: Roboto, sans-serif, size=20pt" >Name:</label>
     <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
-    <label for="score">Comment:</label>
-    <input id="score" type="text" name="score" placeholder="Your Comment">
-    <label for="rating">Rating (1-5)</label>
-    <input id="rating" name="rating" min="0" max="5" placeholder="Rating">
+    <label for="rating">Rating from 1 to 5:</label>
+    <input id="rating" type="number" name="rating" min="0" max="5"placeholder="Your Rating">
+    <label for="comment"> Comment: </label>
+    <input id="comment" name="comment" placeholder="Comments">
     <button type="submit" class="w3-center w3-button w3-blue"> Submit your review  </button>
 </form>
-    {% for ratingResult in ratingResults %}
-    {%  endfor %}
 </div>
 <div align="center" style="font-family:Roboto; font-size: 45px">
 
@@ -70,11 +68,11 @@
             <th align="center" style="font-size: 30px"> COMMENT </th>
             <th align="right" style="font-size: 30px"> RATING </th>
         </tr>
-        {% for score in gameScores  %}
+        {% for arcadeRating in arcadeRatings  %}
         <tr>
-            <td align="left" style="font-family:Roboto; font-size: 15px">{{score.name}}</td>
-            <td align="center" style="font-family:Roboto; font-size: 15px">{{score.score}}</td>
-            <td align="right" style="font-family:Roboto; font-size: 15px">{{score.game}}</td>
+            <td align="left" style="font-family:Roboto; font-size: 15px">{{rating.name}}</td>
+            <td align="center" style="font-family:Roboto; font-size: 15px">{{rating.rating}}</td>
+            <td align="right" style="font-family:Roboto; font-size: 15px">{{rating.comment}}</td>
         </tr>
         {%  endfor %}
     </table>

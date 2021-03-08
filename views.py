@@ -2,6 +2,8 @@ import os
 from flask import Flask, render_template, redirect, url_for
 from flask import request
 
+
+
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 # from __init__ import app
@@ -36,6 +38,25 @@ class Score(db.Model):
     def __repr__(self):
         return f"{self.p_name},{self.p_score}, {self.p_game}"
 
+#code for the ratings table
+db.create_all();
+
+class Ratings(db.Model):
+    __tablename__ = 'ratings'
+    id = db.Column(db.Integer, primary_key=True)
+    # not planning to delete scores, but still a good practice
+    p_name = db.Column(db.String(10), unique=False, nullable=False)
+    p_rating = db.Column(db.Integer, unique=False, nullable=False) # want score as int so we can sort by it easily.
+    p_commment = db.Column(db.String(10), unique=False, nullable=False)
+
+    def __init__(self, p_name, p_rating, p_comment):
+        self.p_name = p_name
+        self.p_rating = p_rating
+        self.p_comment = p_comment
+
+    def __repr__(self):
+        return f"{self.p_name},{self.p_rating}, {self.p_comment}"
+
 #must go after 'models'
 db.create_all();
 
@@ -43,30 +64,31 @@ db.create_all();
 def home():
     return render_template('home.html')
 
+
 @app.route("/ratings", methods=['GET', 'POST'])
 def ratings():
-    gameScores='nothing'
+    Ratings='nothing'
 
     if request.method == 'POST':
         name = request.form['name']
-        score = request.form['score']
-        game = request.form['rating']
+        rating = int(request.form['rating'])
+        comment = request.form['comment']
         #the code below confirmed I had the proper data. Now to add it to the db.
-        print(Score(name, score, game))
+        print(Score(name, rating, comment))
 
-        new_score = Score(name, score, game)
-        db.session.add(new_score)
+        new_review = Ratings(name, rating, comment)
+        db.session.add(new_review)
         db.session.commit()
 
         #query the db for the relevant scores on this table:
-        gameResults = Score.query.filter_by(p_game=game).order_by('p_score').all()
-        gameScores = []
+        arcadeRating = Ratings.query.filter_by(p_rating=rating).order_by('p_rating').all()
+        arcadeReviews = []
 
-        for gameResult in gameResults:
-            game_dict = {'name':gameResult.p_name, 'score':gameResult.p_score, 'game':gameResult.p_game}
-            gameScores.append(game_dict)
+        for arcadeRating in arcadeRatings:
+            review_dict = {'name':arcadeReviews.p_name, 'score':arcadeReviews.p_score, 'game':arcadeReviews.p_game}
+            Ratings.append(review_dict)
 
-    return render_template('ratings.html', gameScores=gameScores)
+    return render_template('ratings.html', Ratings=Ratings)
 
 
 

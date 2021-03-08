@@ -41,7 +41,7 @@ class Score(db.Model):
 #code for the ratings table
 db.create_all();
 
-class Ratings(db.Model):
+class Rating(db.Model):
     __tablename__ = 'ratings'
     id = db.Column(db.Integer, primary_key=True)
     # not planning to delete scores, but still a good practice
@@ -67,7 +67,6 @@ def home():
 
 @app.route("/ratings", methods=['GET', 'POST'])
 def ratings():
-    Ratings='nothing'
 
     if request.method == 'POST':
         name = request.form['name']
@@ -78,19 +77,19 @@ def ratings():
         print(rating)
         print(comment)
 
-        new_review = Ratings(name, rating, comment)
+        new_review = Rating(name, rating, comment)
         db.session.add(new_review)
         db.session.commit()
 
-        #query the db for the relevant scores on this table:
-        arcadeRating = Ratings.query.filter_by(p_rating=rating).order_by('p_rating').all()
-        arcadeReviews = []
+    #query the db for the ratings:
+    results = Rating.query.order_by(desc('p_rating')).all()
+    arcade_ratings = []
 
-        for arcadeRating in arcadeRatings:
-            review_dict = {'name':arcadeReviews.p_name, 'score':arcadeReviews.p_score, 'game':arcadeReviews.p_game}
-            Ratings.append(review_dict)
+    for result in results:
+        rating_dict = {'name':result.p_name, 'rating':result.p_rating, 'comment':result.p_commment}
+        arcade_ratings.append(rating_dict)
 
-    return render_template('ratings.html', Ratings=Ratings)
+    return render_template('ratings.html', arcade_ratings = arcade_ratings)
 
 
 

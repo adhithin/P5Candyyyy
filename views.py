@@ -41,21 +41,21 @@ class Score(db.Model):
 #code for the ratings table
 db.create_all();
 
-class Ratings(db.Model):
+class Rating(db.Model):
     __tablename__ = 'ratings'
     id = db.Column(db.Integer, primary_key=True)
     # not planning to delete scores, but still a good practice
     p_name = db.Column(db.String(10), unique=False, nullable=False)
     p_rating = db.Column(db.Integer, unique=False, nullable=False) # want score as int so we can sort by it easily.
-    p_comment = db.Column(db.String(20), unique=False, nullable=False)
+    p_commment = db.Column(db.String(20), unique=False, nullable=False)
 
-    def __init__(self, p_name, p_rating, p_comment):
+    def __init__(self, p_name, p_rating, p_commment):
         self.p_name = p_name
         self.p_rating = p_rating
-        self.p_comment = p_comment
+        self.p_commment = p_commment
 
     def __repr__(self):
-        return f"{self.p_name},{self.p_rating}, {self.p_comment}"
+        return f"{self.p_name},{self.p_rating}, {self.p_commment}"
 
 #must go after 'models'
 db.create_all();
@@ -67,30 +67,29 @@ def home():
 
 @app.route("/ratings", methods=['GET', 'POST'])
 def ratings():
-    Ratings='nothing'
 
     if request.method == 'POST':
         name = request.form['name']
         rating = int(request.form['rating'])
-        comment = request.form['comment']
+        commment = request.form['comment']
         #the code below confirmed I had the proper data. Now to add it to the db.
         print(name)
         print(rating)
-        print(comment)
+        print(commment)
 
-        new_review = Ratings(name, rating, comment)
+        new_review = Rating(name, rating, commment)
         db.session.add(new_review)
         db.session.commit()
 
-        #query the db for the relevant scores on this table:
-        arcadeRating = Ratings.query.filter_by(p_rating=rating).order_by('p_rating').all()
-        arcadeReviews = []
+    #query the db for the ratings:
+    results = Rating.query.order_by(desc('p_rating')).all()
+    arcade_ratings = []
 
-        for arcadeRating in arcadeRatings:
-            review_dict = {'name':arcadeReviews.p_name, 'score':arcadeReviews.p_score, 'game':arcadeReviews.p_game}
-            Ratings.append(review_dict)
+    for result in results:
+        rating_dict = {'name':result.p_name, 'rating':result.p_rating, 'comment':result.p_commment}
+        arcade_ratings.append(rating_dict)
 
-    return render_template('ratings.html', Ratings=Ratings)
+    return render_template('ratings.html', arcade_ratings = arcade_ratings)
 
 
 

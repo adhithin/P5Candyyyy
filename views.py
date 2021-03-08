@@ -47,7 +47,7 @@ class Ratings(db.Model):
     # not planning to delete scores, but still a good practice
     p_name = db.Column(db.String(10), unique=False, nullable=False)
     p_rating = db.Column(db.Integer, unique=False, nullable=False) # want score as int so we can sort by it easily.
-    p_commment = db.Column(db.String(10), unique=False, nullable=False)
+    p_comment = db.Column(db.String(20), unique=False, nullable=False)
 
     def __init__(self, p_name, p_rating, p_comment):
         self.p_name = p_name
@@ -74,7 +74,9 @@ def ratings():
         rating = int(request.form['rating'])
         comment = request.form['comment']
         #the code below confirmed I had the proper data. Now to add it to the db.
-        print(Score(name, rating, comment))
+        print(name)
+        print(rating)
+        print(comment)
 
         new_review = Ratings(name, rating, comment)
         db.session.add(new_review)

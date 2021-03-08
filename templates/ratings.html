@@ -52,8 +52,8 @@
 <form action="" method="POST">
     <label for="name" style="font-family: Roboto, sans-serif, size=20pt" >Name:</label>
     <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
-    <label for="rating">Rating from 1 to 5:</label>
-    <input id="rating" type="number" name="rating" min="0" max="5"placeholder="Your Rating">
+    <label for="rating">Rating from 1 to 5 (5 is best):</label>
+    <input id="rating" type="number" name="rating" min="0" max="5"placeholder="5">
     <label for="comment"> Comment: </label>
     <input id="comment" name="comment" placeholder="Comments">
     <button type="submit" class="w3-center w3-button w3-blue"> Submit your review  </button>
@@ -62,13 +62,13 @@
 <div align="center" style="font-family:Roboto; font-size: 45px">
 
     <h1 align="center" type="block"> Reviews </h1>
-    <table class="score">
+    <table>
         <tr>
-            <th align="left" style="font-size: 30px"> NAME </th>
-            <th align="center" style="font-size: 30px"> COMMENT </th>
-            <th align="right" style="font-size: 30px"> RATING </th>
+            <th align="left" style="font-size: 20px"> NAME </th>
+            <th align="center" style="font-size: 20px"> COMMENT </th>
+            <th align="right" style="font-size: 20px"> RATING </th>
         </tr>
-        {% for arcadeRating in arcadeRatings  %}
+        {% for rating in arcade_ratings  %}
         <tr>
             <td align="left" style="font-family:Roboto; font-size: 15px">{{rating.name}}</td>
             <td align="center" style="font-family:Roboto; font-size: 15px">{{rating.rating}}</td>
@@ -78,6 +78,12 @@
     </table>
 </div>
 
-
+<script>
+    //fixes the double post upon refresh. 
+if ( window.history.replaceState ) {
+    console.log('history replaceState...')
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 </body>
 </html>

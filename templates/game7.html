@@ -1,12 +1,13 @@
 
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 
 <head>
     <title>Gem Gatherer Game</title>
     <!-- found and modified art from here: http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html -->
     <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='https://lh3.googleusercontent.com/0LhKzvRDCuodOxM7cNP6tyLtvocQ6yPniStPmTN7Op3pq0LKgZL_tZJsE18ogM5YeESnEApVS0PkksJd8kvXxDm-zpagDuJwZ-OtoX74RY0lDxKP8Ak94b5I1YZPZ9xWlOKc4-7GqY6qzlNJnIYkvoyK3xDpJ7uzqK_S2ZKvqb5GnMzmqwVNrslTOCgalIb251VCvo6VYf2Tcf99164WJx9gWZ8umyeCzHl970oxS15tB9tyurAiiid3M6xxRdVpCI2B09lf5NzBnNvrTSvcTH0GeyUGPV92OPpaeAfS_1YN8mXmUm8ksxS7uZUug0Zld1NShKbt6q6VBZiSmZq4F9hn8uq89xghvdhzW67OD4fTuYr3TPaO6RKll_xlkcaMvfCTZcg4CCKheWc5ryW7BV89cTU0KmeaQnkosKb-mKseY59OLOYtuS_Je2DkjRYmjk63F-68Eqo2kVT_d1UBYkoMv9tYPYef6aeCWDus1SOsJdL3NAtBj2Ejzq5BcptGuiB-d6lxJY9eJm6TEi5_JWNnqRNX3FbCIHiOJnPpCqDUfEpUBwfchhJ2Fj9SQWDoF21M4aaPsvTXMqMyuUI3za0F_loM9lFE4pKgjyGFYVaoeHnQjxd2hCgH4upUVGH9He901575vq9Y2-BTweU85A8kgOroABfkTqN7rGIJh8T9XijWiw7RCWYuLqGf=s40-no?authuser=0' rel='stylesheet' type='image'>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='gems.css')}}"> </link>
+
     <style>
         html {
             font-size: 24px;
@@ -16,7 +17,7 @@
         #gridbox {
             border: 1px solid black;
             background-color: #CC99FF;
-            background-image: url(images/floor.png);
+            background-image: url(../images/floor.png);
             margin: 50px auto;
             display: none;
         }
@@ -29,35 +30,35 @@
         }
 
         .wall {
-            background-image: url(images/wall.png);
+            background-image: url(../images/wall.png);
         }
 
         .collect.blue {
-            background-image: url(images/collectblue.png);
+            background-image: url(../images/collectblue.png);
         }
 
         .collect.green {
-            background-image: url(images/collectgreen.png);
+            background-image: url(../images/collectgreen.png);
         }
 
         .collect.purple {
-            background-image: url(images/collectpurple.png);
+            background-image: url(../images/collectpurple.png);
         }
 
         .collect.orange {
-            background-image: url(images/collectorange.png);
+            background-image: url(../images/collectorange.png);
         }
 
         .gridsquare.finish {
-            background-image: url(images/end.png);
+            background-image: url(../images/end.png);
         }
 
         .gridsquare.enemy {
-            background-image: url(images/bug.png);
+            background-image: url(../images/bug.png);
         }
 
         .gridsquare.player {
-            background-image: url(images/girl.png);
+            background-image: url(../images/girl.png);
         }
 
         #score {
@@ -90,7 +91,7 @@
         #lifebar .bar {
             height: 40px;
             width: 100%;
-            background-image: url(images/heart.png);
+            background-image: url(../images/heart.png);
         }
 
         #start {
@@ -151,8 +152,6 @@
             text-align: center;
             margin: 30px auto;
         }
-
-
 
     </style>
 </head>
@@ -465,3 +464,4 @@
 </body>
 
 </html>
+

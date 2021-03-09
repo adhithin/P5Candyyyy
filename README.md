@@ -18,11 +18,15 @@ A fast and easy way to play some great hit games. This will allow people to rela
 
 we use the employment of CRUD as a DATABASE. 
 
-CREATE is used i our ratings and reviews, when users add 
+CREATE is used in our ratings and reviews, when users add a review of the game. they include their name, a rating from 1-5, and a comment. 
+<a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L72"> link to code for ratings </a>
+
 
 ### SQL 
 
-We use SQL databases to capture data. 
+We use SQL databases to capture data. In our arcade, we use the employment of two tables: one for the game leaderboards, as well as one for the reviews and ratings. 
+
+#### Leaderboards: 
 
 
 ### API 

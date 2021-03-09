@@ -62,5 +62,8 @@ Similar to the leaderboard, we set up a table for the reviews and ratings. Origi
 ### API 
 
 We also use APIs in our game. In game1, the covid data tracking game, we use an API to import data regarding covid 19 statistics. 
++ game 1 <a href="https://github.com/adhithin/P5Candyyyy/blob/072e82e771ffbdd94cb5f88633ebd4dfeb007a82/templates/game1-1.html#L257"> api code </a>
++ game 1 <a href="http://arcadesmash.tk/game"> run time link </a>
+
 
 

@@ -54,7 +54,9 @@ code links | runtime links
 <a href="https://github.com/adhithin/P5Candyyyy/blob/3d12496aca3631c3f1677c7dc0697ceefeeebf5b/templates/game4.html#L228"> game4.html </a>| <a href="http://arcadesmash.tk/game4"> game 4 </a>
 <a href="https://github.com/adhithin/P5Candyyyy/blob/3d12496aca3631c3f1677c7dc0697ceefeeebf5b/templates/game6.html#L226"> game6.html </a>| <a href="http://arcadesmash.tk/game6"> game 6 </a>
 
-*note: there's no leaderboard for game 7 and game 8. we don't have a game 5. 
+*notes: 
++ there's no leaderboard for game 7 and game 8
++ we don't have a game 5 
 
     
 
@@ -69,6 +71,8 @@ Similar to the leaderboard, we set up a table for the reviews and ratings.
 We also use APIs in our game. In game1, the covid data tracking game, we use an API to import data regarding covid 19 statistics. 
 + game 1 <a href="https://github.com/adhithin/P5Candyyyy/blob/072e82e771ffbdd94cb5f88633ebd4dfeb007a82/templates/game1-1.html#L257"> api code </a>
 + game 1 <a href="http://arcadesmash.tk/game"> run time link </a>
+
+    TECH TALK: REST APIs 
 
 
 

@@ -23,7 +23,7 @@ A fast and easy way to play some great hit games. This will allow people to rela
 
 - If you click BEGIN, the page will take you to tips. "Let's Start" will take you to the GAMES section. "Back to top" will take user to top.  
 
-<img width="1440" alt="Screen Shot 2021-03-09 at 3 36 07 PM" src="https://user-images.githubusercontent.com/71796291/110553029-2ddd1480-80ed-11eb-80ca-cb18815a7410.png">
+<img width="500" alt="Screen Shot 2021-03-09 at 3 36 07 PM" src="https://user-images.githubusercontent.com/71796291/110553029-2ddd1480-80ed-11eb-80ca-cb18815a7410.png">
 
 
 # Key Technicals 

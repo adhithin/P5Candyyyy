@@ -47,18 +47,19 @@ class Rating(db.Model):
     # not planning to delete scores, but still a good practice
     p_name = db.Column(db.String(10), unique=False, nullable=False)
     p_rating = db.Column(db.Integer, unique=False, nullable=False) # want score as int so we can sort by it easily.
-    p_comment = db.Column(db.String(20), unique=False, nullable=False)
+    p_commment = db.Column(db.String(10), unique=False, nullable=False)
 
-    def __init__(self, p_name, p_rating, p_comment):
+    def __init__(self, p_name, p_rating, p_commment):
         self.p_name = p_name
         self.p_rating = p_rating
-        self.p_comment = p_comment
+        self.p_commment = p_commment
 
     def __repr__(self):
-        return f"{self.p_name},{self.p_rating}, {self.p_comment}"
+        return f"{self.p_name},{self.p_rating}, {self.p_commment}"
 
 #must go after 'models'
 db.create_all();
+
 
 @app.route('/')
 def home():
@@ -90,6 +91,7 @@ def ratings():
         arcade_ratings.append(rating_dict)
 
     return render_template('ratings.html', arcade_ratings = arcade_ratings)
+
 
 
 

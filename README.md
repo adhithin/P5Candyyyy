@@ -2,7 +2,18 @@
 # Arcade Smash 
 The ultimate arcade for all your gaming purposes! 
 
-## Goal 
+## Key Terms 
+
+- [x] **Python**
+- [x] **SQL**
+- [x] **CRUD**
+- [x] **CSS** 
+- [x] **HTML**
+- [x] **APIs**
+- [x] **JAVA GAMES**
+
+
+## Goals 
 A fast and easy way to play some great hit games. This will allow people to relax from a long day, and grab some coffee while having some fun. 
 
 ## Quick start guide
@@ -13,15 +24,15 @@ A fast and easy way to play some great hit games. This will allow people to rela
  
 <img width="500" alt="Screen Shot 2021-03-09 at 3 29 33 PM" src="https://user-images.githubusercontent.com/71796291/110552485-47ca2780-80ec-11eb-9cb2-e8f8e7afb245.png">
 
-- **If you click GAMES at the top, you can find all of our games: 
+- **If you click GAMES at the top, you can find all of our games:**
 
 <img width="500" alt="Screen Shot 2021-03-09 at 3 32 01 PM" src="https://user-images.githubusercontent.com/71796291/110552668-9b3c7580-80ec-11eb-9e37-fb26e8029482.png">
 
-- **If you click ABOUT, it'll give you information, and the ratings for the game:
+- **If you click ABOUT, it'll give you information, and the ratings for the game:**
 
 <img width="500" alt="Screen Shot 2021-03-09 at 3 35 23 PM" src="https://user-images.githubusercontent.com/71796291/110552984-13a33680-80ed-11eb-89cf-bfa603223de5.png">
 
-- **If you click BEGIN, the page will take you to tips. "Let's Start" will take you to the GAMES section. "Back to top" will take user to top.  
+- **If you click BEGIN, the page will take you to tips. "Let's Start" will take you to the GAMES section. "Back to top" will take user to top. **
 
 <img width="500" alt="Screen Shot 2021-03-09 at 3 36 07 PM" src="https://user-images.githubusercontent.com/71796291/110553029-2ddd1480-80ed-11eb-80ca-cb18815a7410.png">
 
@@ -52,7 +63,6 @@ CREATE is used in our ratings and reviews.
 
 ## SQL 
 
-
 ### Leaderboards: 
 
 The leaderboards all capture the game score, and then queries it, along with the user's name, to the leaderboard, which is displayed afterward. 
@@ -68,11 +78,9 @@ code links | runtime links
 <a href="https://github.com/adhithin/P5Candyyyy/blob/3d12496aca3631c3f1677c7dc0697ceefeeebf5b/templates/game4.html#L228"> game4.html </a>| <a href="http://arcadesmash.tk/game4"> game 4 </a>
 <a href="https://github.com/adhithin/P5Candyyyy/blob/3d12496aca3631c3f1677c7dc0697ceefeeebf5b/templates/game6.html#L226"> game6.html </a>| <a href="http://arcadesmash.tk/game6"> game 6 </a>
 
-*notes: 
+***notes:***
 + there's no leaderboard for game 7 and game 8
-+ we don't have a game 5 
-
-    
++ we don't have a game 5   
 
 ### Reviews and Ratings: 
 
@@ -86,7 +94,8 @@ We also use APIs in our game. In game1, the covid data tracking game, we use an 
 + game 1 <a href="https://github.com/adhithin/P5Candyyyy/blob/072e82e771ffbdd94cb5f88633ebd4dfeb007a82/templates/game1-1.html#L257"> api code </a>
 + game 1 <a href="http://arcadesmash.tk/game"> run time link </a>
 
-    TECH TALK: REST APIs 
+    **TECH TALK** 
+    + 
 
 
 

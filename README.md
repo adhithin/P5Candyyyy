@@ -23,7 +23,7 @@ we use the employment of CRUD, create, read, update, and delete.
 Use of DB Browser for MySQLite
 + has all data 
 + can delete and update entries from here 
-+ here is the <a href"https://sqlitebrowser.org/"> tool </a>
++ here is the <a href="https://sqlitebrowser.org/"> tool </a>
 
 ### Ratings and Reviews:
 

@@ -48,9 +48,10 @@ code links | runtime links
 <a href="https://github.com/adhithin/P5Candyyyy/blob/dc0d6f3ebbcc75716e3aac4ccc7ee05e0fa2fc5b/templates/game1-1.html#L177"> game1-1.html </a>| <a href="http://arcadesmash.tk/game1"> game 1 </a>
 <a href="https://github.com/adhithin/P5Candyyyy/blob/be59a137e74922e5cf800dd6d3028ea90bb7048e/templates/game2.html#L167"> game2.html </a>| <a href="http://arcadesmash.tk/game2"> game 2 </a>
 <a href="https://github.com/adhithin/P5Candyyyy/blob/be59a137e74922e5cf800dd6d3028ea90bb7048e/templates/game3.html#L577"> game3.html </a>| <a href="http://arcadesmash.tk/game3"> game 3 </a>
-<a href="https://github.com/adhithin/P5Candyyyy/blob/dc0d6f3ebbcc75716e3aac4ccc7ee05e0fa2fc5b/templates/game1-1.html#L177"> line 177, game1-1.html </a>| <a href="http://arcadesmash.tk/game1"> game 4 </a>
-<a href="https://github.com/adhithin/P5Candyyyy/blob/dc0d6f3ebbcc75716e3aac4ccc7ee05e0fa2fc5b/templates/game1-1.html#L177"> line 177, game1-1.html </a>| <a href="http://arcadesmash.tk/game1"> game 5 </a>
-<a href="https://github.com/adhithin/P5Candyyyy/blob/dc0d6f3ebbcc75716e3aac4ccc7ee05e0fa2fc5b/templates/game1-1.html#L177"> line 177, game1-1.html </a>| <a href="http://arcadesmash.tk/game1"> game 6 </a>
+<a href="https://github.com/adhithin/P5Candyyyy/blob/3d12496aca3631c3f1677c7dc0697ceefeeebf5b/templates/game4.html#L228"> game4.html </a>| <a href="http://arcadesmash.tk/game4"> game 4 </a>
+<a href="https://github.com/adhithin/P5Candyyyy/blob/3d12496aca3631c3f1677c7dc0697ceefeeebf5b/templates/game6.html#L226"> game6.html </a>| <a href="http://arcadesmash.tk/game6"> game 6 </a>
+
+*note: there's no leaderboard for game 7 and game 8. we don't have a game 5. 
 
     
 

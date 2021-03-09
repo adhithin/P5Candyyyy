@@ -41,7 +41,7 @@
 </div>
 <body>
 <div>
-    <h2 font="Roboto" class=" w3-button" style="font-family:Roboto; font-size: 45px">Ratings and Reviews</h2>
+    <h2 font="Roboto"  style="font-family:Roboto; font-size: 45px">Ratings and Reviews</h2>
     <form action="" method="POST">
         <label for="name" style="font-family: Roboto, sans-serif, size=20pt" >Name:</label>
         <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
@@ -49,11 +49,9 @@
         <input id="rating" type="number" name="rating" min="0" max="5"placeholder="5">
         <label for="comment"> Comment: </label>
         <input id="comment" name="comment" placeholder="Comments">
-        <button type="submit" class="w3-center w3-button w3-blue"> Submit your review  </button>
-        <h2 font="Roboto" class=" w3-button" style="font-family:Roboto; font-size: 45px"
-        <div align="center" style="font-family:Roboto; font-size: 45px">
+        <button type="submit" class="w3-center w3-button w3-blue"> Submit your review </button>
+        </div>
 
-            <h1 align="center" type="block"> Reviews </h1>
             <table>
                 <tr>
                     <th align="left" style="font-size: 20px"> NAME </th>
@@ -64,9 +62,11 @@
                 <tr>
                     <td align="left" style="font-family:Roboto; font-size: 15px">{{rating.name}}</td>
                     <td align="center" style="font-family:Roboto; font-size: 15px">{{rating.rating}}</td>
-                    <h1 align="center" type="block"> Reviews </h1>
+                    <td align="right" style="font-family:Roboto; font-size: 15px">{{rating.comment}}</td>
+                </tr>
+                {% endfor  %}
             </table>
-            {% endfor  %}
+
         </div>
 
         <script>

@@ -16,7 +16,14 @@ A fast and easy way to play some great hit games. This will allow people to rela
 
 ### CRUD 
 
-we use the employment of CRUD as a DATABASE. 
+we use the employment of CRUD, create, read, update, and delete. 
+
+**WOW FACTOR** 
+
+Use of DB Browser for MySQLite
++ has all data 
++ can delete and update entries from here 
++ here is the <a href"https://sqlitebrowser.org/"> tool </a>
 
 ### Ratings and Reviews:
 

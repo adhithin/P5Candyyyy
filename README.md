@@ -40,8 +40,14 @@ We use SQL databases to capture data. In our arcade, we use the employment of tw
 
 The leaderboards all capture the game score, and then queries it, along with the user's name, to the leaderboard, which is displayed afterward. 
 + sql table set up is here on <a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L25"> line 25 </a> of views.py
-+ users can enter leaderboard scores for the following games: 
-    + game 1  
++ users can enter leaderboard scores for the following games. code shows the form that queries information, runtime links show the site. 
+
+
+code links | runtime links
+------------ | -------------
+<a href="https://github.com/adhithin/P5Candyyyy/blob/dc0d6f3ebbcc75716e3aac4ccc7ee05e0fa2fc5b/templates/game1-1.html#L177"> line 177, game1-1.html </a>| <a href="http://arcadesmash.tk/game1"> game 1 </a>
+
+    
 
 #### Reviews and Ratings: 
 

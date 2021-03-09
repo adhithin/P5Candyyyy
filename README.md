@@ -6,7 +6,7 @@ A fast and easy way to play some great hit games. This will allow people to rela
 
 ## Quick start guide
 
-<a href="arcadesmash.tk"> Get onto arcade smash </a>
+<a href="arcadesmash.tk"> Get onto arcade smash here </a>
 
 - Explore our multitide of games available for your leisure 
 
@@ -18,8 +18,12 @@ A fast and easy way to play some great hit games. This will allow people to rela
 
 we use the employment of CRUD as a DATABASE. 
 
+### Ratings and Reviews:
+
 CREATE is used in our ratings and reviews, when users add a review of the game. they include their name, a rating from 1-5, and a comment. 
 <a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L72"> link to code for ratings </a>
+
+they can leave a rating and comment <a href="http://arcadesmash.tk/ratings"> here. </a>
 
 
 ### SQL 
@@ -37,6 +41,6 @@ Similar to the leaderboard, we set up a table for the reviews and ratings. Origi
 
 ### API 
 
-We also use APIs in our game. In game1, the covid data tracking game, we use an API to import data regarding covid 19 statistics. T
-### MUSIC 
+We also use APIs in our game. In game1, the covid data tracking game, we use an API to import data regarding covid 19 statistics. 
+
 

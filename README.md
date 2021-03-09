@@ -6,7 +6,7 @@ A fast and easy way to play some great hit games. This will allow people to rela
 
 ## Quick start guide
 
-<a href="arcadesmash.tk"> Get onto arcade smash here </a>
+<a href="arcadesmash.tk"> Visit arcade smash here </a>
 
 - Explore our multitide of games available for your leisure 
 

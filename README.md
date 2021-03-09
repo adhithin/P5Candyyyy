@@ -4,7 +4,7 @@ The ultimate arcade for all your gaming purposes!
 
 ## Key Terms 
 
-- [x] **Python**
+- [x] **PYTHON**
 - [x] **SQL**
 - [x] **CRUD**
 - [x] **CSS** 

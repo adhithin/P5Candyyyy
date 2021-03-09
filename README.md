@@ -28,6 +28,12 @@ We use SQL databases to capture data. In our arcade, we use the employment of tw
 
 #### Leaderboards: 
 
+The leaderboards all capture the game score, and then queries it, along with the user's name, to the leaderboard, which is displayed afterward. 
+<a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L25"> link to code - this sets up the Scores table </a>
+
+#### Reviews and Ratings: 
+
+Similar to the leaderboard, we set up a table for the reviews and ratings. Originally, this was just coombined with the leaderboard, but since values and ideas were seperate, a new table was created <a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L44"> here. </a>
 
 ### API 
 

@@ -20,10 +20,13 @@ we use the employment of CRUD as a DATABASE.
 
 ### Ratings and Reviews:
 
-CREATE is used in our ratings and reviews, when users add a review of the game. they include their name, a rating from 1-5, and a comment. 
-<a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L72"> link to code for ratings </a>
+CREATE is used in our ratings and reviews. 
 
-+ they can leave a rating and comment <a href="http://arcadesmash.tk/ratings"> here. </a>
+*when users add a review of the game. they include their name, a rating from 1-5, and a comment.* 
+
++ code for create is here <a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L72"> from line 72 </a> of views.py
+
++ they can leave a rating and comment <a href="http://arcadesmash.tk/ratings"> here </a> on the site.
 
 
 ### SQL 

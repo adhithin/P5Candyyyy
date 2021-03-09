@@ -9,19 +9,19 @@ A fast and easy way to play some great hit games. This will allow people to rela
 
 <a href="arcadesmash.tk"> Visit arcade smash here </a>
 
-- You'll land on the home page:
+- **You'll land on the home page:**
  
 <img width="500" alt="Screen Shot 2021-03-09 at 3 29 33 PM" src="https://user-images.githubusercontent.com/71796291/110552485-47ca2780-80ec-11eb-9cb2-e8f8e7afb245.png">
 
-- If you click GAMES at the top, you can find all of our games: 
+- **If you click GAMES at the top, you can find all of our games: 
 
 <img width="500" alt="Screen Shot 2021-03-09 at 3 32 01 PM" src="https://user-images.githubusercontent.com/71796291/110552668-9b3c7580-80ec-11eb-9e37-fb26e8029482.png">
 
-- If you click ABOUT, it'll give you information, and the ratings for the game:
+- **If you click ABOUT, it'll give you information, and the ratings for the game:
 
 <img width="500" alt="Screen Shot 2021-03-09 at 3 35 23 PM" src="https://user-images.githubusercontent.com/71796291/110552984-13a33680-80ed-11eb-89cf-bfa603223de5.png">
 
-- If you click BEGIN, the page will take you to tips. "Let's Start" will take you to the GAMES section. "Back to top" will take user to top.  
+- **If you click BEGIN, the page will take you to tips. "Let's Start" will take you to the GAMES section. "Back to top" will take user to top.  
 
 <img width="500" alt="Screen Shot 2021-03-09 at 3 36 07 PM" src="https://user-images.githubusercontent.com/71796291/110553029-2ddd1480-80ed-11eb-80ca-cb18815a7410.png">
 

@@ -31,12 +31,17 @@ CREATE is used in our ratings and reviews.
 
 ### SQL 
 
-We use SQL databases to capture data. In our arcade, we use the employment of two tables: one for the game leaderboards, as well as one for the reviews and ratings. 
+We use SQL databases to capture data. In our arcade, we use the employment of two tables
+
++ one for the game leaderboards
++ one for the reviews and ratings 
 
 #### Leaderboards: 
 
 The leaderboards all capture the game score, and then queries it, along with the user's name, to the leaderboard, which is displayed afterward. 
-<a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L25"> link to code - this sets up the Scores table </a>
++ sql table set up is here on <a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L25"> line 25 </a> of views.py
++ users can enter leaderboard scores for the following games: 
+    + game 1  
 
 #### Reviews and Ratings: 
 

@@ -36,7 +36,6 @@ A fast and easy way to play some great hit games. This will allow people to rela
 
 <img width="500" alt="Screen Shot 2021-03-09 at 3 36 07 PM" src="https://user-images.githubusercontent.com/71796291/110553029-2ddd1480-80ed-11eb-80ca-cb18815a7410.png">
 
-
 # Key Technicals 
 
 ## CRUD 
@@ -50,18 +49,37 @@ Use of DB Browser for MySQLite
 + can delete and update entries from here 
 + here is the <a href="https://sqlitebrowser.org/"> tool </a>
 
-## Ratings and Reviews:
+### Ratings and Reviews:
 
 CREATE is used in our ratings and reviews. 
 
 *when users add a review of the game. they include their name, a rating from 1-5, and a comment.* 
 
-+ code for create is here <a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L72"> from line 72 </a> of views.py
++ code for create in python is here <a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L72"> from line 72 </a> of views.py
 
 + they can leave a rating and comment <a href="http://arcadesmash.tk/ratings"> here </a> on the site.
 
++ html form code for ratings is <a href="http://arcadesmash.tk/ratings"> here. </a> 
+
+
+### Leaderboard:
+
+CREATE is also used here. 
+
+*once users play, they can log their score into the leaderboard* 
+
++ code for create in python is here <a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L209"> from line 72 </a> of views.py
+
++ game 6 <a href="http://arcadesmash.tk/game6"> example </a> on the site.
+
++ <a href="https://github.com/adhithin/P5Candyyyy/blob/b63a9537f7164f4a7fd172c88edf0086116e7cbb/templates/game6.html#L226"> html form code </a> for game 6 
+
+
+
 
 ## SQL 
+
+   **TECH TALK**
 
 ### Leaderboards: 
 
@@ -90,12 +108,14 @@ Similar to the leaderboard, we set up a table for the reviews and ratings.
 
 ## API 
 
+   **TECH TALK** 
+    +  
+
 We also use APIs in our game. In game1, the covid data tracking game, we use an API to import data regarding covid 19 statistics. 
 + game 1 <a href="https://github.com/adhithin/P5Candyyyy/blob/072e82e771ffbdd94cb5f88633ebd4dfeb007a82/templates/game1-1.html#L257"> api code </a>
 + game 1 <a href="http://arcadesmash.tk/game"> run time link </a>
 
-    **TECH TALK** 
-    + 
+  
 
 
 

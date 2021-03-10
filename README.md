@@ -75,8 +75,6 @@ CREATE is also used here.
 + <a href="https://github.com/adhithin/P5Candyyyy/blob/b63a9537f7164f4a7fd172c88edf0086116e7cbb/templates/game6.html#L226"> html form code </a> for game 6 
 
 
-
-
 ## SQL 
 
    **TECH TALK**
@@ -114,6 +112,24 @@ Similar to the leaderboard, we set up a table for the reviews and ratings.
 We also use APIs in our game. In game1, the covid data tracking game, we use an API to import data regarding covid 19 statistics. 
 + game 1 <a href="https://github.com/adhithin/P5Candyyyy/blob/072e82e771ffbdd94cb5f88633ebd4dfeb007a82/templates/game1-1.html#L257"> api code </a>
 + game 1 <a href="http://arcadesmash.tk/game"> run time link </a>
+
+## CSS and HTML 
+
+### Game 7 
+
++ uses and imports <a href="https://github.com/adhithin/P5Candyyyy/blob/main/static/css/gems.css"> gems.css </a> into html 
++ <a href="https://github.com/adhithin/P5Candyyyy/blob/f12b012ac85e7ec13e19ce6c090274cea7f5ad81/templates/game7.html#L9"> this line </a> imports the css into game 7 and the game's html code 
+
+### Game 8 
+
++ uses and imports <a href="https://github.com/adhithin/P5Candyyyy/blob/main/static/css/dragon.css"> dragon.css </a> into html 
++ <a href="https://github.com/adhithin/P5Candyyyy/blob/f12b012ac85e7ec13e19ce6c090274cea7f5ad81/templates/game8.html#L6"> this line </a> imports the css into game 8 and the game's html code 
+
+
+## JAVA GAMES
+
+
+
 
   
 

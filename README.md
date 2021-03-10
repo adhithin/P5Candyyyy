@@ -11,6 +11,7 @@ The ultimate arcade for all your gaming purposes!
 - [x] **HTML**
 - [x] **APIs**
 - [x] **JAVA GAMES**
+- [x] **JINJA**
 
 
 ## Goals 
@@ -61,6 +62,8 @@ CREATE is used in our ratings and reviews.
 
 + html form code for ratings is <a href="http://arcadesmash.tk/ratings"> here. </a> 
 
++ linked to the page and the table is printed with <a href="https://github.com/adhithin/P5Candyyyy/blob/5398498b014be5c8dc643293fb95ec014efca0ad/templates/ratings.html#L61">  **JINJA** </a> 
+
 
 ### Leaderboard:
 
@@ -74,6 +77,7 @@ CREATE is also used here.
 
 + <a href="https://github.com/adhithin/P5Candyyyy/blob/b63a9537f7164f4a7fd172c88edf0086116e7cbb/templates/game6.html#L226"> html form code </a> for game 6 
 
++ linked to the page and the table is printed with <a href="https://github.com/adhithin/P5Candyyyy/blob/5398498b014be5c8dc643293fb95ec014efca0ad/templates/game6.html#L248">  **JINJA** </a> 
 
 ## SQL 
 
@@ -128,6 +132,19 @@ We also use APIs in our game. In game1, the covid data tracking game, we use an 
 
 ## JAVA GAMES
 
+Some games in the arcade employ the use of Java. 
+
++ <a href="https://github.com/adhithin/P5Candyyyy/blob/5398498b014be5c8dc643293fb95ec014efca0ad/templates/game1-1.html#L2052"> Game 1 </a>
+
++ <a href="https://github.com/adhithin/P5Candyyyy/blob/5398498b014be5c8dc643293fb95ec014efca0ad/templates/game2.html#L196"> Game 2 </a>
+
++ <a href="https://github.com/adhithin/P5Candyyyy/blob/5398498b014be5c8dc643293fb95ec014efca0ad/templates/game4.html#L65"> Game 4 </a>
+
++ <a href="https://github.com/adhithin/P5Candyyyy/blob/5398498b014be5c8dc643293fb95ec014efca0ad/templates/game6.html#L62"> Game 6 </a>
+
++ <a href="https://github.com/adhithin/P5Candyyyy/blob/5398498b014be5c8dc643293fb95ec014efca0ad/templates/game7.html#L28"> Game 7 </a>
+
++ <a href="https://github.com/adhithin/P5Candyyyy/blob/f12b012ac85e7ec13e19ce6c090274cea7f5ad81/templates/game8.html#L22"> Game 8 </a>
 
 
 

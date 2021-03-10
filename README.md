@@ -43,6 +43,8 @@ A fast and easy way to play some great hit games. This will allow people to rela
 
 we use the employment of CRUD, create, read, update, and delete. 
 
+   **Tech Talk** February 3rd on <a href="http://nighthawkcoders.cf/pythondb/#FE-HTML"> CRUD models </a> on the nighthawk page. 
+
 **EXTRA** 
 
 Use of DB Browser for MySQLite
@@ -81,9 +83,12 @@ CREATE is also used here.
 
 ## SQL 
 
-   **TECH TALK**
+
 
 ### Leaderboards: 
+
+   **Tech Talk** 
+   February 17th Ms. Trish and assistance 
 
 The leaderboards all capture the game score, and then queries it, along with the user's name, to the leaderboard, which is displayed afterward. 
 + sql table set up is here on <a href="https://github.com/adhithin/P5Candyyyy/blob/2cd317c8a0bb2203be14b4b2d60d673801f3fff6/views.py#L25"> line 25 </a> of views.py
@@ -111,13 +116,16 @@ Similar to the leaderboard, we set up a table for the reviews and ratings.
 ## API 
 
    **TECH TALK** 
-    +  
+   January 20th Flask/Python Review with <a href="http://nighthawkcoders.cf/restapi/"> API example </a> on nighthawk coding page. 
 
 We also use APIs in our game. In game1, the covid data tracking game, we use an API to import data regarding covid 19 statistics. 
 + game 1 <a href="https://github.com/adhithin/P5Candyyyy/blob/072e82e771ffbdd94cb5f88633ebd4dfeb007a82/templates/game1-1.html#L257"> api code </a>
 + game 1 <a href="http://arcadesmash.tk/game"> run time link </a>
 
 ## CSS and HTML 
+
+  **Tech Talk**
+  Ms. Trish and assistance 
 
 ### Game 7 
 
